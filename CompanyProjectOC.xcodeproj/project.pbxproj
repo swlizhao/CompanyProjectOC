@@ -8,6 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		180D65811F89C49800E39B2D /* img_dusk.png in Resources */ = {isa = PBXBuildFile; fileRef = 180D65801F89C49800E39B2D /* img_dusk.png */; };
+		180D65841F89FE2E00E39B2D /* ShoppingCartMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65831F89FE2E00E39B2D /* ShoppingCartMainModel.m */; };
+		180D65871F89FEC100E39B2D /* ShoppingCartMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65861F89FEC100E39B2D /* ShoppingCartMainView.m */; };
+		180D658A1F89FEE300E39B2D /* ShoppingCartViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65891F89FEE300E39B2D /* ShoppingCartViewModel.m */; };
+		180D658D1F89FEFC00E39B2D /* HomeMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D658C1F89FEFC00E39B2D /* HomeMainModel.m */; };
+		180D65901F89FF1200E39B2D /* HomeMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D658F1F89FF1200E39B2D /* HomeMainView.m */; };
+		180D65931F89FF2400E39B2D /* HomeMainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65921F89FF2400E39B2D /* HomeMainViewModel.m */; };
+		180D65961F89FF3D00E39B2D /* HomeDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65951F89FF3D00E39B2D /* HomeDetailModel.m */; };
+		180D65991F89FF5200E39B2D /* HomeDetailMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65981F89FF5200E39B2D /* HomeDetailMainView.m */; };
+		180D659C1F89FF6400E39B2D /* HomeDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D659B1F89FF6400E39B2D /* HomeDetailViewModel.m */; };
+		180D659F1F89FF8700E39B2D /* HomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D659E1F89FF8700E39B2D /* HomeDetailViewController.m */; };
+		180D65A21F89FFBA00E39B2D /* ProductCategoriesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65A11F89FFBA00E39B2D /* ProductCategoriesModel.m */; };
+		180D65A51F89FFD100E39B2D /* ProductCategoriesMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65A41F89FFD100E39B2D /* ProductCategoriesMainView.m */; };
+		180D65A81F89FFF200E39B2D /* ProductCategoriesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65A71F89FFF200E39B2D /* ProductCategoriesViewModel.m */; };
+		180D65AB1F8A001B00E39B2D /* PersonalMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65AA1F8A001B00E39B2D /* PersonalMainModel.m */; };
+		180D65AE1F8A002900E39B2D /* PersonalMainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65AD1F8A002900E39B2D /* PersonalMainViewModel.m */; };
+		180D65B11F8A004600E39B2D /* PersonalSettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65B01F8A004600E39B2D /* PersonalSettingModel.m */; };
+		180D65B41F8A005D00E39B2D /* PersonalSettingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65B31F8A005D00E39B2D /* PersonalSettingViewModel.m */; };
+		180D65B71F8A007900E39B2D /* PersonalSettingMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65B61F8A007900E39B2D /* PersonalSettingMainView.m */; };
+		180D65BA1F8A009C00E39B2D /* PersonalSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65B91F8A009C00E39B2D /* PersonalSettingVC.m */; };
+		180D65BD1F8A00C300E39B2D /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65BC1F8A00C300E39B2D /* LoginModel.m */; };
+		180D65C01F8A00D000E39B2D /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65BF1F8A00D000E39B2D /* LoginViewModel.m */; };
+		180D65C31F8A00DE00E39B2D /* LoginMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65C21F8A00DE00E39B2D /* LoginMainView.m */; };
+		180D65C61F8A00FC00E39B2D /* RegisterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65C51F8A00FC00E39B2D /* RegisterModel.m */; };
+		180D65C91F8A010A00E39B2D /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65C81F8A010A00E39B2D /* RegisterViewModel.m */; };
+		180D65CC1F8A011B00E39B2D /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65CB1F8A011B00E39B2D /* RegisterVC.m */; };
+		180D65CF1F8A014000E39B2D /* ForgotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65CE1F8A014000E39B2D /* ForgotModel.m */; };
+		180D65D21F8A015300E39B2D /* ForgotViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65D11F8A015300E39B2D /* ForgotViewModel.m */; };
+		180D65D51F8A016A00E39B2D /* ForgotVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65D41F8A016A00E39B2D /* ForgotVC.m */; };
+		180D65D81F8A018B00E39B2D /* RegisterMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65D71F8A018B00E39B2D /* RegisterMainView.m */; };
+		180D65DB1F8A019E00E39B2D /* ForgotMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65DA1F8A019E00E39B2D /* ForgotMainView.m */; };
+		180D65DE1F8A01BD00E39B2D /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65DD1F8A01BD00E39B2D /* Test.m */; };
 		188A441F1F885F3E00212E35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188A441E1F885F3E00212E35 /* AppDelegate.m */; };
 		188A44251F885F3E00212E35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188A44231F885F3E00212E35 /* Main.storyboard */; };
 		188A44271F885F3E00212E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188A44261F885F3E00212E35 /* Assets.xcassets */; };
@@ -60,6 +91,68 @@
 
 /* Begin PBXFileReference section */
 		180D65801F89C49800E39B2D /* img_dusk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_dusk.png; sourceTree = "<group>"; };
+		180D65821F89FE2E00E39B2D /* ShoppingCartMainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingCartMainModel.h; sourceTree = "<group>"; };
+		180D65831F89FE2E00E39B2D /* ShoppingCartMainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartMainModel.m; sourceTree = "<group>"; };
+		180D65851F89FEC100E39B2D /* ShoppingCartMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingCartMainView.h; sourceTree = "<group>"; };
+		180D65861F89FEC100E39B2D /* ShoppingCartMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartMainView.m; sourceTree = "<group>"; };
+		180D65881F89FEE300E39B2D /* ShoppingCartViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingCartViewModel.h; sourceTree = "<group>"; };
+		180D65891F89FEE300E39B2D /* ShoppingCartViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartViewModel.m; sourceTree = "<group>"; };
+		180D658B1F89FEFC00E39B2D /* HomeMainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeMainModel.h; sourceTree = "<group>"; };
+		180D658C1F89FEFC00E39B2D /* HomeMainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeMainModel.m; sourceTree = "<group>"; };
+		180D658E1F89FF1200E39B2D /* HomeMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeMainView.h; sourceTree = "<group>"; };
+		180D658F1F89FF1200E39B2D /* HomeMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeMainView.m; sourceTree = "<group>"; };
+		180D65911F89FF2400E39B2D /* HomeMainViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeMainViewModel.h; sourceTree = "<group>"; };
+		180D65921F89FF2400E39B2D /* HomeMainViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeMainViewModel.m; sourceTree = "<group>"; };
+		180D65941F89FF3D00E39B2D /* HomeDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeDetailModel.h; sourceTree = "<group>"; };
+		180D65951F89FF3D00E39B2D /* HomeDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeDetailModel.m; sourceTree = "<group>"; };
+		180D65971F89FF5200E39B2D /* HomeDetailMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeDetailMainView.h; sourceTree = "<group>"; };
+		180D65981F89FF5200E39B2D /* HomeDetailMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeDetailMainView.m; sourceTree = "<group>"; };
+		180D659A1F89FF6400E39B2D /* HomeDetailViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeDetailViewModel.h; sourceTree = "<group>"; };
+		180D659B1F89FF6400E39B2D /* HomeDetailViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeDetailViewModel.m; sourceTree = "<group>"; };
+		180D659D1F89FF8700E39B2D /* HomeDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeDetailViewController.h; sourceTree = "<group>"; };
+		180D659E1F89FF8700E39B2D /* HomeDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeDetailViewController.m; sourceTree = "<group>"; };
+		180D65A01F89FFBA00E39B2D /* ProductCategoriesModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductCategoriesModel.h; sourceTree = "<group>"; };
+		180D65A11F89FFBA00E39B2D /* ProductCategoriesModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductCategoriesModel.m; sourceTree = "<group>"; };
+		180D65A31F89FFD100E39B2D /* ProductCategoriesMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductCategoriesMainView.h; sourceTree = "<group>"; };
+		180D65A41F89FFD100E39B2D /* ProductCategoriesMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductCategoriesMainView.m; sourceTree = "<group>"; };
+		180D65A61F89FFF200E39B2D /* ProductCategoriesViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductCategoriesViewModel.h; sourceTree = "<group>"; };
+		180D65A71F89FFF200E39B2D /* ProductCategoriesViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductCategoriesViewModel.m; sourceTree = "<group>"; };
+		180D65A91F8A001B00E39B2D /* PersonalMainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalMainModel.h; sourceTree = "<group>"; };
+		180D65AA1F8A001B00E39B2D /* PersonalMainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalMainModel.m; sourceTree = "<group>"; };
+		180D65AC1F8A002900E39B2D /* PersonalMainViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalMainViewModel.h; sourceTree = "<group>"; };
+		180D65AD1F8A002900E39B2D /* PersonalMainViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalMainViewModel.m; sourceTree = "<group>"; };
+		180D65AF1F8A004600E39B2D /* PersonalSettingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalSettingModel.h; sourceTree = "<group>"; };
+		180D65B01F8A004600E39B2D /* PersonalSettingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalSettingModel.m; sourceTree = "<group>"; };
+		180D65B21F8A005D00E39B2D /* PersonalSettingViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalSettingViewModel.h; sourceTree = "<group>"; };
+		180D65B31F8A005D00E39B2D /* PersonalSettingViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalSettingViewModel.m; sourceTree = "<group>"; };
+		180D65B51F8A007900E39B2D /* PersonalSettingMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalSettingMainView.h; sourceTree = "<group>"; };
+		180D65B61F8A007900E39B2D /* PersonalSettingMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalSettingMainView.m; sourceTree = "<group>"; };
+		180D65B81F8A009C00E39B2D /* PersonalSettingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalSettingVC.h; sourceTree = "<group>"; };
+		180D65B91F8A009C00E39B2D /* PersonalSettingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalSettingVC.m; sourceTree = "<group>"; };
+		180D65BB1F8A00C300E39B2D /* LoginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
+		180D65BC1F8A00C300E39B2D /* LoginModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
+		180D65BE1F8A00D000E39B2D /* LoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		180D65BF1F8A00D000E39B2D /* LoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		180D65C11F8A00DE00E39B2D /* LoginMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginMainView.h; sourceTree = "<group>"; };
+		180D65C21F8A00DE00E39B2D /* LoginMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginMainView.m; sourceTree = "<group>"; };
+		180D65C41F8A00FC00E39B2D /* RegisterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterModel.h; sourceTree = "<group>"; };
+		180D65C51F8A00FC00E39B2D /* RegisterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterModel.m; sourceTree = "<group>"; };
+		180D65C71F8A010A00E39B2D /* RegisterViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewModel.h; sourceTree = "<group>"; };
+		180D65C81F8A010A00E39B2D /* RegisterViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewModel.m; sourceTree = "<group>"; };
+		180D65CA1F8A011B00E39B2D /* RegisterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
+		180D65CB1F8A011B00E39B2D /* RegisterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
+		180D65CD1F8A014000E39B2D /* ForgotModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgotModel.h; sourceTree = "<group>"; };
+		180D65CE1F8A014000E39B2D /* ForgotModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgotModel.m; sourceTree = "<group>"; };
+		180D65D01F8A015300E39B2D /* ForgotViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgotViewModel.h; sourceTree = "<group>"; };
+		180D65D11F8A015300E39B2D /* ForgotViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgotViewModel.m; sourceTree = "<group>"; };
+		180D65D31F8A016A00E39B2D /* ForgotVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgotVC.h; sourceTree = "<group>"; };
+		180D65D41F8A016A00E39B2D /* ForgotVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgotVC.m; sourceTree = "<group>"; };
+		180D65D61F8A018B00E39B2D /* RegisterMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterMainView.h; sourceTree = "<group>"; };
+		180D65D71F8A018B00E39B2D /* RegisterMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterMainView.m; sourceTree = "<group>"; };
+		180D65D91F8A019E00E39B2D /* ForgotMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgotMainView.h; sourceTree = "<group>"; };
+		180D65DA1F8A019E00E39B2D /* ForgotMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgotMainView.m; sourceTree = "<group>"; };
+		180D65DC1F8A01BD00E39B2D /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		180D65DD1F8A01BD00E39B2D /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		188A441A1F885F3E00212E35 /* CompanyProjectOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompanyProjectOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188A441D1F885F3E00212E35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		188A441E1F885F3E00212E35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -347,6 +440,8 @@
 		188A445C1F8860E400212E35 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				180D65DC1F8A01BD00E39B2D /* Test.h */,
+				180D65DD1F8A01BD00E39B2D /* Test.m */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -423,6 +518,8 @@
 		188A44681F8864F100212E35 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				180D65911F89FF2400E39B2D /* HomeMainViewModel.h */,
+				180D65921F89FF2400E39B2D /* HomeMainViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -430,6 +527,8 @@
 		188A44691F8864FB00212E35 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				180D658E1F89FF1200E39B2D /* HomeMainView.h */,
+				180D658F1F89FF1200E39B2D /* HomeMainView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -437,6 +536,8 @@
 		188A446A1F88652300212E35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				180D658B1F89FEFC00E39B2D /* HomeMainModel.h */,
+				180D658C1F89FEFC00E39B2D /* HomeMainModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -444,6 +545,8 @@
 		188A446B1F88654200212E35 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				180D659D1F89FF8700E39B2D /* HomeDetailViewController.h */,
+				180D659E1F89FF8700E39B2D /* HomeDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -451,6 +554,8 @@
 		188A446C1F88654B00212E35 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				180D659A1F89FF6400E39B2D /* HomeDetailViewModel.h */,
+				180D659B1F89FF6400E39B2D /* HomeDetailViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -458,6 +563,8 @@
 		188A446D1F88655200212E35 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				180D65971F89FF5200E39B2D /* HomeDetailMainView.h */,
+				180D65981F89FF5200E39B2D /* HomeDetailMainView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -465,6 +572,8 @@
 		188A446E1F88655600212E35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				180D65941F89FF3D00E39B2D /* HomeDetailModel.h */,
+				180D65951F89FF3D00E39B2D /* HomeDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -492,6 +601,8 @@
 		188A44711F88657C00212E35 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				180D65881F89FEE300E39B2D /* ShoppingCartViewModel.h */,
+				180D65891F89FEE300E39B2D /* ShoppingCartViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -499,6 +610,8 @@
 		188A44721F88658200212E35 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				180D65851F89FEC100E39B2D /* ShoppingCartMainView.h */,
+				180D65861F89FEC100E39B2D /* ShoppingCartMainView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -506,6 +619,8 @@
 		188A44731F88658800212E35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				180D65821F89FE2E00E39B2D /* ShoppingCartMainModel.h */,
+				180D65831F89FE2E00E39B2D /* ShoppingCartMainModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -533,6 +648,8 @@
 		188A44761F8865A100212E35 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				180D65AC1F8A002900E39B2D /* PersonalMainViewModel.h */,
+				180D65AD1F8A002900E39B2D /* PersonalMainViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -551,6 +668,8 @@
 		188A44781F8865AF00212E35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				180D65A91F8A001B00E39B2D /* PersonalMainModel.h */,
+				180D65AA1F8A001B00E39B2D /* PersonalMainModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -569,6 +688,8 @@
 		188A447A1F8865CC00212E35 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				180D65B81F8A009C00E39B2D /* PersonalSettingVC.h */,
+				180D65B91F8A009C00E39B2D /* PersonalSettingVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -576,6 +697,8 @@
 		188A447B1F8865D300212E35 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				180D65B21F8A005D00E39B2D /* PersonalSettingViewModel.h */,
+				180D65B31F8A005D00E39B2D /* PersonalSettingViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -583,6 +706,8 @@
 		188A447C1F8865D800212E35 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				180D65B51F8A007900E39B2D /* PersonalSettingMainView.h */,
+				180D65B61F8A007900E39B2D /* PersonalSettingMainView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -590,6 +715,8 @@
 		188A447D1F8865DC00212E35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				180D65AF1F8A004600E39B2D /* PersonalSettingModel.h */,
+				180D65B01F8A004600E39B2D /* PersonalSettingModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -606,6 +733,8 @@
 		188A447F1F8865F800212E35 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				180D65BE1F8A00D000E39B2D /* LoginViewModel.h */,
+				180D65BF1F8A00D000E39B2D /* LoginViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -613,6 +742,8 @@
 		188A44801F88660400212E35 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				180D65C11F8A00DE00E39B2D /* LoginMainView.h */,
+				180D65C21F8A00DE00E39B2D /* LoginMainView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -620,6 +751,8 @@
 		188A44811F88660900212E35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				180D65BB1F8A00C300E39B2D /* LoginModel.h */,
+				180D65BC1F8A00C300E39B2D /* LoginModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -627,6 +760,8 @@
 		188A44821F88660F00212E35 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				180D65CA1F8A011B00E39B2D /* RegisterVC.h */,
+				180D65CB1F8A011B00E39B2D /* RegisterVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -634,6 +769,8 @@
 		188A44831F88661A00212E35 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				180D65C71F8A010A00E39B2D /* RegisterViewModel.h */,
+				180D65C81F8A010A00E39B2D /* RegisterViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -641,6 +778,8 @@
 		188A44841F88661F00212E35 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				180D65D61F8A018B00E39B2D /* RegisterMainView.h */,
+				180D65D71F8A018B00E39B2D /* RegisterMainView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -648,6 +787,8 @@
 		188A44851F88662600212E35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				180D65C41F8A00FC00E39B2D /* RegisterModel.h */,
+				180D65C51F8A00FC00E39B2D /* RegisterModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -655,6 +796,8 @@
 		188A44861F88663700212E35 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				180D65D31F8A016A00E39B2D /* ForgotVC.h */,
+				180D65D41F8A016A00E39B2D /* ForgotVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -662,6 +805,8 @@
 		188A44871F88664000212E35 /* ViewMoel */ = {
 			isa = PBXGroup;
 			children = (
+				180D65D01F8A015300E39B2D /* ForgotViewModel.h */,
+				180D65D11F8A015300E39B2D /* ForgotViewModel.m */,
 			);
 			path = ViewMoel;
 			sourceTree = "<group>";
@@ -669,6 +814,8 @@
 		188A44881F88664500212E35 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				180D65D91F8A019E00E39B2D /* ForgotMainView.h */,
+				180D65DA1F8A019E00E39B2D /* ForgotMainView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -676,6 +823,8 @@
 		188A44891F88664900212E35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				180D65CD1F8A014000E39B2D /* ForgotModel.h */,
+				180D65CE1F8A014000E39B2D /* ForgotModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -703,6 +852,8 @@
 		188A448C1F88667700212E35 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				180D65A61F89FFF200E39B2D /* ProductCategoriesViewModel.h */,
+				180D65A71F89FFF200E39B2D /* ProductCategoriesViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -710,6 +861,8 @@
 		188A448D1F88667F00212E35 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				180D65A31F89FFD100E39B2D /* ProductCategoriesMainView.h */,
+				180D65A41F89FFD100E39B2D /* ProductCategoriesMainView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -717,6 +870,8 @@
 		188A448F1F88668A00212E35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				180D65A01F89FFBA00E39B2D /* ProductCategoriesModel.h */,
+				180D65A11F89FFBA00E39B2D /* ProductCategoriesModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -972,25 +1127,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180D65871F89FEC100E39B2D /* ShoppingCartMainView.m in Sources */,
+				180D658D1F89FEFC00E39B2D /* HomeMainModel.m in Sources */,
 				188A442D1F885F3E00212E35 /* main.m in Sources */,
+				180D65D51F8A016A00E39B2D /* ForgotVC.m in Sources */,
+				180D65961F89FF3D00E39B2D /* HomeDetailModel.m in Sources */,
 				188A44C51F88866100212E35 /* PersonalMainView.m in Sources */,
 				188A44B41F88709200212E35 /* BaseNavigationController.m in Sources */,
 				188A44C21F8884EA00212E35 /* LoginVC.m in Sources */,
+				180D65A21F89FFBA00E39B2D /* ProductCategoriesModel.m in Sources */,
+				180D65C31F8A00DE00E39B2D /* LoginMainView.m in Sources */,
+				180D65C01F8A00D000E39B2D /* LoginViewModel.m in Sources */,
 				188A44A41F88680500212E35 /* ProductCategoriesMainVC.m in Sources */,
+				180D658A1F89FEE300E39B2D /* ShoppingCartViewModel.m in Sources */,
+				180D65A81F89FFF200E39B2D /* ProductCategoriesViewModel.m in Sources */,
+				180D65AB1F8A001B00E39B2D /* PersonalMainModel.m in Sources */,
 				188A44941F8866DC00212E35 /* BaseViewController.m in Sources */,
 				188A44BD1F88711F00212E35 /* UIView+LZNavigationBackItem.m in Sources */,
+				180D65BD1F8A00C300E39B2D /* LoginModel.m in Sources */,
+				180D65DB1F8A019E00E39B2D /* ForgotMainView.m in Sources */,
 				188A44B71F8870BD00212E35 /* BaseTabBarController.m in Sources */,
+				180D659C1F89FF6400E39B2D /* HomeDetailViewModel.m in Sources */,
 				188A44AF1F88688000212E35 /* PersonalMainVC.m in Sources */,
 				188A44DD1F88DC7300212E35 /* Tools.m in Sources */,
+				180D65D21F8A015300E39B2D /* ForgotViewModel.m in Sources */,
+				180D65CF1F8A014000E39B2D /* ForgotModel.m in Sources */,
+				180D65A51F89FFD100E39B2D /* ProductCategoriesMainView.m in Sources */,
+				180D65C91F8A010A00E39B2D /* RegisterViewModel.m in Sources */,
 				188A441F1F885F3E00212E35 /* AppDelegate.m in Sources */,
 				188A449D1F88674200212E35 /* BaseCollectionView.m in Sources */,
+				180D65CC1F8A011B00E39B2D /* RegisterVC.m in Sources */,
 				188A449A1F88671800212E35 /* BaseTableView.m in Sources */,
 				188A44A71F88682600212E35 /* ShoppingCartMainVC.m in Sources */,
+				180D65841F89FE2E00E39B2D /* ShoppingCartMainModel.m in Sources */,
+				180D65B71F8A007900E39B2D /* PersonalSettingMainView.m in Sources */,
+				180D65901F89FF1200E39B2D /* HomeMainView.m in Sources */,
+				180D65DE1F8A01BD00E39B2D /* Test.m in Sources */,
+				180D65D81F8A018B00E39B2D /* RegisterMainView.m in Sources */,
+				180D65991F89FF5200E39B2D /* HomeDetailMainView.m in Sources */,
 				188A44C81F88895A00212E35 /* PersonalMainCell.m in Sources */,
 				188A44D51F88A97900212E35 /* RequestServerData.m in Sources */,
+				180D65B11F8A004600E39B2D /* PersonalSettingModel.m in Sources */,
+				180D65931F89FF2400E39B2D /* HomeMainViewModel.m in Sources */,
 				188A44AA1F88684300212E35 /* HomeMainVC.m in Sources */,
 				188A44BA1F8870ED00212E35 /* BasePlusButton.m in Sources */,
+				180D65C61F8A00FC00E39B2D /* RegisterModel.m in Sources */,
+				180D65AE1F8A002900E39B2D /* PersonalMainViewModel.m in Sources */,
 				188A44971F8866FD00212E35 /* BaseView.m in Sources */,
+				180D65BA1F8A009C00E39B2D /* PersonalSettingVC.m in Sources */,
+				180D659F1F89FF8700E39B2D /* HomeDetailViewController.m in Sources */,
+				180D65B41F8A005D00E39B2D /* PersonalSettingViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
