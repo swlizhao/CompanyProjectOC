@@ -7,7 +7,9 @@
 //
 
 #import "BaseView.h"
-
+#import "BaseTableView.h"
 @interface PersonalMainView : BaseView
+
+@property(nonatomic,strong)BaseTableView * baseTableView;
 
 @end

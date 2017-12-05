@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "LoadingView.h"
 @interface BaseViewController : UIViewController
+
+@property(nonatomic,copy)void(^baseViewBtnActionBlock)(id object);
+@property(nonatomic,strong)LoadingView * loadingView;
 
 @end

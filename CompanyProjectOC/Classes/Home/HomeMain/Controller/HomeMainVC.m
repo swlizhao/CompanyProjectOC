@@ -7,10 +7,10 @@
 //
 
 #import "HomeMainVC.h"
-
+#import "HomeMainView.h"
 @interface HomeMainVC ()
 
-@property (weak, nonatomic) IBOutlet UIButton *button;
+@property(nonatomic,strong)HomeMainView * mainView;
 
 @end
 
@@ -18,11 +18,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self  initHomeUI];
+    [self  initHomeConfig];
 }
 
-
-- (IBAction)btnAction:(UIButton *)sender {
-    UIViewController * vc = [STORYBOARD_MAIN instantiateViewControllerWithIdentifier:@"HomeDetailViewController"];
-    [self.navigationController pushViewController:vc animated:YES];
+- (void)initHomeUI {
+   [self.view  addSubview:self.mainView];
 }
+
+- (void)initHomeConfig {
+    self.mainView.backgroundColor = [UIColor redColor];
+}
+
+- (HomeMainView *)mainView {
+    if (_mainView) {
+        return _mainView;
+    }
+       _mainView = [[HomeMainView alloc]initWithFrame:CGRectMake(0, STATUS_NAVIGATION_BAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - STATUS_NAVIGATION_BAR_HEIGHT - TAB_BAR_HEIGHT)];
+    return _mainView;
+}
+
 @end

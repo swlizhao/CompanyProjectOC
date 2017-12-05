@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030E63631FD67EA30011D967 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 030E63621FD67EA30011D967 /* LoadingView.m */; };
 		031659941FD4D95800CF6419 /* ForgotMainVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 031659931FD4D95800CF6419 /* ForgotMainVM.m */; };
 		031659971FD4D97400CF6419 /* ForgotMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 031659961FD4D97400CF6419 /* ForgotMainView.m */; };
 		0316599A1FD4D98A00CF6419 /* ForgotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 031659991FD4D98A00CF6419 /* ForgotModel.m */; };
@@ -111,6 +112,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		030E63611FD67EA30011D967 /* LoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		030E63621FD67EA30011D967 /* LoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
 		031659921FD4D95800CF6419 /* ForgotMainVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgotMainVM.h; sourceTree = "<group>"; };
 		031659931FD4D95800CF6419 /* ForgotMainVM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgotMainVM.m; sourceTree = "<group>"; };
 		031659951FD4D97400CF6419 /* ForgotMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgotMainView.h; sourceTree = "<group>"; };
@@ -1066,6 +1069,8 @@
 				036EBA151FD2A0040067A3C0 /* LZWKWebView.m */,
 				036EBA161FD2A0050067A3C0 /* LZWKWebViewController.h */,
 				036EBA141FD2A0040067A3C0 /* LZWKWebViewController.m */,
+				030E63611FD67EA30011D967 /* LoadingView.h */,
+				030E63621FD67EA30011D967 /* LoadingView.m */,
 			);
 			path = BaseControl;
 			sourceTree = "<group>";
@@ -1324,6 +1329,7 @@
 				188A44C21F8884EA00212E35 /* LoginVC.m in Sources */,
 				036EBA2E1FD2A7050067A3C0 /* HomeMainModel.m in Sources */,
 				031659BE1FD4DF5F00CF6419 /* ShoppingCartDetailMainView.m in Sources */,
+				030E63631FD67EA30011D967 /* LoadingView.m in Sources */,
 				036EBA3A1FD2A7600067A3C0 /* HomeDetailMainView.m in Sources */,
 				036EBA191FD2A0060067A3C0 /* LZWKWebView.m in Sources */,
 				036EBA771FD2B4640067A3C0 /* TYLaunchFadeScaleAnimation.m in Sources */,

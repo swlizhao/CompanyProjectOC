@@ -16,16 +16,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initBaseSetup];
-    [self initBaseConfig];
+    [self initBaseViewControllerSetup];
+    [self initBaseViewControllerConfig];
 }
 
-- (void)initBaseSetup {
+- (void)initBaseViewControllerSetup {
     NSLog(@"我是BaseViewController--->ViewDidLoad");
+    [self.view addSubview:self.loadingView];
 }
 
-- (void)initBaseConfig {
+- (void)initBaseViewControllerConfig {
     NSLog(@"我是BaseConfig --->ViewDidLoad");
+    self.loadingView.backgroundColor = [UIColor whiteColor];
+}
+
+- (LoadingView *)loadingView {
+    if (!_loadingView) {
+        _loadingView = [[LoadingView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    }
+    return _loadingView;
 }
 
 

@@ -31,12 +31,19 @@
 
 - (void)setup {
     self.view.backgroundColor = [UIColor orangeColor];
+    [self.view addSubview:self.mainView];
 }
 
 - (void)initConfig {
 
 }
 
+- (PersonalMainView *)mainView {
+    if (!_mainView) {
+        _mainView = [[PersonalMainView alloc]initWithFrame:CGRectMake(0, STATUS_BAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - STATUS_BAR_HEIGHT)];
+    }
+    return _mainView;
+}
 
 
 @end
