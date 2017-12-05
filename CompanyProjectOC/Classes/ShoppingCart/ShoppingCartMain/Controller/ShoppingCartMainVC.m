@@ -7,8 +7,10 @@
 //
 
 #import "ShoppingCartMainVC.h"
-
+#import "ShoppingCartMainView.h"
 @interface ShoppingCartMainVC ()
+
+@property(nonatomic,strong)ShoppingCartMainView * mainView;
 
 @end
 
@@ -16,9 +18,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setup];
+    [self initConfig];
+}
+
+- (void)setup {
     
 }
 
+- (void)initConfig {
+    
+}
 
 
 @end

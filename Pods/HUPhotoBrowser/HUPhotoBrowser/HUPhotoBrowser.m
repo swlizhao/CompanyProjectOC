@@ -10,7 +10,7 @@
 #import "HUPhotoBrowserCell.h"
 #import "hu_const.h"
 #import "HUWebImage.h"
-#import "HUToast.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface HUPhotoBrowser () <UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout> {
     CGRect _endTempFrame;
@@ -353,11 +353,13 @@
     NSString *msg = nil ;
     if(error != nil){
         msg = @"保存图片失败";
+        [SVProgressHUD showInfoWithStatus:msg];
     }
     else{
         msg = @"保存图片成功";
+        [SVProgressHUD showSuccessWithStatus:msg];
     }
-    [HUToast showToastWithMsg:msg];
+    
 }
 
 @end

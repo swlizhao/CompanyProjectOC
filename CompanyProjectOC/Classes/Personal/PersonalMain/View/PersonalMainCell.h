@@ -2,12 +2,12 @@
 //  PersonalMainCell.h
 //  CompanyProjectOC
 //
-//  Created by apple on 2017/10/7.
+//  Created by apple on 2017/12/2.
 //  Copyright © 2017年 LIZHAO. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-static NSString * personalMainCell = @"PersonalMainCell";
-@interface PersonalMainCell : UITableViewCell
+#import "BaseTableViewCell.h"
+
+@interface PersonalMainCell : BaseTableViewCell
 
 @end

@@ -2,12 +2,12 @@
 //  ProductCategoriesMainView.h
 //  CompanyProjectOC
 //
-//  Created by apple on 2017/10/8.
+//  Created by apple on 2017/12/2.
 //  Copyright © 2017年 LIZHAO. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseView.h"
 
-@interface ProductCategoriesMainView : UIView
+@interface ProductCategoriesMainView : BaseView
 
 @end

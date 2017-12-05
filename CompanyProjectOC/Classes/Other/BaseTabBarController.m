@@ -21,13 +21,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"tabController---> viewDidLoad");
+    NSLog(@"BaseTabBarController --->viewDidLoad");
     WeakSelf(weakSelf)
     self.delegate = self;
     [self setupTabBarItemsAttributes];
     [self setupViewControllers];
     [self setViewDidLayoutSubViewsBlock:^(CYLTabBarController *aTabBarController) {
-        NSLog(@"我是李钊");
+        NSLog(@"tabBarViewController --->badgePoint");
         UIViewController *viewController = aTabBarController.viewControllers[0];
         UIView *tabBadgePointView0 = [UIView cyl_tabBadgePointViewWithClolor:RANDOM_COLOR radius:4.5];
         [viewController.tabBarItem.cyl_tabButton cyl_setTabBadgePointView:tabBadgePointView0];

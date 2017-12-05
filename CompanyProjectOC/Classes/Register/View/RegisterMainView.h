@@ -2,12 +2,12 @@
 //  RegisterMainView.h
 //  CompanyProjectOC
 //
-//  Created by apple on 2017/10/8.
+//  Created by apple on 2017/12/4.
 //  Copyright © 2017年 LIZHAO. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseView.h"
 
-@interface RegisterMainView : UIView
+@interface RegisterMainView : BaseView
 
 @end

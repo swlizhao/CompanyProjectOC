@@ -2,12 +2,12 @@
 //  ShoppingCartMainModel.h
 //  CompanyProjectOC
 //
-//  Created by apple on 2017/10/8.
+//  Created by apple on 2017/12/2.
 //  Copyright © 2017年 LIZHAO. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BaseModel.h"
 
-@interface ShoppingCartMainModel : NSObject
+@interface ShoppingCartMainModel : BaseModel
 
 @end

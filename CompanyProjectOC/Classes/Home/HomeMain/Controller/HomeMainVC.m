@@ -7,7 +7,10 @@
 //
 
 #import "HomeMainVC.h"
+
 @interface HomeMainVC ()
+
+@property (weak, nonatomic) IBOutlet UIButton *button;
 
 @end
 
@@ -18,6 +21,8 @@
 }
 
 
-
-
+- (IBAction)btnAction:(UIButton *)sender {
+    UIViewController * vc = [STORYBOARD_MAIN instantiateViewControllerWithIdentifier:@"HomeDetailViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 @end

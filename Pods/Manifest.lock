@@ -14,69 +14,74 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - CYLTabBarController (1.13.2)
+  - CYLTabBarController (1.14.2)
   - FMDB (2.7.2):
     - FMDB/standard (= 2.7.2)
   - FMDB/standard (2.7.2)
-  - HUPhotoBrowser (1.2.5)
+  - HUPhotoBrowser (1.3.1):
+    - SVProgressHUD
   - IQKeyboardManager (4.0.13)
   - JRSwizzle (1.0)
   - Mantle (2.1.0):
     - Mantle/extobjc (= 2.1.0)
   - Mantle/extobjc (2.1.0)
   - Masonry (1.0.2)
-  - MBProgressHUD (1.0.0)
-  - MJRefresh (3.1.14)
+  - MBProgressHUD (1.1.0)
+  - MJRefresh (3.1.15.1)
   - Reachability (3.2)
   - ReactiveObjC (3.0.0)
   - SDAutoLayout (2.2.0)
-  - SDWebImage (4.1.1):
-    - SDWebImage/Core (= 4.1.1)
-  - SDWebImage/Core (4.1.1)
-  - SVProgressHUD (2.2.1)
-  - YPTabBarController (2.2.3)
+  - SDCycleScrollView (1.74):
+    - SDWebImage (>= 4.0.0)
+  - SDWebImage (4.1.2):
+    - SDWebImage/Core (= 4.1.2)
+  - SDWebImage/Core (4.1.2)
+  - SVProgressHUD (2.2.2)
+  - YPTabBarController (2.4.4)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
-  - CYLTabBarController (~> 1.13.2)
+  - CYLTabBarController (~> 1.14.2)
   - FMDB (~> 2.7.2)
-  - HUPhotoBrowser (~> 1.2.5)
+  - HUPhotoBrowser (~> 1.3.1)
   - IQKeyboardManager (~> 4.0.13)
   - JRSwizzle (~> 1.0)
   - Mantle (~> 2.1.0)
   - Masonry (~> 1.0.2)
-  - MBProgressHUD (~> 1.0.0)
-  - MJRefresh (~> 3.1.1)
+  - MBProgressHUD (~> 1.1.0)
+  - MJRefresh (~> 3.1.15.1)
   - Reachability (~> 3.2)
   - ReactiveObjC (~> 3.0.0)
   - SDAutoLayout (~> 2.2.0)
+  - SDCycleScrollView (~> 1.74)
   - SDWebImage (~> 4.1.0)
-  - SVProgressHUD (~> 2.2)
-  - YPTabBarController (~> 2.2.3)
+  - SVProgressHUD (~> 2.2.2)
+  - YPTabBarController (~> 2.4.4)
   - YYKit (~> 1.0.9)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  CYLTabBarController: 1ea13266ead94d45427c9d7ff8fa6e06d6835d23
+  CYLTabBarController: 5eac1940e20aa934a609ecec38837da63a41dcfe
   FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
-  HUPhotoBrowser: ffc1dfd33150cf9fa59cf02277a1701bf8472a0b
+  HUPhotoBrowser: 136b1830da6e3231c823f83e1ce8b2288add312a
   IQKeyboardManager: 8eab4d8111418414619d1df8e4779ce5d0f8d7e2
   JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
-  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  MJRefresh: 6642e35b3227a5447b9fd5e17c552c90196c9859
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
   SDAutoLayout: c5509e77ae75735d9a39f7bc83dba6d3f75d49d8
-  SDWebImage: caf91ee75671c95eb7b3073cd90649d25f852a88
-  SVProgressHUD: db27c54e6e18bc903341661fc9feb55e04905cc4
-  YPTabBarController: 2e0e97b2d9d4b28b722ecb57700b7cd4d1b38a47
+  SDCycleScrollView: f821215226f6146a35470721a9d6e83ec5cfb04b
+  SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
+  SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  YPTabBarController: 6733de539d7ef2410d98dfefcf704be2b259429e
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 9c347d5ee2e185317e387612244957b5dce4a3bb
+PODFILE CHECKSUM: 21862092e4c2023ce3d455b829ea1ccebad07e93
 
 COCOAPODS: 1.2.1

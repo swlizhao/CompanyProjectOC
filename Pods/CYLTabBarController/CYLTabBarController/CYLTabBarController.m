@@ -2,7 +2,7 @@
 //  CYLTabBarController.m
 //  CYLTabBarController
 //
-//  v1.13.1 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 10/20/15.
+//  v1.14.0 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 10/20/15.
 //  Copyright © 2015 https://github.com/ChenYilong . All rights reserved.
 //
 
@@ -42,6 +42,7 @@ static void * const CYLTabImageViewDefaultOffsetContext = (void*)&CYLTabImageVie
         [self.tabBar addObserver:self forKeyPath:@"tabImageViewDefaultOffset" options:NSKeyValueObservingOptionNew context:CYLTabImageViewDefaultOffsetContext];
         self.observingTabImageViewDefaultOffset = YES;
     }
+
 }
 
 - (void)setViewDidLayoutSubViewsBlock:(CYLViewDidLayoutSubViewsBlock)viewDidLayoutSubviewsBlock {
@@ -66,7 +67,7 @@ static void * const CYLTabImageViewDefaultOffsetContext = (void*)&CYLTabImageVie
 }
 
 - (void)viewWillLayoutSubviews {
-    if (!self.tabBarHeight) {
+    if (CYL_IS_IOS_11 || !self.tabBarHeight) {
         return;
     }
     self.tabBar.frame = ({
@@ -365,7 +366,7 @@ static void * const CYLTabImageViewDefaultOffsetContext = (void*)&CYLTabImageVie
     UIWindow *window = delegate.window;
     UIViewController *rootViewController = [window.rootViewController cyl_getViewControllerInsteadIOfNavigationController];;
     if ([rootViewController isKindOfClass:[CYLTabBarController class]]) {
-        tabBarController = (CYLTabBarController *)window.rootViewController;
+        tabBarController = (CYLTabBarController *)rootViewController;
     }
     return tabBarController;
 }

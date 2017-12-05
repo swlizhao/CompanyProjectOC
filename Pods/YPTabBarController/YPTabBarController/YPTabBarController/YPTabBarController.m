@@ -7,9 +7,13 @@
 //
 
 #import "YPTabBarController.h"
+#import "UIViewController+YPTabBarController.h"
+#import "UIScrollView+YPTabBarController.h"
 #import <objc/runtime.h>
 
 #define TAB_BAR_HEIGHT 50
+
+static NSString * const kContentOffset = @"contentOffset";
 
 #pragma mark - YPTabContentScrollView
 
@@ -36,69 +40,30 @@
 
 @end
 
+@interface UIViewController (Private)
 
-#pragma mark - UIViewController (YPTabBarController)
+@property (nonatomic, assign) BOOL hasBeenDisplayed;
 
-@implementation UIViewController (YPTabBarController)
+@property (nonatomic, assign) BOOL hasAddedContentOffsetObserver;
 
-- (NSString *)yp_tabItemTitle {
-    return objc_getAssociatedObject(self, _cmd);
+@end
+
+@implementation UIViewController (Private)
+
+- (void)setHasBeenDisplayed:(BOOL)hasBeenDisplayed {
+    objc_setAssociatedObject(self, @selector(hasBeenDisplayed), @(hasBeenDisplayed), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (void)setYp_tabItemTitle:(NSString *)yp_tabItemTitle {
-    self.yp_tabItem.title = yp_tabItemTitle;
-    objc_setAssociatedObject(self, @selector(yp_tabItemTitle), yp_tabItemTitle, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (BOOL)hasBeenDisplayed {
+    return [objc_getAssociatedObject(self, _cmd) boolValue];
 }
 
-- (UIImage *)yp_tabItemImage {
-    return objc_getAssociatedObject(self, _cmd);
+- (void)setHasAddedContentOffsetObserver:(BOOL)hasAddedContentOffsetObserver {
+    objc_setAssociatedObject(self, @selector(hasAddedContentOffsetObserver), @(hasAddedContentOffsetObserver), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (void)setYp_tabItemImage:(UIImage *)yp_tabItemImage {
-    self.yp_tabItem.image = yp_tabItemImage;
-    objc_setAssociatedObject(self, @selector(yp_tabItemImage), yp_tabItemImage, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (UIImage *)yp_tabItemSelectedImage {
-    return objc_getAssociatedObject(self, _cmd);
-}
-
-- (void)setYp_tabItemSelectedImage:(UIImage *)yp_tabItemSelectedImage {
-    self.yp_tabItem.selectedImage = yp_tabItemSelectedImage;
-    objc_setAssociatedObject(self, @selector(yp_tabItemSelectedImage), yp_tabItemSelectedImage, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (YPTabItem *)yp_tabItem {
-    YPTabBar *tabBar = self.yp_tabBarController.tabBar;
-    if (!tabBar) {
-        return nil;
-    }
-    if (![self.yp_tabBarController.viewControllers containsObject:self]) {
-        return nil;
-    }
-    
-    NSUInteger index = [self.yp_tabBarController.viewControllers indexOfObject:self];
-    return tabBar.items[index];
-}
-
-- (YPTabBarController *)yp_tabBarController {
-    return (YPTabBarController *)self.parentViewController;
-}
-
-- (void)yp_tabItemDidSelected:(BOOL)isFirstTime {}
-
-- (void)tabItemDidSelected {}
-
-- (void)yp_tabItemDidDeselected {}
-
-- (void)tabItemDidDeselected {}
-
-- (BOOL)yp_isTabItemSelectedFirstTime {
-    id selected = objc_getAssociatedObject(self, _cmd);
-    if (!selected) {
-        return YES;
-    }
-    return [selected boolValue];
+- (BOOL)hasAddedContentOffsetObserver {
+    return [objc_getAssociatedObject(self, _cmd) boolValue];
 }
 
 @end
@@ -112,6 +77,11 @@
 }
 
 @property (nonatomic, strong) YPTabContentScrollView *contentScrollView;
+
+@property (nonatomic, strong) UIView *headerView;
+@property (nonatomic, assign) CGFloat headerViewDefaultHeight;
+@property (nonatomic, assign) CGFloat tabBarStopOnTopHeight;
+@property (nonatomic, assign) BOOL headerViewNeedStretch;
 
 @property (nonatomic, assign) BOOL contentScrollEnabled;
 @property (nonatomic, assign) BOOL contentSwitchAnimated;
@@ -141,8 +111,29 @@
     _tabBar = [[YPTabBar alloc] init];
     _tabBar.delegate = self;
     
+    _contentScrollView = [[YPTabContentScrollView alloc] init];
+    _contentScrollView.pagingEnabled = YES;
+    _contentScrollView.scrollEnabled = NO;
+    _contentScrollView.showsHorizontalScrollIndicator = NO;
+    _contentScrollView.showsVerticalScrollIndicator = NO;
+    _contentScrollView.scrollsToTop = NO;
+    _contentScrollView.delegate = self;
+    _contentScrollView.yp_delegate = self;
+    _contentScrollView.interceptRightSlideGuetureInFirstPage = self.interceptRightSlideGuetureInFirstPage;
+    _contentScrollView.interceptLeftSlideGuetureInLastPage = self.interceptLeftSlideGuetureInLastPage;
+    
     _loadViewOfChildContollerWhileAppear = NO;
     _defaultSelectedControllerIndex = 0;
+}
+
+- (void)dealloc {
+    for (UIViewController *controller in self.viewControllers) {
+        if (controller.hasAddedContentOffsetObserver) {
+            // 如果vc注册了contentOffset的观察者，需移除
+            [controller.yp_displayView removeObserver:self forKeyPath:kContentOffset];
+            controller.hasAddedContentOffsetObserver = NO;
+        }
+    }
 }
 
 - (void)viewDidLoad {
@@ -155,6 +146,7 @@
     [self setupFrameOfTabBarAndContentView];
     
     [self.view addSubview:self.tabBar];
+    [self.view insertSubview:self.contentScrollView belowSubview:self.tabBar];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -173,6 +165,9 @@
     
     CGFloat contentViewY = 0;
     CGFloat tabBarY = screenSize.height - TAB_BAR_HEIGHT;
+    if (screenSize.height == 812) {
+        tabBarY -= 34;
+    }
     CGFloat contentViewHeight = tabBarY;
     // 如果parentViewController为UINavigationController及其子类
     if ([self.parentViewController isKindOfClass:[UINavigationController class]] &&
@@ -197,19 +192,27 @@
 
 - (void)setContentViewFrame:(CGRect)contentViewFrame {
     _contentViewFrame = contentViewFrame;
+    self.contentScrollView.frame = contentViewFrame;
     [self updateContentViewsFrame];
 }
 
 - (void)setTabBarFrame:(CGRect)tabBarFrame contentViewFrame:(CGRect)contentViewFrame {
+    if (self.headerView) {
+        return;
+    }
     self.tabBar.frame = tabBarFrame;
-    self.contentViewFrame = contentViewFrame;
+    self.contentScrollView.frame = contentViewFrame;
 }
 
 - (void)setViewControllers:(NSArray *)viewControllers {
     for (UIViewController *controller in _viewControllers) {
+        if (controller.hasAddedContentOffsetObserver) {
+            [controller.yp_displayView removeObserver:self forKeyPath:kContentOffset];
+            controller.hasAddedContentOffsetObserver = NO;
+        }
         [controller removeFromParentViewController];
         if (controller.isViewLoaded) {
-            [controller.view removeFromSuperview];
+            [controller.yp_displayView removeFromSuperview];
         }
     }
     
@@ -233,50 +236,49 @@
     }
     
     // 更新scrollView的content size
-    if (self.contentScrollView) {
-        self.contentScrollView.contentSize = CGSizeMake(self.contentViewFrame.size.width * _viewControllers.count,
-                                                 self.contentViewFrame.size.height);
+    if (self.contentScrollEnabled) {
+        self.contentScrollView.contentSize = CGSizeMake(self.contentScrollView.bounds.size.width * _viewControllers.count,
+                                                        self.contentScrollView.bounds.size.height);
     }
 }
 
 - (void)setContentScrollEnabledAndTapSwitchAnimated:(BOOL)switchAnimated {
-    if (!self.contentScrollView) {
-        self.contentScrollView = [[YPTabContentScrollView alloc] initWithFrame:self.contentViewFrame];
-        self.contentScrollView.pagingEnabled = YES;
-        self.contentScrollView.showsHorizontalScrollIndicator = NO;
-        self.contentScrollView.showsVerticalScrollIndicator = NO;
-        self.contentScrollView.scrollsToTop = NO;
-        self.contentScrollView.delegate = self;
-        self.contentScrollView.yp_delegate = self;
-        [self.view insertSubview:self.contentScrollView belowSubview:self.tabBar];
-        self.contentScrollView.contentSize = CGSizeMake(self.contentViewFrame.size.width * self.viewControllers.count, self.contentViewFrame.size.height);
-    }
+    self.contentScrollView.scrollEnabled = YES;
+    self.contentScrollEnabled = YES;
     [self updateContentViewsFrame];
     self.contentSwitchAnimated = switchAnimated;
 }
 
+- (void)setContentScrollEnabled:(BOOL)enabled tapSwitchAnimated:(BOOL)animated {
+    if (!self.contentScrollEnabled && enabled) {
+        self.contentScrollEnabled = enabled;
+        [self updateContentViewsFrame];
+    }
+    self.contentScrollView.scrollEnabled = enabled;
+    self.contentSwitchAnimated = animated;
+}
+
 - (void)updateContentViewsFrame {
-    if (self.contentScrollView) {
-        self.contentScrollView.frame = self.contentViewFrame;
-        self.contentScrollView.contentSize = CGSizeMake(self.contentViewFrame.size.width * self.viewControllers.count,
-                                                 self.contentViewFrame.size.height);
+    if (self.contentScrollEnabled) {
+        self.contentScrollView.contentSize = CGSizeMake(self.contentScrollView.bounds.size.width * self.viewControllers.count, self.contentScrollView.bounds.size.height);
         [self.viewControllers enumerateObjectsUsingBlock:^(UIViewController * _Nonnull controller,
                                                            NSUInteger idx, BOOL * _Nonnull stop) {
             if (controller.isViewLoaded) {
-                controller.view.frame = [self frameForControllerAtIndex:idx];
+                controller.yp_displayView.frame = [self frameForControllerAtIndex:idx];
             }
         }];
-        [self.contentScrollView scrollRectToVisible:self.selectedController.view.frame animated:NO];
+        [self.contentScrollView scrollRectToVisible:self.selectedController.yp_displayView.frame animated:NO];
     } else {
-        self.selectedController.view.frame = self.contentViewFrame;
+        self.contentScrollView.contentSize = self.contentScrollView.bounds.size;
+        self.selectedController.yp_displayView.frame = self.contentScrollView.bounds;
     }
 }
 
 - (CGRect)frameForControllerAtIndex:(NSUInteger)index {
-    return CGRectMake(index * self.contentViewFrame.size.width,
+    return CGRectMake(index * self.contentScrollView.bounds.size.width,
                       0,
-                      self.contentViewFrame.size.width,
-                      self.contentViewFrame.size.height);
+                      self.contentScrollView.bounds.size.width,
+                      self.contentScrollView.bounds.size.height);
 }
 
 - (void)setInterceptRightSlideGuetureInFirstPage:(BOOL)interceptRightSlideGuetureInFirstPage {
@@ -302,6 +304,68 @@
 
 - (void)didSelectViewControllerAtIndex:(NSUInteger)index {}
 
+#pragma mark - HeaderView
+
+- (void)setHeaderView:(UIView *)headerView
+          needStretch:(BOOL)needStretch
+         headerHeight:(CGFloat)headerHeight
+         tabBarHeight:(CGFloat)tabBarHeight
+    contentViewHeight:(CGFloat)contentViewHeight
+tabBarStopOnTopHeight:(CGFloat)tabBarStopOnTopHeight {
+    if (!headerView) {
+        return;
+    }
+    self.headerView = headerView;
+    self.headerView.frame = CGRectMake(0, 0, self.view.frame.size.width, headerHeight);
+    [self.view addSubview:self.headerView];
+    
+    self.headerViewNeedStretch = needStretch;
+    self.headerViewDefaultHeight = headerHeight;
+    
+    self.tabBar.frame = CGRectMake(0,
+                                   CGRectGetMaxY(self.headerView.frame),
+                                   self.view.frame.size.width,
+                                   tabBarHeight);
+    
+    self.contentScrollView.frame = CGRectMake(0,
+                                              0,
+                                              self.view.frame.size.width,
+                                              headerHeight + tabBarHeight + contentViewHeight);
+    
+    self.tabBarStopOnTopHeight = tabBarStopOnTopHeight;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([kContentOffset isEqualToString:keyPath]) {
+        NSValue *value = change[NSKeyValueChangeNewKey];
+        CGFloat offsetY = [value CGPointValue].y + self.headerViewDefaultHeight + self.tabBar.frame.size.height;
+        CGRect headerFrame;
+        CGFloat minHeaderY = self.headerViewDefaultHeight - self.tabBarStopOnTopHeight;
+        if (offsetY > minHeaderY) {
+            headerFrame = CGRectMake(0, -minHeaderY, self.view.frame.size.width, self.headerViewDefaultHeight);
+        } else if (offsetY >= 0 && offsetY <= minHeaderY) {
+            headerFrame = CGRectMake(0, -offsetY, self.view.frame.size.width, self.headerViewDefaultHeight);
+        } else {
+            CGFloat height = self.headerViewDefaultHeight - (self.headerViewNeedStretch ? offsetY : 0);
+            headerFrame = CGRectMake(0, 0, self.view.frame.size.width, height);
+        }
+        self.headerView.frame = headerFrame;
+        
+        CGRect tabBarFrame = self.tabBar.frame;
+        tabBarFrame.origin.y = CGRectGetMaxY(headerFrame);
+        self.tabBar.frame = tabBarFrame;
+    }
+}
+
+- (void)updateContentOffsetOfDisplayScrollView:(UIScrollView *)scrollView {
+    CGFloat tabBarY = self.tabBar.frame.origin.y;
+    if (tabBarY > self.tabBarStopOnTopHeight ||
+        scrollView.contentOffset.y == 0 ||
+        scrollView.contentOffset.y <= -CGRectGetMaxY(self.tabBar.frame)) {
+        scrollView.contentOffset = CGPointMake(0, -(tabBarY + self.tabBar.frame.size.height));
+    }
+}
+
 #pragma mark - YPTabBarDelegate
 
 - (void)yp_tabBar:(YPTabBar *)tabBar didSelectedItemAtIndex:(NSUInteger)index {
@@ -316,47 +380,78 @@
             [oldController performSelector:@selector(tabItemDidDeselected)];
         }
         [self.viewControllers enumerateObjectsUsingBlock:^(UIViewController * _Nonnull controller, NSUInteger idx, BOOL * _Nonnull stop) {
-            if (idx != index && controller.isViewLoaded && controller.view.superview) {
-                [controller.view removeFromSuperview];
+            if (idx != index && controller.isViewLoaded && controller.yp_displayView.superview) {
+                [controller.yp_displayView removeFromSuperview];
             }
         }];
     }
     UIViewController *curController = self.viewControllers[index];
-    if (self.contentScrollView) {
+    if (self.contentScrollEnabled) {
         // contentView支持滚动
         if (!curController.isViewLoaded) {
-            curController.view.frame = [self frameForControllerAtIndex:index];
+            CGRect frame = [self frameForControllerAtIndex:index];
+            if (![curController.view isEqual:curController.yp_displayView]) {
+                curController.view.frame = frame;
+            }
+            curController.yp_displayView.frame = frame;
         }
         
-        [self.contentScrollView addSubview:curController.view];
+        [self.contentScrollView addSubview:curController.yp_displayView];
         // 切换到curController
-        [self.contentScrollView scrollRectToVisible:curController.view.frame animated:self.contentSwitchAnimated];
+        [self.contentScrollView scrollRectToVisible:curController.yp_displayView.frame animated:self.contentSwitchAnimated];
+
     } else {
         // contentView不支持滚动
         
-        [self.view insertSubview:curController.view belowSubview:self.tabBar];
+        [self.contentScrollView addSubview:curController.yp_displayView];
         // 设置curController.view的frame
-        if (!CGRectEqualToRect(curController.view.frame, self.contentViewFrame)) {
-            curController.view.frame = self.contentViewFrame;
+        if (!CGRectEqualToRect(curController.yp_displayView.frame, self.contentScrollView.bounds)) {
+            if (![curController.view isEqual:curController.yp_displayView]) {
+                curController.view.frame = self.contentScrollView.bounds;
+            }
+            curController.yp_displayView.frame = self.contentScrollView.bounds;
         }
     }
-    
-    BOOL isSelectedFirstTime = [curController yp_isTabItemSelectedFirstTime];
-    if (isSelectedFirstTime) {
-        objc_setAssociatedObject(curController, @selector(yp_isTabItemSelectedFirstTime), @(NO), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+
+    // 获取是否是第一次被选中的标识
+    BOOL hasBeenDisplayed = curController.hasBeenDisplayed;
+    if (hasBeenDisplayed) {
+        [curController yp_tabItemDidSelected:NO];
+    } else {
+        [curController yp_tabItemDidSelected:YES];
+        curController.hasBeenDisplayed = YES;
     }
     
-    [curController yp_tabItemDidSelected:isSelectedFirstTime];
     if ([curController respondsToSelector:@selector(tabItemDidSelected)]) {
         [curController performSelector:@selector(tabItemDidSelected)];
     }
     
     // 当contentView为scrollView及其子类时，设置它支持点击状态栏回到顶部
-    if (oldController && [oldController.view isKindOfClass:[UIScrollView class]]) {
-        [(UIScrollView *)oldController.view setScrollsToTop:NO];
+    if (oldController && [oldController.yp_displayView isKindOfClass:[UIScrollView class]]) {
+        [(UIScrollView *)oldController.yp_displayView setScrollsToTop:NO];
     }
-    if ([curController.view isKindOfClass:[UIScrollView class]]) {
-        [(UIScrollView *)curController.view setScrollsToTop:YES];
+    if ([curController.yp_displayView isKindOfClass:[UIScrollView class]]) {
+        UIScrollView *curScrollView = (UIScrollView *)curController.yp_displayView;
+        [curScrollView setScrollsToTop:YES];
+        if (self.headerView) {
+            UIEdgeInsets insets = curScrollView.contentInset;
+            insets.top = self.headerViewDefaultHeight + self.tabBar.frame.size.height;
+            curScrollView.contentInset = insets;
+            curScrollView.scrollIndicatorInsets = insets;
+            curScrollView.minContentSizeHeight = self.contentScrollView.frame.size.height - self.tabBar.frame.size.height - self.tabBarStopOnTopHeight;
+            
+            if (oldController && oldController.hasAddedContentOffsetObserver) {
+                // 移除oldController的yp_displayView注册的观察者
+                [oldController.yp_displayView removeObserver:self forKeyPath:kContentOffset];
+                oldController.hasAddedContentOffsetObserver = NO;
+            }
+            if (!curController.hasAddedContentOffsetObserver) {
+                // 注册curScrollView的观察者
+                [curScrollView addObserver:self forKeyPath:kContentOffset options:NSKeyValueObservingOptionNew context:NULL];
+                curController.hasAddedContentOffsetObserver = YES;
+            }
+            [self updateContentOffsetOfDisplayScrollView:curScrollView];
+        }
     }
 
     _selectedControllerIndex = index;
@@ -427,10 +522,26 @@
         UIViewController *controller = self.viewControllers[index];
         
         if (!controller.isViewLoaded && self.loadViewOfChildContollerWhileAppear) {
-            controller.view.frame = [self frameForControllerAtIndex:index];
+            CGRect frame = [self frameForControllerAtIndex:index];
+            if (![controller.view isEqual:controller.yp_displayView]) {
+                controller.view.frame = frame;
+            }
+            [controller.yp_displayView removeFromSuperview];
+            controller.yp_displayView.frame = frame;
         }
-        if (controller.isViewLoaded && !controller.view.superview) {
-            [self.contentScrollView addSubview:controller.view];
+        if (controller.isViewLoaded && !controller.yp_displayView.superview) {
+            [self.contentScrollView addSubview:controller.yp_displayView];
+            
+            if (self.headerView) {
+                UIScrollView *scrollView = (UIScrollView *)controller.yp_displayView;
+                // 如果有headerView，需要更新contentOffset
+                UIEdgeInsets insets = scrollView.contentInset;
+                insets.top = self.headerViewDefaultHeight + self.tabBar.frame.size.height;
+                scrollView.contentInset = insets;
+                scrollView.scrollIndicatorInsets = insets;
+                scrollView.minContentSizeHeight = self.contentScrollView.frame.size.height - self.tabBar.frame.size.height - self.tabBarStopOnTopHeight;
+                [self updateContentOffsetOfDisplayScrollView:scrollView];
+            }
         }
     }
     

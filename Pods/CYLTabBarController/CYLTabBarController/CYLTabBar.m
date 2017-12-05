@@ -2,13 +2,14 @@
 //  CYLTabBar.m
 //  CYLTabBarController
 //
-//  v1.13.1 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 10/20/15.
+//  v1.14.0 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 10/20/15.
 //  Copyright © 2015 https://github.com/ChenYilong . All rights reserved.
 //
 
 #import "CYLTabBar.h"
 #import "CYLPlusButton.h"
 #import "CYLTabBarController.h"
+#import "CYLConstants.h"
 
 static void *const CYLTabBarContext = (void*)&CYLTabBarContext;
 
@@ -51,6 +52,15 @@ static void *const CYLTabBarContext = (void*)&CYLTabBarContext;
     _tabBarItemWidth = CYLTabBarItemWidth;
     [self addObserver:self forKeyPath:@"tabBarItemWidth" options:NSKeyValueObservingOptionNew context:CYLTabBarContext];
     return self;
+}
+
+- (CGSize)sizeThatFits:(CGSize)size {
+    CGSize sizeThatFits = [super sizeThatFits:size];
+    CGFloat height = [self cyl_tabBarController].tabBarHeight;
+    if (height > 0 && !CYL_IS_IPHONE_X && CYL_IS_IOS_11) {
+        sizeThatFits.height = [self cyl_tabBarController].tabBarHeight;
+    }
+    return sizeThatFits;
 }
 
 /**
@@ -238,7 +248,7 @@ static void *const CYLTabBarContext = (void*)&CYLTabBarContext;
             shouldCustomizeImageView = NO;
         }
     }];
-    if (shouldCustomizeImageView) {
+    if (shouldCustomizeImageView && !CYL_IS_IPHONE_X) {
         self.tabImageViewDefaultOffset = tabImageViewDefaultOffset;
     }
 }

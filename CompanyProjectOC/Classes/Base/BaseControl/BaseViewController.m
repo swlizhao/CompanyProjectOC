@@ -16,7 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self initBaseSetup];
+    [self initBaseConfig];
+}
+
+- (void)initBaseSetup {
+    NSLog(@"我是BaseViewController--->ViewDidLoad");
+}
+
+- (void)initBaseConfig {
+    NSLog(@"我是BaseConfig --->ViewDidLoad");
 }
 
 

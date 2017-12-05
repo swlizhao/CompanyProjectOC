@@ -2,12 +2,12 @@
 //  HomeMainModel.h
 //  CompanyProjectOC
 //
-//  Created by apple on 2017/10/8.
+//  Created by apple on 2017/12/2.
 //  Copyright © 2017年 LIZHAO. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BaseModel.h"
 
-@interface HomeMainModel : NSObject
+@interface HomeMainModel : BaseModel
 
 @end

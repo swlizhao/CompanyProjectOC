@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "YPTabItem.h"
 
+typedef NS_ENUM(NSInteger, YPTabBarIndicatorAnimationStyle) {
+    YPTabBarIndicatorAnimationStyleDefault = 0,
+    YPTabBarIndicatorAnimationStyle1,
+};
+
 @class YPTabBar;
 
 @protocol YPTabBarDelegate <NSObject>
@@ -39,9 +44,10 @@
  */
 @property (nonatomic, copy) NSArray <YPTabItem *> *items;
 
-@property (nonatomic, strong) UIColor *itemSelectedBgColor;         // item选中背景颜色
-@property (nonatomic, strong) UIImage *itemSelectedBgImage;         // item选中背景图像
-@property (nonatomic, assign) CGFloat itemSelectedBgCornerRadius;   // item选中背景圆角
+@property (nonatomic, strong) UIColor *indicatorColor;         // item指示器颜色
+@property (nonatomic, strong) UIImage *indicatorImage;         // item指示器图像
+@property (nonatomic, assign) CGFloat indicatorCornerRadius;   // item指示器圆角
+@property (nonatomic, assign) YPTabBarIndicatorAnimationStyle indicatorAnimationStyle;
 
 @property (nonatomic, strong) UIColor *itemTitleColor;              // 标题颜色
 @property (nonatomic, strong) UIColor *itemTitleSelectedColor;      // 选中时标题的颜色
@@ -53,10 +59,9 @@
 @property (nonatomic, strong) UIColor *badgeTitleColor;             // Badge标题颜色
 @property (nonatomic, strong) UIFont  *badgeTitleFont;              // Badge标题字体
 
-@property (nonatomic, assign) CGFloat leftAndRightSpacing;          // TabBar边缘与第一个和最后一个item的距离
+@property (nonatomic, assign) CGFloat leadAndTrailSpace;          // TabBar边缘与第一个和最后一个item的距离
 
 @property (nonatomic, assign) NSUInteger selectedItemIndex;          // 选中某一个item
-
 
 /**
  *  拖动内容视图时，item的颜色是否根据拖动位置显示渐变效果，默认为YES
@@ -71,7 +76,7 @@
 /**
  *  TabItem的选中背景是否随contentView滑动而移动
  */
-@property (nonatomic, assign, getter = isItemSelectedBgScrollFollowContent) BOOL itemSelectedBgScrollFollowContent;
+@property (nonatomic, assign, getter = isIndicatorScrollFollowContent) BOOL indicatorScrollFollowContent;
 
 /**
  *  将Image和Title设置为水平居中，默认为YES
@@ -91,12 +96,41 @@
 - (void)setTitles:(NSArray <NSString *> *)titles;
 
 /**
- *  设置tabItem的选中背景，这个背景可以是一个横条
+ *  设置tabBar为竖向且支持滚动，tabItem的高度根据tabBar高度和leadAndTrailSpace属性计算
+ *  一旦调用此方法，所有跟横向相关的效果将失效，例如内容视图滚动，指示器切换动画等
+ */
+- (void)setTabItemsVerticalLayout;
+
+/**
+ *  设置tabBar为竖向且支持滚动，一旦调用此方法，所有跟横向相关的效果将失效，例如内容视图滚动，指示器切换动画等
+ *  一旦调用此方法，所有跟横向相关的效果将失效，例如内容视图滚动，指示器切换动画等
+ *
+ *  @param height 单个tabItem的高度
+ */
+- (void)setTabItemsVerticalLayoutWithItemHeight:(CGFloat)height;
+
+/**
+ *  设置tabItem的选中背景，这个背景可以是一个横条。
+ *  此方法与setIndicatorWidthFixTextWithTop方法互斥，后调用者生效
  *
  *  @param insets       选中背景的insets
  *  @param animated     点击item进行背景切换的时候，是否支持动画
  */
-- (void)setItemSelectedBgInsets:(UIEdgeInsets)insets tapSwitchAnimated:(BOOL)animated;
+- (void)setIndicatorInsets:(UIEdgeInsets)insets tapSwitchAnimated:(BOOL)animated;
+
+/**
+ *  设置指示器的宽度根据title宽度来匹配
+ *  此方法与setIndicatorInsets方法互斥，后调用者生效
+
+ *  @param top 指示器与tabItem顶部的距离
+ *  @param bottom 指示器与tabItem底部的距离
+ *  @param additional 指示器与文字宽度匹配后额外增加或减少的长度，0表示相等，正数表示较长，负数表示较短
+ *  @param animated 点击item进行背景切换的时候，是否支持动画
+ */
+- (void)setIndicatorWidthFixTextAndMarginTop:(CGFloat)top
+                                marginBottom:(CGFloat)bottom
+                             widthAdditional:(CGFloat)additional
+                           tapSwitchAnimated:(BOOL)animated;
 
 /**
  *  设置tabBar可以左右滑动
@@ -151,19 +185,19 @@
 /**
  *  设置分割线
  *
- *  @param itemSeparatorColor 分割线颜色
- *  @param width              宽度
- *  @param marginTop          与tabBar顶部距离
- *  @param marginBottom       与tabBar底部距离
+ *  @param itemSeparatorColor   分割线颜色
+ *  @param thickness            分割线的粗细
+ *  @param leading              与tabBar顶部或者左侧的距离
+ *  @param trailing             与tabBar底部或者右侧距离
  */
 - (void)setItemSeparatorColor:(UIColor *)itemSeparatorColor
-                        width:(CGFloat)width
-                    marginTop:(CGFloat)marginTop
-                 marginBottom:(CGFloat)marginBottom;
+                    thickness:(CGFloat)thickness
+                      leading:(CGFloat)leading
+                     trailing:(CGFloat)trailing;
 
 - (void)setItemSeparatorColor:(UIColor *)itemSeparatorColor
-                    marginTop:(CGFloat)marginTop
-                 marginBottom:(CGFloat)marginBottom;
+                      leading:(CGFloat)leading
+                     trailing:(CGFloat)trailing;
 
 /**
  *  添加一个特殊的YPTabItem到tabBar上，此TabItem不包含在tabBar的items数组里

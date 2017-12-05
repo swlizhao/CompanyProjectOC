@@ -2,12 +2,12 @@
 //  RegisterViewModel.h
 //  CompanyProjectOC
 //
-//  Created by apple on 2017/10/8.
+//  Created by apple on 2017/12/4.
 //  Copyright © 2017年 LIZHAO. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BaseViewModel.h"
 
-@interface RegisterViewModel : NSObject
+@interface RegisterViewModel : BaseViewModel
 
 @end
