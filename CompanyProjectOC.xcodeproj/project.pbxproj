@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		030527FC20243BC00038EFA6 /* BasePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030527FB20243BC00038EFA6 /* BasePageViewController.m */; };
-		0305280320243E2D0038EFA6 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0305280220243E2D0038EFA6 /* TestViewController.m */; };
-		0305280620244C770038EFA6 /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0305280520244C770038EFA6 /* Test1ViewController.m */; };
 		030E63631FD67EA30011D967 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 030E63621FD67EA30011D967 /* LoadingView.m */; };
 		031659941FD4D95800CF6419 /* ForgotMainVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 031659931FD4D95800CF6419 /* ForgotMainVM.m */; };
 		031659971FD4D97400CF6419 /* ForgotMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 031659961FD4D97400CF6419 /* ForgotMainView.m */; };
@@ -35,9 +33,6 @@
 		033D85FA1FFE1458006BA669 /* img_msg_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 033D85F81FFE1458006BA669 /* img_msg_white.png */; };
 		033D85FD1FFE1520006BA669 /* PersonalSetMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 033D85FC1FFE1520006BA669 /* PersonalSetMainView.m */; };
 		033D86001FFE1CFF006BA669 /* PersonalSetMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 033D85FF1FFE1CFF006BA669 /* PersonalSetMainCell.m */; };
-		033F8BF820478C79001A0887 /* LZOrderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 033F8BF220478C79001A0887 /* LZOrderItem.m */; };
-		033F8BF920478C79001A0887 /* LZOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 033F8BF520478C79001A0887 /* LZOrderModel.m */; };
-		033F8BFA20478C79001A0887 /* LZOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 033F8BF720478C79001A0887 /* LZOrderView.m */; };
 		033F8BFD2047942E001A0887 /* img_evaluation.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F8BFC2047942E001A0887 /* img_evaluation.png */; };
 		033F8C00204794DB001A0887 /* img_receivedGoods.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F8BFF204794DB001A0887 /* img_receivedGoods.png */; };
 		033F8C0820479680001A0887 /* img_shouhou.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F8C0720479680001A0887 /* img_shouhou.png */; };
@@ -141,6 +136,9 @@
 		036EBA7A1FD2B4640067A3C0 /* UIViewController+XHPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 036EBA711FD2B4640067A3C0 /* UIViewController+XHPhoto.m */; };
 		036EBA7B1FD2B4640067A3C0 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 036EBA741FD2B4640067A3C0 /* MBProgressHUD+MJ.m */; };
 		03722E4A1FFF279A00B28AFD /* LZLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 03722E491FFF279A00B28AFD /* LZLocation.m */; };
+		038167CF204E420D00CC0A7C /* LZOrderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 038167C9204E420D00CC0A7C /* LZOrderItem.m */; };
+		038167D0204E420D00CC0A7C /* LZOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 038167CC204E420D00CC0A7C /* LZOrderModel.m */; };
+		038167D1204E420D00CC0A7C /* LZOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 038167CE204E420D00CC0A7C /* LZOrderView.m */; };
 		03A15C7D204A8FC00038829C /* img_wallet.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A15C7C204A8FC00038829C /* img_wallet.png */; };
 		03A15C7F204A8FFC0038829C /* img_voucher.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A15C7E204A8FFC0038829C /* img_voucher.png */; };
 		03A15C81204A90450038829C /* img_collect.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A15C80204A90450038829C /* img_collect.png */; };
@@ -212,10 +210,6 @@
 /* Begin PBXFileReference section */
 		030527FA20243BC00038EFA6 /* BasePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasePageViewController.h; sourceTree = "<group>"; };
 		030527FB20243BC00038EFA6 /* BasePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasePageViewController.m; sourceTree = "<group>"; };
-		0305280120243E2D0038EFA6 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		0305280220243E2D0038EFA6 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		0305280420244C770038EFA6 /* Test1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test1ViewController.h; sourceTree = "<group>"; };
-		0305280520244C770038EFA6 /* Test1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test1ViewController.m; sourceTree = "<group>"; };
 		030E63611FD67EA30011D967 /* LoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
 		030E63621FD67EA30011D967 /* LoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
 		031659921FD4D95800CF6419 /* ForgotMainVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgotMainVM.h; sourceTree = "<group>"; };
@@ -258,12 +252,6 @@
 		033D85FC1FFE1520006BA669 /* PersonalSetMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalSetMainView.m; sourceTree = "<group>"; };
 		033D85FE1FFE1CFF006BA669 /* PersonalSetMainCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalSetMainCell.h; sourceTree = "<group>"; };
 		033D85FF1FFE1CFF006BA669 /* PersonalSetMainCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalSetMainCell.m; sourceTree = "<group>"; };
-		033F8BF120478C79001A0887 /* LZOrderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZOrderItem.h; sourceTree = "<group>"; };
-		033F8BF220478C79001A0887 /* LZOrderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZOrderItem.m; sourceTree = "<group>"; };
-		033F8BF420478C79001A0887 /* LZOrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZOrderModel.h; sourceTree = "<group>"; };
-		033F8BF520478C79001A0887 /* LZOrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZOrderModel.m; sourceTree = "<group>"; };
-		033F8BF620478C79001A0887 /* LZOrderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZOrderView.h; sourceTree = "<group>"; };
-		033F8BF720478C79001A0887 /* LZOrderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZOrderView.m; sourceTree = "<group>"; };
 		033F8BFC2047942E001A0887 /* img_evaluation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_evaluation.png; sourceTree = "<group>"; };
 		033F8BFF204794DB001A0887 /* img_receivedGoods.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_receivedGoods.png; sourceTree = "<group>"; };
 		033F8C0720479680001A0887 /* img_shouhou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_shouhou.png; sourceTree = "<group>"; };
@@ -456,6 +444,12 @@
 		03722E481FFF279A00B28AFD /* LZLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLocation.h; sourceTree = "<group>"; };
 		03722E491FFF279A00B28AFD /* LZLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLocation.m; sourceTree = "<group>"; };
 		03722E8E1FFF316C00B28AFD /* LZConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZConfig.h; sourceTree = "<group>"; };
+		038167C8204E420D00CC0A7C /* LZOrderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZOrderItem.h; sourceTree = "<group>"; };
+		038167C9204E420D00CC0A7C /* LZOrderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZOrderItem.m; sourceTree = "<group>"; };
+		038167CB204E420D00CC0A7C /* LZOrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZOrderModel.h; sourceTree = "<group>"; };
+		038167CC204E420D00CC0A7C /* LZOrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZOrderModel.m; sourceTree = "<group>"; };
+		038167CD204E420D00CC0A7C /* LZOrderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZOrderView.h; sourceTree = "<group>"; };
+		038167CE204E420D00CC0A7C /* LZOrderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZOrderView.m; sourceTree = "<group>"; };
 		03A15C7C204A8FC00038829C /* img_wallet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_wallet.png; sourceTree = "<group>"; };
 		03A15C7E204A8FFC0038829C /* img_voucher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_voucher.png; sourceTree = "<group>"; };
 		03A15C80204A90450038829C /* img_collect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_collect.png; sourceTree = "<group>"; };
@@ -571,17 +565,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		030527FD20243C970038EFA6 /* TestViewController */ = {
-			isa = PBXGroup;
-			children = (
-				0305280120243E2D0038EFA6 /* TestViewController.h */,
-				0305280220243E2D0038EFA6 /* TestViewController.m */,
-				0305280420244C770038EFA6 /* Test1ViewController.h */,
-				0305280520244C770038EFA6 /* Test1ViewController.m */,
-			);
-			path = TestViewController;
-			sourceTree = "<group>";
-		};
 		031659B41FD4DEEF00CF6419 /* ShoppingCartDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -743,36 +726,6 @@
 				033F8CA02047F9CB001A0887 /* PersonalSettingMainModel.m */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		033F8BEF20478C79001A0887 /* LZOrderView */ = {
-			isa = PBXGroup;
-			children = (
-				033F8BF020478C79001A0887 /* LZOrderItem */,
-				033F8BF320478C79001A0887 /* LZOrderModel */,
-				033F8BF620478C79001A0887 /* LZOrderView.h */,
-				033F8BF720478C79001A0887 /* LZOrderView.m */,
-			);
-			name = LZOrderView;
-			path = ../../../../LifeFinanceDemo/LifeFinanceDemo/Classes/Base/LZOrderView;
-			sourceTree = "<group>";
-		};
-		033F8BF020478C79001A0887 /* LZOrderItem */ = {
-			isa = PBXGroup;
-			children = (
-				033F8BF120478C79001A0887 /* LZOrderItem.h */,
-				033F8BF220478C79001A0887 /* LZOrderItem.m */,
-			);
-			path = LZOrderItem;
-			sourceTree = "<group>";
-		};
-		033F8BF320478C79001A0887 /* LZOrderModel */ = {
-			isa = PBXGroup;
-			children = (
-				033F8BF420478C79001A0887 /* LZOrderModel.h */,
-				033F8BF520478C79001A0887 /* LZOrderModel.m */,
-			);
-			path = LZOrderModel;
 			sourceTree = "<group>";
 		};
 		033F8BFB20479416001A0887 /* PersonalOrder */ = {
@@ -1884,6 +1837,35 @@
 			path = LZConfig;
 			sourceTree = "<group>";
 		};
+		038167C6204E420D00CC0A7C /* LZOrderView */ = {
+			isa = PBXGroup;
+			children = (
+				038167C7204E420D00CC0A7C /* LZOrderItem */,
+				038167CA204E420D00CC0A7C /* LZOrderModel */,
+				038167CD204E420D00CC0A7C /* LZOrderView.h */,
+				038167CE204E420D00CC0A7C /* LZOrderView.m */,
+			);
+			path = LZOrderView;
+			sourceTree = "<group>";
+		};
+		038167C7204E420D00CC0A7C /* LZOrderItem */ = {
+			isa = PBXGroup;
+			children = (
+				038167C8204E420D00CC0A7C /* LZOrderItem.h */,
+				038167C9204E420D00CC0A7C /* LZOrderItem.m */,
+			);
+			path = LZOrderItem;
+			sourceTree = "<group>";
+		};
+		038167CA204E420D00CC0A7C /* LZOrderModel */ = {
+			isa = PBXGroup;
+			children = (
+				038167CB204E420D00CC0A7C /* LZOrderModel.h */,
+				038167CC204E420D00CC0A7C /* LZOrderModel.m */,
+			);
+			path = LZOrderModel;
+			sourceTree = "<group>";
+		};
 		03A15C92204A91A30038829C /* PersonalSet */ = {
 			isa = PBXGroup;
 			children = (
@@ -2023,7 +2005,6 @@
 				188A44581F88609300212E35 /* Login */,
 				188A44591F88609E00212E35 /* Register */,
 				188A445A1F8860CC00212E35 /* Forgot */,
-				030527FD20243C970038EFA6 /* TestViewController */,
 				188A445B1F8860D600212E35 /* Tools */,
 				188A445C1F8860E400212E35 /* Vendor */,
 				188A445F1F88612000212E35 /* Base */,
@@ -2178,8 +2159,8 @@
 		188A445F1F88612000212E35 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				038167C6204E420D00CC0A7C /* LZOrderView */,
 				033F8CA22047FFF6001A0887 /* LZAdd */,
-				033F8BEF20478C79001A0887 /* LZOrderView */,
 				03722E8D1FFF314700B28AFD /* LZConfig */,
 				188A44901F8866AA00212E35 /* LZKit */,
 				03722E471FFF279A00B28AFD /* LZLocation */,
@@ -2907,7 +2888,7 @@
 				188A442D1F885F3E00212E35 /* main.m in Sources */,
 				031659A91FD4D9FB00CF6419 /* LoginViewModel.m in Sources */,
 				036EBA791FD2B4640067A3C0 /* UIView+TYLaunchAnimation.m in Sources */,
-				033F8BFA20478C79001A0887 /* LZOrderView.m in Sources */,
+				038167CF204E420D00CC0A7C /* LZOrderItem.m in Sources */,
 				035070812046619C00B810E2 /* NewsInformationBaseVC.m in Sources */,
 				035687072043F4A300027F31 /* FSSegmentTitleView.m in Sources */,
 				03F5A9A02046AA1A00F471C2 /* PersonalOrderCell.m in Sources */,
@@ -2934,7 +2915,6 @@
 				188A44B41F88709200212E35 /* BaseNavigationController.m in Sources */,
 				036EBA471FD2A7D10067A3C0 /* ProductCategoriesModel.m in Sources */,
 				036EBA341FD2A7330067A3C0 /* HomeMainVM.m in Sources */,
-				033F8BF920478C79001A0887 /* LZOrderModel.m in Sources */,
 				036EB2BF20285A5D00A15478 /* AppDelegate+ShareSDK.m in Sources */,
 				036EBA561FD2A87C0067A3C0 /* PersonalMainModel.m in Sources */,
 				188A44C21F8884EA00212E35 /* LoginVC.m in Sources */,
@@ -2951,9 +2931,9 @@
 				03B54D1E203FF63C008BE8F3 /* UITextField+Limit.m in Sources */,
 				036EBA591FD2A8960067A3C0 /* PersonalMainView.m in Sources */,
 				035686F92043EBF100027F31 /* ShoppingCartSectionView.m in Sources */,
-				0305280620244C770038EFA6 /* Test1ViewController.m in Sources */,
 				036EBA5C1FD2A8B50067A3C0 /* PersonalMainCell.m in Sources */,
 				033F8C9A2047E24B001A0887 /* PersonalOrderRefundVC.m in Sources */,
+				038167D1204E420D00CC0A7C /* LZOrderView.m in Sources */,
 				036EBA781FD2B4640067A3C0 /* UIImage+TYLaunchImage.m in Sources */,
 				031659A61FD4D9E900CF6419 /* LoginMainView.m in Sources */,
 				033F8C4C2047D7B5001A0887 /* PersonalIntegralVC.m in Sources */,
@@ -2975,6 +2955,7 @@
 				036EBA441FD2A7BE0067A3C0 /* ProductCategoriesVM.m in Sources */,
 				188A44941F8866DC00212E35 /* BaseViewController.m in Sources */,
 				036EBA181FD2A0060067A3C0 /* LZWKWebViewController.m in Sources */,
+				038167D0204E420D00CC0A7C /* LZOrderModel.m in Sources */,
 				033F8C692047E014001A0887 /* PersonalOrderBaseVC.m in Sources */,
 				035686F32043E00000027F31 /* ShoppingCartMainCell.m in Sources */,
 				033F8C972047E23E001A0887 /* PersonalOrderEvaluationVC.m in Sources */,
@@ -2998,9 +2979,7 @@
 				188A441F1F885F3E00212E35 /* AppDelegate.m in Sources */,
 				188A449D1F88674200212E35 /* BaseCollectionView.m in Sources */,
 				03504A2220492EEA00BDBCF2 /* AccountSecurityMainView.m in Sources */,
-				033F8BF820478C79001A0887 /* LZOrderItem.m in Sources */,
 				180D65CC1F8A011B00E39B2D /* RegisterVC.m in Sources */,
-				0305280320243E2D0038EFA6 /* TestViewController.m in Sources */,
 				033F8C5B2047D923001A0887 /* PersonalCollectionBaseVC.m in Sources */,
 				033F8C8B2047E1F4001A0887 /* PersonalOrderAllVC.m in Sources */,
 				188A449A1F88671800212E35 /* BaseTableView.m in Sources */,
