@@ -1,0 +1,26 @@
+{
+  "code" : "1",
+  "data" : [
+             {
+              "img":"img_account",
+               "title" : "账户与安全"
+              },
+             {
+               "img":"img_address",
+               "title" : "地址管理"
+              },
+             {
+               "img":"img_tel",
+               "title" : "联系我们"
+             },
+             {
+               "img":"img_advice",
+               "title" : "投诉建议"
+             },
+             {
+              "img":"img_version",
+              "title" : "版本号"
+             }
+
+            ]
+}

@@ -80,14 +80,28 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "$PODS_CONFIGURATION_BUILD_DIR/Appirater/Appirater.bundle"
+  install_resource "BButton/BButton/resources/FontAwesome.ttf"
+  install_resource "BRPickerView/BRPickerView/AddressPickerView/BRCity.plist"
+  install_resource "BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle"
+  install_resource "DateTools/DateTools/DateTools/DateTools.bundle"
   install_resource "IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
+  install_resource "mob_sharesdk/SDK/ShareSDK/Support/Required/ShareSDK.bundle"
+  install_resource "mob_sharesdk/SDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "$PODS_CONFIGURATION_BUILD_DIR/Appirater/Appirater.bundle"
+  install_resource "BButton/BButton/resources/FontAwesome.ttf"
+  install_resource "BRPickerView/BRPickerView/AddressPickerView/BRCity.plist"
+  install_resource "BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle"
+  install_resource "DateTools/DateTools/DateTools/DateTools.bundle"
   install_resource "IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
+  install_resource "mob_sharesdk/SDK/ShareSDK/Support/Required/ShareSDK.bundle"
+  install_resource "mob_sharesdk/SDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

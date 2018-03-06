@@ -7,7 +7,16 @@
 //
 
 #import "BaseView.h"
+#import "ProductCategoryLeftTableViewCell.h"
+#import "ProductCategoryRightCollectionViewCell.h"
+#import "ProductChildHeaderView.h"
+@interface ProductCategoriesMainView : BaseView <UITableViewDelegate,UITableViewDataSource,UICollectionViewDataSource,UICollectionViewDelegate>
 
-@interface ProductCategoriesMainView : BaseView
+@property(nonatomic,strong)UITableView * leftTableView;
+@property(nonatomic,strong)BaseCollectionView * rightCollectionView;
+
+@property(nonatomic,strong)NSMutableArray * parentCategoryDatas;
+
+@property(nonatomic,strong)NSMutableArray * childSectionCategotyDatas;
 
 @end

@@ -24,10 +24,12 @@
 
 - (void)initHomeUI {
    [self.view  addSubview:self.mainView];
+  
 }
 
 - (void)initHomeConfig {
-    self.mainView.backgroundColor = [UIColor redColor];
+    self.mainView.backgroundColor = RGB(245, 245, 245);
+    self.navigationItem.title = @"首页";
 }
 
 - (HomeMainView *)mainView {

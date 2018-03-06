@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 #import "MBProgressHUD.h"
 #import "Reachability.h"
 #import "AppDelegate.h"
@@ -90,4 +91,8 @@ NSString * CompareCurrentTime(NSDate *compareDate);
 #pragma mark - 富文本
 +(NSMutableAttributedString *)setupAttributeString:(NSString *)text highlightText:(NSString *)highlightText fontSize:(CGFloat)fontSize highlightColor:(UIColor *)color;
 + (NSMutableAttributedString *)setupAttributeDeleLineString:(NSString *)deleText fontSize:(CGFloat)fontSize  lineColor:(UIColor *)color;
+/*
+ * 播放添加购物车声音
+ */
++ (void)playSound;
 @end

@@ -7,8 +7,12 @@
 //
 
 #import "LoginVC.h"
-
+#import "LoginMainView.h"
+#import "RegisterVC.h"
+#import "ForgotVC.h"
 @interface LoginVC ()
+
+@property(nonatomic,strong)LoginMainView * mainView;
 
 @end
 
@@ -16,15 +20,45 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setup];
+    [self initConfig];
     // [self commitLoginDataToServer];
     // [self commitPhotoDataToServer];
     // [self getAppStoreAppVersionInfo];
-
 }
 
-#pragma mark - btnClickedSender
-- (IBAction)backBtnAction:(UIBarButtonItem *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+- (void)setup {
+    [self.view addSubview:self.mainView];
+    __weak typeof(self)weakSelf = self;
+    BaseButton * backBtn = [BaseButton baseButtonWithFrame:CGRectMake(0, 0, 15, 15) title:nil titleFont:nil titleColor:nil backgroundColor:nil image:[UIImage imageNamed:@"img_arrow_left_22"] backgroundImage:nil];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
+    [backBtn baseButtonActionWithBlock:^(UIButton *button) {
+        [weakSelf dismissViewControllerAnimated:YES completion:nil];
+    }];
+    BaseButton * registerBtn = [BaseButton baseButtonWithFrame:CGRectMake(0, 0, 10, 10) title:@"注册" titleFont: [UIFont systemFontOfSize:FONTSIZE_14] titleColor:[UIColor redColor] backgroundColor:nil image:nil backgroundImage:nil];
+     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:registerBtn];
+    [registerBtn baseButtonActionWithBlock:^(UIButton *button) {
+        RegisterVC * registerVC = [[RegisterVC alloc]init];
+        [weakSelf.navigationController pushViewController:registerVC animated:YES];
+    }];
+    [self.mainView.forgotBtn baseButtonActionWithBlock:^(UIButton *button) {
+        ForgotVC * forgotVC = [[ForgotVC alloc]init];
+        [weakSelf.navigationController pushViewController:forgotVC animated:YES];
+    }];
+    [self.mainView.loginBtn baseButtonActionWithBlock:^(UIButton *button) {
+        [Tools MsgBox:@"登录"];
+    }];
+}
+
+- (void)initConfig {
+    self.navigationItem.title = @"用户登录";
+}
+
+- (LoginMainView *)mainView {
+    if (!_mainView) {
+        _mainView  = [[LoginMainView alloc]initWithFrame:CGRectMake(0, STATUS_NAVIGATION_BAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - STATUS_NAVIGATION_BAR_HEIGHT)];
+    }
+    return _mainView;
 }
 
 #pragma mark - serviceData
@@ -40,7 +74,7 @@
 //上传图片
 - (void)commitPhotoDataToServer {
     [[RequestServerData getServerInstance]postPhotoDataToServerWithUserID:@"138" formData:^(id<AFMultipartFormData> formData) {
-        UIImage * image = [UIImage imageNamed:@"img_back_right_16"];
+        UIImage * image = [UIImage imageNamed:nil];
         NSData * imgData = UIImageJPEGRepresentation(image, 0.5);
         NSDate * date = [NSDate date];
         NSDateFormatter * formatter = [[NSDateFormatter alloc]init];

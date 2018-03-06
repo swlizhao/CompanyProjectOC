@@ -2,12 +2,13 @@
 //  AppDelegate.m
 //  CompanyProjectOC
 //
-//  Created by apple on 2017/10/7.
-//  Copyright © 2017年 LIZHAO. All rights reserved.
+//  Created by apple on 2016/3/1.
+//  Copyright © 2016年 LIZHAO. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
+#import "BaseTabBarController.h"
+#import "AppDelegate+ShareSDK.h"
 @interface AppDelegate ()
 
 @end
@@ -16,10 +17,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    BaseTabBarController * rootTabBarViewController = [[BaseTabBarController alloc]init];
+    self.window.rootViewController = rootTabBarViewController;
+    [self.window makeKeyAndVisible];
     if (@available(iOS 11.0, *)){
         [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
     }
-    
+    [self  registerShareSDK];
     return YES;
 }
 
@@ -49,6 +54,8 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
 
 
 @end

@@ -2,7 +2,7 @@
 //  UIViewController+CYLTabBarControllerExtention.m
 //  CYLTabBarController
 //
-//  v1.14.0 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 16/2/26.
+//  v1.16.0 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 16/2/26.
 //  Copyright © 2016年 https://github.com/ChenYilong .All rights reserved.
 //
 
@@ -16,12 +16,13 @@
 #pragma mark - public Methods
 
 - (UIViewController *)cyl_popSelectTabBarChildViewControllerAtIndex:(NSUInteger)index {
-    [self checkTabBarChildControllerValidityAtIndex:index];
-    [self.navigationController popToRootViewControllerAnimated:NO];
-    CYLTabBarController *tabBarController = [self cyl_tabBarController];
+    UIViewController *viewController = [self cyl_getViewControllerInsteadOfNavigationController];
+    [viewController checkTabBarChildControllerValidityAtIndex:index];
+    [viewController.navigationController popToRootViewControllerAnimated:NO];
+    CYLTabBarController *tabBarController = [viewController cyl_tabBarController];
     tabBarController.selectedIndex = index;
     UIViewController *selectedTabBarChildViewController = tabBarController.selectedViewController;
-    return [selectedTabBarChildViewController cyl_getViewControllerInsteadIOfNavigationController];
+    return [selectedTabBarChildViewController cyl_getViewControllerInsteadOfNavigationController];
 }
 
 - (void)cyl_popSelectTabBarChildViewControllerAtIndex:(NSUInteger)index
@@ -33,7 +34,7 @@
 }
 
 - (UIViewController *)cyl_popSelectTabBarChildViewControllerForClassType:(Class)classType {
-    CYLTabBarController *tabBarController = [self cyl_tabBarController];
+    CYLTabBarController *tabBarController = [[self cyl_getViewControllerInsteadOfNavigationController] cyl_tabBarController];
     NSArray *viewControllers = tabBarController.viewControllers;
     NSInteger atIndex = [self cyl_indexForClassType:classType inViewControllers:viewControllers];
     return [self cyl_popSelectTabBarChildViewControllerAtIndex:atIndex];
@@ -86,7 +87,7 @@
 }
 
 - (void)cyl_pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    UIViewController *fromViewController = [self cyl_getViewControllerInsteadIOfNavigationController];
+    UIViewController *fromViewController = [self cyl_getViewControllerInsteadOfNavigationController];
     NSArray *childViewControllers = fromViewController.navigationController.childViewControllers;
     if (childViewControllers.count > 0) {
         if ([[childViewControllers lastObject] isKindOfClass:[viewController class]]) {
@@ -96,9 +97,9 @@
     [fromViewController.navigationController pushViewController:viewController animated:animated];
 }
 
-- (UIViewController *)cyl_getViewControllerInsteadIOfNavigationController {
+- (UIViewController *)cyl_getViewControllerInsteadOfNavigationController {
     BOOL isNavigationController = [[self class] isSubclassOfClass:[UINavigationController class]];
-    if (isNavigationController) {
+    if (isNavigationController && ((UINavigationController *)self).viewControllers.count > 0) {
         return ((UINavigationController *)self).viewControllers[0];
     }
     return self;
@@ -118,6 +119,7 @@
         return;
     }
     [self.cyl_tabButton cyl_showTabBadgePoint];
+    [[[self cyl_getViewControllerInsteadOfNavigationController] cyl_tabBarController].tabBar layoutIfNeeded];
 }
 
 - (void)cyl_removeTabBadgePoint {
@@ -125,6 +127,7 @@
         return;
     }
     [self.cyl_tabButton cyl_removeTabBadgePoint];
+    [[[self cyl_getViewControllerInsteadOfNavigationController] cyl_tabBarController].tabBar layoutIfNeeded];
 }
 
 - (BOOL)cyl_isShowTabBadgePoint {
@@ -171,10 +174,10 @@
         return NO;
     }
     BOOL isEmbedInTabBarController = NO;
-    UIViewController *viewControllerInsteadIOfNavigationController = [self cyl_getViewControllerInsteadIOfNavigationController];
+    UIViewController *viewControllerInsteadIOfNavigationController = [self cyl_getViewControllerInsteadOfNavigationController];
     for (NSInteger i = 0; i < self.cyl_tabBarController.viewControllers.count; i++) {
         UIViewController * vc = self.cyl_tabBarController.viewControllers[i];
-        if ([vc cyl_getViewControllerInsteadIOfNavigationController] == viewControllerInsteadIOfNavigationController) {
+        if ([vc cyl_getViewControllerInsteadOfNavigationController] == viewControllerInsteadIOfNavigationController) {
             isEmbedInTabBarController = YES;
             [self cyl_setTabIndex:i];
             break;
@@ -210,6 +213,23 @@
     return control;
 }
 
+- (NSString *)cyl_context {
+    return objc_getAssociatedObject(self, @selector(cyl_context));
+}
+
+- (void)cyl_setContext:(NSString *)cyl_context {
+    objc_setAssociatedObject(self, @selector(cyl_context), cyl_context, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (BOOL)cyl_plusViewControllerEverAdded {
+    NSNumber *cyl_plusViewControllerEverAddedObject = objc_getAssociatedObject(self, @selector(cyl_plusViewControllerEverAdded));
+    return [cyl_plusViewControllerEverAddedObject boolValue];
+}
+
+- (void)cyl_setPlusViewControllerEverAdded:(BOOL)cyl_plusViewControllerEverAdded {
+    NSNumber *cyl_plusViewControllerEverAddedObject = [NSNumber numberWithBool:cyl_plusViewControllerEverAdded];
+    objc_setAssociatedObject(self, @selector(cyl_plusViewControllerEverAdded), cyl_plusViewControllerEverAddedObject, OBJC_ASSOCIATION_ASSIGN);
+}
 
 #pragma mark -
 #pragma mark - Private Methods
@@ -235,7 +255,7 @@
 }
 
 - (void)checkTabBarChildControllerValidityAtIndex:(NSUInteger)index {
-    CYLTabBarController *tabBarController = [self cyl_tabBarController];
+    CYLTabBarController *tabBarController = [[self cyl_getViewControllerInsteadOfNavigationController] cyl_tabBarController];
     @try {
         UIViewController *viewController;
         viewController = tabBarController.viewControllers[index];
@@ -263,7 +283,7 @@
 - (NSInteger)cyl_indexForClassType:(Class)classType inViewControllers:(NSArray *)viewControllers {
     __block NSInteger atIndex = NSNotFound;
     [viewControllers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        UIViewController *obj_ = [obj cyl_getViewControllerInsteadIOfNavigationController];
+        UIViewController *obj_ = [obj cyl_getViewControllerInsteadOfNavigationController];
         if ([obj_ isKindOfClass:classType]) {
             atIndex = idx;
             *stop = YES;

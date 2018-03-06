@@ -2,7 +2,7 @@
 //  CYLTabBarController.m
 //  CYLTabBarController
 //
-//  v1.14.0 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 10/20/15.
+//  v1.16.0 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 10/20/15.
 //  Copyright © 2015 https://github.com/ChenYilong . All rights reserved.
 //
 
@@ -47,6 +47,42 @@
     NSString *tabBarClassString = [NSString stringWithFormat:@"%@IB%@", @"_U" , @"adg"];
     BOOL isTabBadgeView = [self cyl_classStringHasPrefix:tabBarClassString];;
     return isTabBadgeView;
+}
+
+- (BOOL)cyl_isTabBackgroundView {
+    BOOL isKindOfClass = [self isKindOfClass:[UIView class]];
+    BOOL isClass = [self isMemberOfClass:[UIView class]];
+    BOOL isKind = isKindOfClass && !isClass;
+    if (!isKind) {
+        return NO;
+    }
+    NSString *tabBackgroundViewString = [NSString stringWithFormat:@"%@IB%@", @"_U" , @"arBac"];
+    BOOL isTabBackgroundView = [self cyl_classStringHasPrefix:tabBackgroundViewString] && [self cyl_classStringHasSuffix:@"nd"];
+    return isTabBackgroundView;
+}
+
+- (UIView *)cyl_tabBadgeBackgroundView {
+    for (UIImageView *subview in self.subviews) {
+        if ([subview cyl_isTabBackgroundView]) {
+            return (UIImageView *)subview;
+        }
+    }
+    return nil;
+}
+
+- (UIView *)cyl_tabBadgeBackgroundSeparator {
+    UIView *subview = [self cyl_tabBadgeBackgroundView];
+    if (!subview) {
+        return nil;
+    }
+    NSArray<__kindof UIView *> *backgroundSubviews = subview.subviews;
+    if (backgroundSubviews.count > 1) {
+        UIView *tabBadgeBackgroundSeparator = backgroundSubviews[1];
+        if (CGRectGetHeight(tabBadgeBackgroundSeparator.bounds) < 1.0 ) {
+            return tabBadgeBackgroundSeparator;
+        }
+    }
+    return nil;
 }
 
 - (BOOL)cyl_isKindOfClass:(Class)class {

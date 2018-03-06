@@ -1,0 +1,173 @@
+{
+    "code": "1",
+    "data": {
+        "desc": "更多推荐分类为电脑",
+        "userID": "29",
+        "shoppingCart": [
+                         {
+                         "shopID":"100",
+                         "shopName":"耐克官方旗舰店",
+                         "shopURL" :"www.baidu.com",
+                         "productList" : [
+                                      {
+                                      "productID": "1001",
+                                      "productName":"弹性减震篮球鞋弹性减震篮球鞋弹性减震篮球鞋弹性减震篮球鞋弹性减震篮球鞋",
+                                      "productURL": "http://180.153.246.106:8302/webservice/static/upload/newsPicture/picNewsLogo15143508056559LLE.jpeg",
+                                      "productPrice":"1202",
+                                      "productBuyNum":"2",
+                                      "productDes":"iphoneX 256GB",
+                                      "productTotalCount":"29"
+                                         
+                                       },
+                                      {
+                                      "productID": "1002",
+                                      "productName":"登山减震运动鞋",
+                                      "productURL": "http://180.153.246.106:8302/webservice/static/upload/newsPicture/picNewsLogo15143508056559LLE.jpeg",
+                                      "productPrice":"998",
+                                      "productBuyNum":"1",
+                                      "productDes":"iphoneX 256GB",
+                                      "productTotalCount":"60"
+                                      }
+                                     ]
+                            },
+                         {
+                         "shopID":"200",
+                         "shopName":"斯伯丁篮球官方旗舰店",
+                         "shopURL" :"www.baidu.com",
+                         "productList" : [
+                                         {
+                                           "productID": "2001",
+                                           "productName":"斯伯丁室内篮球鞋",
+                                           "productURL": "http://180.153.246.106:8302/webservice/static/upload/newsPicture/picNewsLogo15143508056559LLE.jpeg",
+                                           "productPrice":"399",
+                                           "productBuyNum":"1",
+                                           "productDes":"iphoneX 256GB",
+                                           "productTotalCount":"999"
+                                          },
+                                          {
+                                           "productID": "2002",
+                                           "productName":"斯伯丁7号室外篮球鞋",
+                                           "productURL": "http://180.153.246.106:8302/webservice/static/upload/newsPicture/picNewsLogo15143508056559LLE.jpeg",
+                                           "productPrice":"129",
+                                           "productBuyNum":"1",
+                                           "productDes":"iphoneX 256GB",
+                                           "productTotalCount":"60"
+                                          }
+                                      ]
+                         }
+         ],
+        "moreProduct":[
+                            {
+                              "type": "电脑",
+                              "shopName":"更多推荐",
+                              "shopID":"300",
+                              "productID": "3003",
+                              "productName":"苹果官方旗舰店",
+                              "productURL": "http://180.153.246.106:8302/webservice/static/upload/newsPicture/picNewsLogo15143508056559LLE.jpeg",
+                              "productPrice":"8888",
+                              "productBuyNum":"1",
+                              "productTotalCount":"60"
+                             },
+                           {
+                           "type": "化妆品",
+                           "shopName":"更多推荐",
+                           "shopID":"300",
+                           "productID": "3003",
+                           "productName":"苹果官方旗舰店",
+                           "productURL": "http://180.153.246.106:8302/webservice/static/upload/newsPicture/picNewsLogo15143508056559LLE.jpeg",
+                           "productPrice":"8888",
+                           "productBuyNum":"1",
+                           "productTotalCount":"60"
+                           },
+                       {
+                       "type": "电脑",
+                       "shopName":"更多推荐",
+                       "shopID":"300",
+                       "productID": "3003",
+                       "productName":"苹果官方旗舰店",
+                       "productURL": "http://180.153.246.106:8302/webservice/static/upload/newsPicture/picNewsLogo15143508056559LLE.jpeg",
+                       "productPrice":"8888",
+                       "productBuyNum":"1",
+                       "productTotalCount":"60"
+                       },
+                       {
+                       "type": "化妆品",
+                       "shopName":"更多推荐",
+                       "shopID":"300",
+                       "productID": "3003",
+                       "productName":"苹果官方旗舰店",
+                       "productURL": "http://180.153.246.106:8302/webservice/static/upload/newsPicture/picNewsLogo15143508056559LLE.jpeg",
+                       "productPrice":"8888",
+                       "productBuyNum":"1",
+                       "productTotalCount":"60"
+                       },
+                       {
+                       "type": "电脑",
+                       "shopName":"更多推荐",
+                       "shopID":"300",
+                       "productID": "3003",
+                       "productName":"苹果官方旗舰店",
+                       "productURL": "http://180.153.246.106:8302/webservice/static/upload/newsPicture/picNewsLogo15143508056559LLE.jpeg",
+                       "productPrice":"8888",
+                       "productBuyNum":"1",
+                       "productTotalCount":"60"
+                       },
+                       {
+                       "type": "电脑",
+                       "shopName":"更多推荐",
+                       "shopID":"300",
+                       "productID": "3003",
+                       "productName":"苹果官方旗舰店",
+                       "productURL": "http://180.153.246.106:8302/webservice/static/upload/newsPicture/picNewsLogo15143508056559LLE.jpeg",
+                       "productPrice":"8888",
+                       "productBuyNum":"1",
+                       "productTotalCount":"60"
+                       },
+                       {
+                       "type": "电脑",
+                       "shopName":"更多推荐",
+                       "shopID":"300",
+                       "productID": "3003",
+                       "productName":"苹果官方旗舰店",
+                       "productURL": "http://180.153.246.106:8302/webservice/static/upload/newsPicture/picNewsLogo15143508056559LLE.jpeg",
+                       "productPrice":"8888",
+                       "productBuyNum":"1",
+                       "productTotalCount":"60"
+                       },
+                       {
+                       "type": "电脑",
+                       "shopName":"更多推荐",
+                       "shopID":"300",
+                       "productID": "3003",
+                       "productName":"苹果官方旗舰店",
+                       "productURL": "http://180.153.246.106:8302/webservice/static/upload/newsPicture/picNewsLogo15143508056559LLE.jpeg",
+                       "productPrice":"8888",
+                       "productBuyNum":"1",
+                       "productTotalCount":"60"
+                       },
+                       {
+                       "type": "电脑",
+                       "shopName":"更多推荐",
+                       "shopID":"300",
+                       "productID": "3003",
+                       "productName":"苹果官方旗舰店",
+                       "productURL": "http://180.153.246.106:8302/webservice/static/upload/newsPicture/picNewsLogo15143508056559LLE.jpeg",
+                       "productPrice":"8888",
+                       "productBuyNum":"1",
+                       "productTotalCount":"60"
+                       },
+                       {
+                       "type": "化妆品",
+                       "shopName":"更多推荐",
+                       "shopID":"300",
+                       "productID": "3003",
+                       "productName":"苹果官方旗舰店",
+                       "productURL": "http://180.153.246.106:8302/webservice/static/upload/newsPicture/picNewsLogo15143508056559LLE.jpeg",
+                       "productPrice":"8888",
+                       "productBuyNum":"1",
+                       "productTotalCount":"60"
+                       }
+                     ]
+    }
+    
+}

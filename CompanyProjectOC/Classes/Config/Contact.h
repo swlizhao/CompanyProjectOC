@@ -39,10 +39,15 @@
 
 #define APP_VERSION       [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
 
+#define  FONTSIZE_18   18
+#define  FONTSIZE_17   17
 #define  FONTSIZE_16   16
 #define  FONTSIZE_15   15
 #define  FONTSIZE_14   14
+#define  FONTSIZE_13   13
 #define  FONTSIZE_12   12
+#define  FONTSIZE_11   11
+#define  FONTSIZE_10   10
 
 #define IS_IOS_11    floorf([[UIDevice currentDevice].systemVersion floatValue]) == 11. ? (YES) : (NO)
 
@@ -51,5 +56,13 @@
 #define STATUS_NAVIGATION_BAR_HEIGHT (([[UIApplication sharedApplication]statusBarFrame].size.height) + 44.)
 
 #define  TAB_BAR_HEIGHT        ((SCREEN_HEIGHT) < (812.) ? (49) : (83))
+
+#define KWIDTH_SCALE    [UIScreen mainScreen].bounds.size.width/375.0f
+
+
+#define QQID     @"1106650129"
+#define QQKEY    @"jCuN4Lhqc2xR7ZFQ"
+#define WXID     @"wxd4fc4d2cb1e0f8bb"
+#define WXKEY    @"7a80996bfc52f684972b5d5083ca01e9"
 
 #endif /* Contact_h */

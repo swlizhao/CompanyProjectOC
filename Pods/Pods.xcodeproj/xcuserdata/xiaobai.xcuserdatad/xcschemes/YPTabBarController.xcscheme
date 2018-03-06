@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CA600923C4CE2367E040294B667734D9'
+               BlueprintIdentifier = '3CE068A7557877520F837C704801041F'
                BlueprintName = 'YPTabBarController'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libYPTabBarController.a'>

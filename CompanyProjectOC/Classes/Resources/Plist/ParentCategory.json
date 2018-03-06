@@ -1,0 +1,97 @@
+{
+    "code":"1",
+    "data": [
+             {
+             "prodcutCategoryName":"推荐分类",
+             "prodcutCategoryID" : "0"
+             },
+             {
+             "prodcutCategoryName":"京东超市",
+             "prodcutCategoryID" : "1"
+             },
+             {
+             "prodcutCategoryName":"国际名牌",
+             "prodcutCategoryID" : "2"
+             },
+             {
+             "prodcutCategoryName":"奢侈品",
+             "prodcutCategoryID" : "3"
+             },
+             {
+             "prodcutCategoryName":"全球购",
+             "prodcutCategoryID" : "4"
+             }, {
+             "prodcutCategoryName":"推荐",
+             "prodcutCategoryID" : "5"
+             },
+             {
+             "prodcutCategoryName":"男装",
+             "prodcutCategoryID" : "6"
+             },
+             {
+             "prodcutCategoryName":"女装",
+             "prodcutCategoryID" : "7"
+             },
+             {
+             "prodcutCategoryName":"推荐",
+             "prodcutCategoryID" : "8"
+             },
+             {
+             "prodcutCategoryName":"箱包手袋",
+             "prodcutCategoryID" : "9"
+             },
+             {
+             "prodcutCategoryName":"美妆个护",
+             "prodcutCategoryID" : "10"
+             },
+             {
+             "prodcutCategoryName":"钟表珠宝",
+             "prodcutCategoryID" : "11"
+             },
+             {
+             "prodcutCategoryName":"手机数码",
+             "prodcutCategoryID" : "12"
+             },
+             {
+             "prodcutCategoryName":"电脑办公",
+             "prodcutCategoryID" : "13"
+             },
+             {
+             "prodcutCategoryName":"生活旅行",
+             "prodcutCategoryID" : "14"
+             },
+             {
+             "prodcutCategoryName":"家用电器",
+             "prodcutCategoryID" : "15"
+             },
+             {
+             "prodcutCategoryName":"食品生鲜",
+             "prodcutCategoryID" : "16"
+             },
+             {
+             "prodcutCategoryName":"酒水饮料",
+             "prodcutCategoryID" : "17"
+             },
+             {
+             "prodcutCategoryName":"医药保健",
+             "prodcutCategoryID" : "18"
+             },
+             {
+             "prodcutCategoryName":"汽车用品",
+             "prodcutCategoryID" : "19"
+             },
+             {
+             "prodcutCategoryName":"礼品鲜花",
+             "prodcutCategoryID" : "20"
+             },
+             {
+             "prodcutCategoryName":"宠物生活",
+             "prodcutCategoryID" : "21"
+             },
+             {
+             "prodcutCategoryName":"二手商品",
+             "prodcutCategoryID" : "22"
+             },
+    
+    ]
+}

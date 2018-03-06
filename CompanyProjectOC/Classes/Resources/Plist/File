@@ -1,0 +1,41 @@
+{
+"code":"1",
+"leftCateogtyList": [
+{
+"categoryName" : "推荐分类"
+},
+
+{
+"categoryName" : "京东超市"
+},
+
+{
+"categoryName" : "国际名牌"
+},
+{
+"categoryName" : "奢侈品"
+},
+{
+"categoryName" : "全球购"
+},
+{
+"categoryName" : "玩具乐器"
+},
+{
+"categoryName" : "运动户外"
+},
+{
+"categoryName" : "特产馆"
+},
+{
+"categoryName" : "拍卖"
+},
+{
+"categoryName" : "图书馆"
+},
+{
+"categoryName" : "医药保健"
+}
+]
+}
+

@@ -1,0 +1,37 @@
+{
+"code":"1",
+"data" : [
+          {
+            "name"  : "李钊",
+            "userID" : "29",
+            "phone" : "13233230000",
+            "address" : "北京省北京市海淀区清河街道五彩城大厦502",
+            "defaultStatus" : "1",
+            "addressID" : "0"
+           },
+           {
+            "name"  : "李潇南",
+            "userID" : "29",
+            "phone" : "13233230001",
+            "address" : "江西省南昌市昌北经济开发区英雄路下罗街道江西财经大学南校C栋英雄路下罗街道江西财经大学南校C栋英雄路下罗街道江西财经大学南校C栋",
+            "defaultStatus" :"0",
+            "addressID" : "1"
+            },
+            {
+            "name"  : "刘亚文",
+            "userID" : "29",
+            "phone" : "13233230002",
+            "address" : "山西省太原市小店区太原高新技术产业开发区太原小店平阳路晋阳街口东500米 纳达大厦",
+            "defaultStatus" : "0",
+            "addressID" : "2"
+            },
+            {
+             "name"  : "李彦宏",
+             "userID" : "29",
+             "phone" : "13233230003",
+             "address" : "北京省北京市海淀区中关村街道百度科技大厦",
+             "defaultStatus" : "0",
+             "addressID" : "3"
+             }
+         ]
+}

@@ -16,9 +16,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self  setup];
+    [self  initConfig];
 }
 
+- (void)setup {
+    
+}
+
+- (void)initConfig {
+    self.navigationItem.title = @"找回密码";
+}
 
 
 @end

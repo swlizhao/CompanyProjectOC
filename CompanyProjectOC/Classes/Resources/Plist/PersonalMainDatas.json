@@ -1,0 +1,31 @@
+{
+    "code": "1",
+    "data": [
+             {
+             "img":"img_wallet",
+             "title":"我的钱包"
+             },
+             {
+             "img":"img_voucher",
+             "title":"优惠券"
+             },
+             {
+             "img":"img_collect",
+             "title":"我的收藏"
+             },
+             {
+             "img":"img_history",
+             "title":"我的足迹"
+             },
+             
+             {
+             "img":"img_intetger",
+             "title":"积分兑换"
+             },
+             {
+             "img":"img_share",
+             "title":"分享app"
+             }
+        
+    ]
+}

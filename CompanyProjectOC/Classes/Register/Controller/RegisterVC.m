@@ -16,7 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    [self  setup];
+}
+
+- (void)setup {
+    self.navigationItem.title = @"注册账号";
 }
 
 

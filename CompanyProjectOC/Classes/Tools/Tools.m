@@ -8,7 +8,7 @@
 
 #import "Tools.h"
 #import <CommonCrypto/CommonDigest.h>
-
+static     SystemSoundID soundID=0;
 //#ifdef DEBUGSEVER
 //#define MAINURL                 @"http://117.34.110.202"
 //#else
@@ -1045,6 +1045,26 @@ static UILabel *lab = nil;
     }else {
       return [deleText copy];
     }
+}
+
++ (void)playSound
+{
+    static NSURL *mp3URL            = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+//        mp3URL                  = [[NSBundle mainBundle] URLForResource:@"AddShopAudio.mp3" withExtension:nil];
+        mp3URL = [NSURL URLWithString:[[NSBundle mainBundle]pathForResource:@"AddShopAudio" ofType:@"mp3"]];
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef _Nonnull)(mp3URL), &soundID);
+    });
+      AudioServicesPlaySystemSound(soundID);
+    //    AudioServicesPlayAlertSound(soundID);
+//    if (CURRENT_USER.isSound)
+//    {
+//        AudioServicesPlaySystemSound(soundID);
+//    }
+    
+    
+    
 }
 
 @end

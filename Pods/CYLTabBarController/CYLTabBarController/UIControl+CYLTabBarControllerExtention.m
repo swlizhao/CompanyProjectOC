@@ -2,13 +2,14 @@
 //  CYLTabBarController.m
 //  CYLTabBarController
 //
-//  v1.14.0 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 10/20/15.
+//  v1.16.0 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 10/20/15.
 //  Copyright © 2015 https://github.com/ChenYilong . All rights reserved.
 //
 
 #import "UIControl+CYLTabBarControllerExtention.h"
 #import <objc/runtime.h>
 #import "UIView+CYLTabBarControllerExtention.h"
+#import "CYLConstants.h"
 
 @implementation UIControl (CYLTabBarControllerExtention)
 
@@ -61,6 +62,10 @@
 }
 
 - (void)cyl_setTabBadgePointView:(UIView *)tabBadgePointView {
+    UIView *tempView = objc_getAssociatedObject(self, @selector(cyl_tabBadgePointView));
+    if (tempView) {
+        [tempView removeFromSuperview];
+    }
     if (tabBadgePointView.superview) {
         [tabBadgePointView removeFromSuperview];
     }

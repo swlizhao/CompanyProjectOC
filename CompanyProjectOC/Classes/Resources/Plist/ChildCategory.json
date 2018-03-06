@@ -1,0 +1,221 @@
+{
+"code" : "1",
+"data" : [
+          {
+           "typeName" : "热门分类",
+           "typeNameID" : "0",
+           "typeStatus" :"0",
+           "category" : [
+                          {
+                            "url" : "www.baidu.com",
+                            "name" : "吃鸡装备",
+                            "classID" : "29"
+                           },
+                          {
+                            "url" : "www.baidu.com",
+                            "name" : "游戏本",
+                            "classID" : "29"
+                           },
+                          {
+                            "url" : "www.baidu.com",
+                            "name" : "轻薄本",
+                            "classID" : "29"
+                          },
+                          {
+                            "url" : "www.baidu.com",
+                            "name" : "游戏台式机",
+                            "classID" : "29"
+                           },
+                          {
+                            "url" : "www.baidu.com",
+                            "name" : "机械键盘",
+                            "classID" : "29"
+                           },
+                           {
+                            "url" : "www.baidu.com",
+                            "name" : "移动硬盘",
+                            "classID" : "29"
+                            },
+                           {
+                             "url" : "www.baidu.com",
+                             "name" : "曲屏显示器",
+                             "classID" : "29"
+                            },
+                            {
+                              "url" : "www.baidu.com",
+                              "name" : "组装电脑",
+                              "classID" : "29"
+                             },
+                             {
+                              "url" : "www.baidu.com",
+                              "name" : "显卡",
+                              "classID" : "29"
+                             }
+                        ]
+           },
+{
+"typeName" : "电脑整机",
+"typeNameID" : "1",
+"typeStatus" :"1",
+"category" : [
+{
+"url" : "www.baidu.com",
+"name" : "吃鸡装备",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "游戏本",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "轻薄本",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "游戏台式机",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "机械键盘",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "移动硬盘",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "曲屏显示器",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "组装电脑",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "显卡",
+"classID" : "29"
+}
+]
+},
+
+{
+"typeName" : "电脑配件",
+"typeNameID" : "2",
+"typeStatus" :"1",
+"category" : [
+{
+"url" : "www.baidu.com",
+"name" : "吃鸡装备",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "游戏本",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "轻薄本",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "游戏台式机",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "机械键盘",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "移动硬盘",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "曲屏显示器",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "组装电脑",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "显卡",
+"classID" : "29"
+}
+]
+},
+
+
+{
+"typeName" : "外设产品",
+"typeNameID" : "2",
+"typeStatus" :"1",
+"category" : [
+{
+"url" : "www.baidu.com",
+"name" : "吃鸡装备",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "游戏本",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "轻薄本",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "游戏台式机",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "机械键盘",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "移动硬盘",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "曲屏显示器",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "组装电脑",
+"classID" : "29"
+},
+{
+"url" : "www.baidu.com",
+"name" : "显卡",
+"classID" : "29"
+}
+]
+}
+
+
+
+
+       ]
+
+}

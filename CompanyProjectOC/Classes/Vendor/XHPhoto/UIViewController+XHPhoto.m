@@ -92,6 +92,7 @@ static  char blockKey;
         UIImagePickerController* imagePickerController = [[UIImagePickerController alloc] init];
         imagePickerController.delegate = self;
         imagePickerController.allowsEditing = canEdit;
+        imagePickerController.navigationBar.translucent = NO;
         switch (buttonIndex)
         {
             case 0:

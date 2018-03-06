@@ -11,3 +11,22 @@
 @implementation ProductCategoriesModel
 
 @end
+
+@implementation ProductParentCategoriesModel
+
+@end
+
+@implementation ProductChildSectionCategoriesModel
+
++ (nullable NSDictionary<NSString *, id> *)modelContainerPropertyGenericClass {
+    return @{
+             @"category":[ProductChildItemCategoriesModel class]
+        };
+}
+
+
+@end
+
+@implementation ProductChildItemCategoriesModel
+
+@end

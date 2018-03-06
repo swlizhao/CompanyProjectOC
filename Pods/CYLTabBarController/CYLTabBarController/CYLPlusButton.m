@@ -2,12 +2,13 @@
 //  CYLPlusButton.m
 //  CYLTabBarController
 //
-//  v1.14.0 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 10/20/15.
+//  v1.16.0 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 10/20/15.
 //  Copyright © 2015 https://github.com/ChenYilong . All rights reserved.
 //
 
 #import "CYLPlusButton.h"
 #import "CYLTabBarController.h"
+#import "UIViewController+CYLTabBarControllerExtention.h"
 
 CGFloat CYLPlusButtonWidth = 0.0f;
 UIButton<CYLPlusButtonSubclassing> *CYLExternPlusButton = nil;
@@ -28,11 +29,19 @@ UIViewController *CYLPlusChildViewController = nil;
     CYLPlusButtonWidth = plusButton.frame.size.width;
     if ([[self class] respondsToSelector:@selector(plusChildViewController)]) {
         CYLPlusChildViewController = [class plusChildViewController];
+        if ([[self class] respondsToSelector:@selector(tabBarContext)]) {
+            NSString *tabBarContext = [class tabBarContext];
+            if (tabBarContext && tabBarContext.length) {
+                [CYLPlusChildViewController cyl_setContext:tabBarContext];
+            }
+        } else {
+            [CYLPlusChildViewController cyl_setContext:NSStringFromClass([CYLTabBarController class])];
+        }
         [[self class] addSelectViewControllerTarget:plusButton];
         if ([[self class] respondsToSelector:@selector(indexOfPlusButtonInTabBar)]) {
             CYLPlusButtonIndex = [[self class] indexOfPlusButtonInTabBar];
         } else {
-            [NSException raise:@"CYLTabBarController" format:@"If you want to add PlusChildViewController, you must realizse `+indexOfPlusButtonInTabBar` in your custom plusButton class.【Chinese】如果你想使用PlusChildViewController样式，你必须同时在你自定义的plusButton中实现 `+indexOfPlusButtonInTabBar`，来指定plusButton的位置"];
+            [NSException raise:NSStringFromClass([CYLTabBarController class]) format:@"If you want to add PlusChildViewController, you must realizse `+indexOfPlusButtonInTabBar` in your custom plusButton class.【Chinese】如果你想使用PlusChildViewController样式，你必须同时在你自定义的plusButton中实现 `+indexOfPlusButtonInTabBar`，来指定plusButton的位置"];
         }
     }
 }
@@ -53,7 +62,13 @@ UIViewController *CYLPlusChildViewController = nil;
         return;
     }
     sender.selected = YES;
-    [self cyl_tabBarController].selectedIndex = CYLPlusButtonIndex;
+    CYLTabBarController *tabBarController = [sender cyl_tabBarController];
+    NSInteger index = [tabBarController.viewControllers indexOfObject:CYLPlusChildViewController];
+    @try {
+        [tabBarController setSelectedIndex:index];
+    } @catch (NSException *exception) {
+        NSLog(@"🔴类名与方法名：%@（在第%@行），描述：%@", @(__PRETTY_FUNCTION__), @(__LINE__), exception);
+    }
 }
 
 #pragma mark -

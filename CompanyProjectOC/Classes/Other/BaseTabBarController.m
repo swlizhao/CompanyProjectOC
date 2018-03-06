@@ -2,8 +2,8 @@
 //  BaseTabBarController.m
 //  CompanyProjectOC
 //
-//  Created by apple on 2017/10/7.
-//  Copyright © 2017年 LIZHAO. All rights reserved.
+//  Created by apple on 2016/10/7.
+//  Copyright © 2016年 LIZHAO. All rights reserved.
 //
 
 #import "BaseTabBarController.h"
@@ -11,6 +11,7 @@
 #import "ProductCategoriesMainVC.h"
 #import "ShoppingCartMainVC.h"
 #import "PersonalMainVC.h"
+#import "NewsInformationBaseVC.h"
 @interface BaseTabBarController ()<UITabBarControllerDelegate>
 
 @end
@@ -21,11 +22,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"BaseTabBarController --->viewDidLoad");
     WeakSelf(weakSelf)
     self.delegate = self;
     [self setupTabBarItemsAttributes];
-    [self setupViewControllers];
+    [self setupCodeViewControllers];
+//    [self setupStoryBoardViewControllers];
+ 
     [self setViewDidLayoutSubViewsBlock:^(CYLTabBarController *aTabBarController) {
         NSLog(@"tabBarViewController --->badgePoint");
         UIViewController *viewController = aTabBarController.viewControllers[0];
@@ -44,7 +46,7 @@
         [aTabBarController.viewControllers[3] cyl_showTabBadgePoint];
         
         //添加提示动画，引导用户点击
-        [weakSelf addScaleAnimationOnView:aTabBarController.viewControllers[3].cyl_tabButton.cyl_tabImageView repeatCount:20];
+        [weakSelf addScaleAnimationOnView:aTabBarController.viewControllers[4].cyl_tabButton.cyl_tabImageView repeatCount:20];
     }];
     [[UINavigationBar appearance] setTintColor:[UIColor grayColor]];
     if (@available(iOS 11, *)) {
@@ -52,18 +54,39 @@
     }else {
         [[UIBarButtonItem appearance]setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault];
     }
-    UIImage *backButtonImage = [[UIImage imageNamed:@" img_back_left_32"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *backButtonImage = [[UIImage imageNamed:@"img_arrow_left_22"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     [[UINavigationBar appearance] setBackIndicatorImage:backButtonImage];
     [UINavigationBar appearance].backIndicatorTransitionMaskImage = backButtonImage;
     
 }
 
-- (void)setupViewControllers {
+//纯代码入口
+- (void)setupCodeViewControllers {
+    HomeMainVC * homeMainVC = [[HomeMainVC alloc]init];
+    BaseNavigationController * homeMainNC = [[BaseNavigationController alloc]initWithRootViewController:homeMainVC];
+    
+    ProductCategoriesMainVC * categoryVC = [[ProductCategoriesMainVC alloc]init];
+    BaseNavigationController * categoriesMainNC = [[BaseNavigationController alloc]initWithRootViewController:categoryVC];
+    
+    NewsInformationBaseVC * newsVC = [[NewsInformationBaseVC alloc]init];
+    BaseNavigationController * newsNC = [[BaseNavigationController alloc]initWithRootViewController:newsVC];
+    
+    ShoppingCartMainVC * shoppingVC = [[ShoppingCartMainVC alloc]init];
+    BaseNavigationController * shoppingCartMainNC = [[BaseNavigationController alloc]initWithRootViewController:shoppingVC];
+  
+    PersonalMainVC * personalVC = [[PersonalMainVC alloc]init];
+    BaseNavigationController * personalMainNC = [[BaseNavigationController alloc]initWithRootViewController:personalVC];
+    self.viewControllers = @[homeMainNC,categoriesMainNC,newsNC,shoppingCartMainNC,personalMainNC];
+}
+
+//storyboard 入口
+- (void)setupStoryBoardViewControllers {
     UINavigationController * homeMainNC = [STORYBOARD_MAIN  instantiateViewControllerWithIdentifier:@"HomeMainNC"];
     UINavigationController * categoriesMainNC = [STORYBOARD_MAIN  instantiateViewControllerWithIdentifier:@"ProductCategoriesMainNC"];
+     UINavigationController * msgCartMainNC = [STORYBOARD_MAIN  instantiateViewControllerWithIdentifier:@"MessageMainNC"];
     UINavigationController * shoppingCartMainNC = [STORYBOARD_MAIN  instantiateViewControllerWithIdentifier:@"ShoppingCartMainNC"];
     UINavigationController * personalMainNC = [STORYBOARD_MAIN  instantiateViewControllerWithIdentifier:@"PersonalMainNC"];
-    self.viewControllers = @[homeMainNC,categoriesMainNC,shoppingCartMainNC,personalMainNC];
+    self.viewControllers = @[homeMainNC,categoriesMainNC,msgCartMainNC,shoppingCartMainNC,personalMainNC];
 }
 
 - (void)setupTabBarItemsAttributes {
@@ -72,28 +95,33 @@
                                                  CYLTabBarItemImage : @"home_normal",
                                                  CYLTabBarItemSelectedImage : @"home_highlight"
                                                  };
-    NSDictionary * streetTabBarItemsAttributes = @{
-                                                   CYLTabBarItemTitle : @"街区",
-                                                   CYLTabBarItemImage : @"mycity_normal",
-                                                   CYLTabBarItemSelectedImage : @"mycity_highlight"
+    NSDictionary * categottyTabBarItemsAttributes = @{
+                                                   CYLTabBarItemTitle : @"分类",
+                                                   CYLTabBarItemImage : @"img_category_normal",
+                                                   CYLTabBarItemSelectedImage : @"img_category_highlight"
                                                    };
-    NSDictionary * thirdTabBarItemsAttributes = @{
-                                                  CYLTabBarItemTitle : @"购物车",
+    NSDictionary * newsTabBarItemsAttributes = @{
+                                                  CYLTabBarItemTitle : @"咨询",
                                                   CYLTabBarItemImage : @"message_normal",
                                                   CYLTabBarItemSelectedImage : @"message_highlight"
                                                   };
+    NSDictionary * shoppingTabBarItemsAttributes = @{
+                                                CYLTabBarItemTitle : @"购物车",
+                                                CYLTabBarItemImage : @"shoppingCart_normal",
+                                                CYLTabBarItemSelectedImage : @"shoppingCart_highlight"
+                                                };
     NSDictionary * personalTabBarItemsAttributes = @{
                                                      CYLTabBarItemTitle : @"我的",
                                                      CYLTabBarItemImage : @"account_normal",
                                                      CYLTabBarItemSelectedImage : @"account_highlight"
                                                      };
-    self.tabBarItemsAttributes = @[homeTabBarItemsAttributes,streetTabBarItemsAttributes,thirdTabBarItemsAttributes,personalTabBarItemsAttributes];
+    self.tabBarItemsAttributes = @[homeTabBarItemsAttributes,categottyTabBarItemsAttributes,newsTabBarItemsAttributes,shoppingTabBarItemsAttributes,personalTabBarItemsAttributes];
     
 }
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectControl:(UIControl *)control {
-    NSLog(@"我是didSelectControl");
     UIView * animationView;
+    [Tools playSound];
     if ([control cyl_isTabButton]) {
         if ([self.selectedViewController cyl_isShowTabBadgePoint]) {
             [self.selectedViewController cyl_removeTabBadgePoint];
@@ -107,6 +135,8 @@
     } else {
         [self addRotateAnimationOnView:animationView];
     }
+    
+//    [Tools MsgBox:[NSString stringWithFormat:@"%@",NSStringFromCGRect(animationView.frame)]];
 }
 
 - (void)addScaleAnimationOnView:(UIView *)animationView repeatCount:(float)repeatCount {

@@ -1,57 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
     </dependencies>
-    <scenes>
-        <!--登录-->
-        <scene sceneID="0L6-vV-HqG">
-            <objects>
-                <viewController storyboardIdentifier="LoginVC" id="vRx-D0-ONa" customClass="LoginVC" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fi4-o3-RFn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="wkX-5j-Bem"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="登录" id="Jqt-n2-K2D">
-                        <barButtonItem key="leftBarButtonItem" image="img_back_left_16.png" id="Wf8-is-GPk">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="backBtnAction:" destination="vRx-D0-ONa" id="jV9-Fj-mNa"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kEp-Ap-ba6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="324" y="134.48275862068968"/>
-        </scene>
-        <!--Base Navigation Controller-->
-        <scene sceneID="VJt-Jm-Y1F">
-            <objects>
-                <navigationController storyboardIdentifier="LoginNC" automaticallyAdjustsScrollViewInsets="NO" id="lw8-Lu-gEF" customClass="BaseNavigationController" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="99F-db-XcG">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vRx-D0-ONa" kind="relationship" relationship="rootViewController" id="pEp-DW-kzt"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MGK-Xx-HvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-300" y="134"/>
-        </scene>
-    </scenes>
-    <resources>
-        <image name="img_back_left_16.png" width="16" height="16"/>
-    </resources>
+    <scenes/>
 </document>

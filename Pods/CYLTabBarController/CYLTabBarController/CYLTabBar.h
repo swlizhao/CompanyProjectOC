@@ -2,7 +2,7 @@
 //  CYLTabBar.h
 //  CYLTabBarController
 //
-//  v1.14.0 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 10/20/15.
+//  v1.16.0 Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 10/20/15.
 //  Copyright © 2015 https://github.com/ChenYilong . All rights reserved.
 //
 
@@ -16,5 +16,7 @@
  * `viewController.tabBarItem.imageInsets = UIEdgeInsetsMake(tabImageViewDefaultOffset, 0, -tabImageViewDefaultOffset, 0);`
  */
 @property (nonatomic, assign, readonly) CGFloat tabImageViewDefaultOffset;
+
+@property (nonatomic, copy) NSString *context;
 
 @end

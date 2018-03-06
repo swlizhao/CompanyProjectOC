@@ -10,4 +10,7 @@
 
 @interface PersonalMainModel : BaseModel
 
+@property(nonatomic,copy)NSString * title;
+@property(nonatomic,copy)NSString * img;
+
 @end

@@ -7,7 +7,10 @@
 //
 
 #import "BaseTableViewCell.h"
-
+#import "PersonalMainModel.h"
+static NSString * personalMainCell = @"PersonalMainCell";
 @interface PersonalMainCell : BaseTableViewCell
+
+@property(nonatomic,strong)PersonalMainModel * model;
 
 @end
