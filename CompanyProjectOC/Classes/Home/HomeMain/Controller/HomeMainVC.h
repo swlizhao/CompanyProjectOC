@@ -1,8 +1,8 @@
 
 
 
-#import "BaseViewController.h"
+#import "CommonBaseViewController.h"
 
-@interface HomeMainVC : BaseViewController
+@interface HomeMainVC : CommonBaseViewController
 
 @end

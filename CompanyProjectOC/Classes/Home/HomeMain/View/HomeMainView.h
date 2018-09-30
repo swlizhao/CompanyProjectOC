@@ -7,9 +7,9 @@
 //
 
 #import "BaseView.h"
-#import "BaseCollectionView.h"
+#import "CommonBaseCollectionView.h"
 @interface HomeMainView : BaseView
 
-@property(nonatomic,strong)BaseCollectionView * collectionView;
+@property(nonatomic,strong)CommonBaseCollectionView * collectionView;
 
 @end

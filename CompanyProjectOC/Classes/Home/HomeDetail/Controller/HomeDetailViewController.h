@@ -6,8 +6,8 @@
 //  Copyright © 2017年 LIZHAO. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "CommonBaseViewController.h"
 
-@interface HomeDetailViewController : BaseViewController
+@interface HomeDetailViewController : CommonBaseViewController
 
 @end

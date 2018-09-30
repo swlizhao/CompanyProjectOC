@@ -6,8 +6,8 @@
 //  Copyright © 2018年 LIZHAO. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "CommonBaseViewController.h"
 
-@interface PersonalIntegralVC : BaseViewController
+@interface PersonalIntegralVC : CommonBaseViewController
 
 @end

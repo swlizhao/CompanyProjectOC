@@ -10,7 +10,6 @@
 
 @interface AppDelegate (ShareSDK)
 
-- (void)registerShareSDK;
-
+- (void)initShareSDKWithApplication:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
 
 @end

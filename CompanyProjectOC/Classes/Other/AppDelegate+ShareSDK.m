@@ -18,7 +18,7 @@
 @implementation AppDelegate (ShareSDK)
 
 
-- (void)registerShareSDK {
+- (void)initShareSDKWithApplication:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
      NSLog(@"shareSDK被注册了...");
     [ShareSDK registerActivePlatforms:@[
                                         @(SSDKPlatformTypeWechat),

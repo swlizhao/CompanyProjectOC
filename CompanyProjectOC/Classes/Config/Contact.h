@@ -9,7 +9,7 @@
 #ifndef Contact_h
 #define Contact_h
 
-#define  MAIN_URL          @"http://www.uzome.com/appapi"
+#define  MAIN_URL          @"https://www.sojson.com"
 
 #define   API              @"/api"
 
@@ -64,5 +64,6 @@
 #define QQKEY    @"jCuN4Lhqc2xR7ZFQ"
 #define WXID     @"wxd4fc4d2cb1e0f8bb"
 #define WXKEY    @"7a80996bfc52f684972b5d5083ca01e9"
+#define RCIM_KEY  @"123456"
 
 #endif /* Contact_h */

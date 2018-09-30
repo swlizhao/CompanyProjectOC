@@ -10,9 +10,9 @@
 
 @interface LoginMainView : BaseView
 
-@property(nonatomic,strong)BaseImageView                   * bgImageView;
-@property(nonatomic,strong)BaseTextField                   * phoneField;
-@property(nonatomic,strong)BaseTextField                   * pwdField;
+@property(nonatomic,strong)CommonBaseImageView                   * bgImageView;
+@property(nonatomic,strong)CommonBaseTextField                   * phoneField;
+@property(nonatomic,strong)CommonBaseTextField                   * pwdField;
 @property(nonatomic,strong)BaseButton                      * loginBtn;
 @property(nonatomic,strong)BaseButton                      * forgotBtn;
 

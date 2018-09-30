@@ -24,7 +24,11 @@
 
 - (void)initHomeUI {
    [self.view  addSubview:self.mainView];
-  
+    [[RequestServerData getServerInstance]getWithCity:@"太原" success:^(NSURLSessionDataTask *task, id responseObject) {
+    
+           NSDictionary * result = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+            NSLog(@"result:%@",result);
+    } ];
 }
 
 - (void)initHomeConfig {

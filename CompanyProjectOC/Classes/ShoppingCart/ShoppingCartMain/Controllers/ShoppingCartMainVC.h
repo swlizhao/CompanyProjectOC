@@ -6,8 +6,8 @@
 //  Copyright © 2017年 LIZHAO. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "CommonBaseViewController.h"
 
-@interface ShoppingCartMainVC : BaseViewController
+@interface ShoppingCartMainVC : CommonBaseViewController
 
 @end

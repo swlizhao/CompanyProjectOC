@@ -42,4 +42,8 @@ typedef void(^BaseViewCollectionViewDidSelectItemIndexPath)(NSIndexPath * indexP
 @property(nonatomic,copy)BaseViewCollectionViewSectionBtnAndIndexPath baseViewCollectionViewSectionBtnAndIndexPathBlock;
 @property(nonatomic,copy)BaseViewTableViewSectionViewBtnAndSection baseViewTableViewSectionViewBtnAndSectionBlock;
 
+- (void)show;
+- (void)hidden;
+
+
 @end

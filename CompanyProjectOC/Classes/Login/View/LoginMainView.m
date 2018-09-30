@@ -58,19 +58,18 @@
     
     self.loginBtn.backgroundColor              = [UIColor orangeColor];
     self.loginBtn.layer.cornerRadius           = 22;
-    self.loginBtn.titleLabel.font              = [UIFont systemFontOfSize:14];
+    self.loginBtn.titleLabel.font              = [UIFont systemFontOfSize:FONTSIZE_16];
     [self.loginBtn setTitle:@"点击登录" forState:0];
 
     [self.forgotBtn setTitleColor:[UIColor blackColor] forState:0];
     [self.forgotBtn setTitle:@"找回密码" forState:0];
     self.forgotBtn.titleLabel.font = [UIFont systemFontOfSize:FONTSIZE_14];
     self.imgLine.backgroundColor = RGBA(0, 0, 0 ,0.5);
-    
 }
 
-- (BaseImageView *)bgImageView {
+- (CommonBaseImageView *)bgImageView {
     if (!_bgImageView) {
-        _bgImageView = [[BaseImageView alloc]init];
+        _bgImageView = [[CommonBaseImageView alloc]init];
     }
     return _bgImageView;
 }
@@ -89,16 +88,16 @@
     return _pwdView;
 }
 
-- (BaseTextField *)phoneField {
+- (CommonBaseTextField *)phoneField {
     if (!_phoneField) {
-        _phoneField = [[BaseTextField alloc]init];
+        _phoneField = [[CommonBaseTextField alloc]init];
     }
     return _phoneField;
 }
 
-- (BaseTextField *)pwdField {
+- (CommonBaseTextField *)pwdField {
     if (!_pwdField) {
-        _pwdField = [[BaseTextField alloc]init];
+        _pwdField = [[CommonBaseTextField alloc]init];
     }
     return _pwdField;
 }
@@ -144,7 +143,7 @@
         make.height.equalTo(@(phoneHeight));
     }];
     [_phoneField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.phoneView).offset(10);
+        make.top.equalTo(self.phoneView).offset(0);
         make.centerY.equalTo(self.phoneView).offset(0);
         make.left.equalTo(self.phoneView).offset(15);
         make.right.equalTo(self.phoneView).offset(-10);

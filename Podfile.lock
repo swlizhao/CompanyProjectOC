@@ -89,8 +89,21 @@ PODS:
   - PIXFeSpinner (1.0.2)
   - PNChart (0.8.9):
     - UICountingLabel (~> 1.2.0)
+  - pop (1.0.10)
   - Reachability (3.2)
   - ReactiveObjC (3.0.0)
+  - RongCloudIM (2.9.0):
+    - RongCloudIM/IMKit (= 2.9.0)
+    - RongCloudIM/IMLib (= 2.9.0)
+    - RongCloudIM/RedPacket (= 2.9.0)
+    - RongCloudIM/Sticker (= 2.9.0)
+  - RongCloudIM/IMKit (2.9.0):
+    - RongCloudIM/IMLib
+  - RongCloudIM/IMLib (2.9.0)
+  - RongCloudIM/RedPacket (2.9.0):
+    - RongCloudIM/IMKit
+  - RongCloudIM/Sticker (2.9.0):
+    - RongCloudIM/IMKit
   - SDAutoLayout (2.2.0)
   - SDCycleScrollView (1.75):
     - SDWebImage (>= 4.0.0)
@@ -98,6 +111,7 @@ PODS:
     - SDWebImage/Core (= 4.1.2)
   - SDWebImage/Core (4.1.2)
   - SVProgressHUD (2.2.2)
+  - TYAlertController (1.2.0)
   - TYCyclePagerView (1.1.0)
   - UICountingLabel (1.2.0)
   - WMPageController (2.5.2)
@@ -121,7 +135,7 @@ DEPENDENCIES:
   - DeepLinkKit (~> 1.4.0)
   - DZNEmptyDataSet (~> 1.8.1)
   - EAIntroView (~> 2.12.0)
-  - FMDB (~> 2.7.2)
+  - FMDB
   - GVUserDefaults (~> 1.0.2)
   - HUPhotoBrowser (~> 1.3.1)
   - IQKeyboardManager (~> 4.0.13)
@@ -146,17 +160,75 @@ DEPENDENCIES:
   - mob_sharesdk/ShareSDKPlatforms/WeChatFull
   - PIXFeSpinner (~> 1.0.2)
   - PNChart (~> 0.8.9)
+  - pop (~> 1.0.10)
   - Reachability (~> 3.2)
   - ReactiveObjC (~> 3.0.0)
+  - RongCloudIM (~> 2.9.0)
   - SDAutoLayout (~> 2.2.0)
   - SDCycleScrollView (~> 1.75)
   - SDWebImage (~> 4.1.0)
   - SVProgressHUD (~> 2.2.2)
+  - TYAlertController (~> 1.2.0)
   - TYCyclePagerView
   - WMPageController (~> 2.5.2)
   - YPTabBarController (~> 2.4.5)
   - YTKNetwork (~> 2.0.4)
   - YYKit (~> 1.0.9)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - Appirater
+    - BaiduMapKit
+    - BButton
+    - BlocksKit
+    - BRPickerView
+    - CWLateralSlide
+    - CYLTabBarController
+    - DateTools
+    - DeepLinkKit
+    - DZNEmptyDataSet
+    - EAIntroView
+    - EARestrictedScrollView
+    - FMDB
+    - GVUserDefaults
+    - HUPhotoBrowser
+    - IQKeyboardManager
+    - JazzHands
+    - JCAlertController
+    - JCore
+    - JDStatusBarNotification
+    - JHChainableAnimations
+    - JKCategories
+    - JPush
+    - JRSwizzle
+    - LinqToObjectiveC
+    - Mantle
+    - Masonry
+    - MBProgressHUD
+    - MDRadialProgress
+    - MGSwipeTableCell
+    - MJExtension
+    - MJRefresh
+    - mob_sharesdk
+    - MOBFoundation
+    - PIXFeSpinner
+    - PNChart
+    - pop
+    - Reachability
+    - ReactiveObjC
+    - RongCloudIM
+    - SDAutoLayout
+    - SDCycleScrollView
+    - SDWebImage
+    - SVProgressHUD
+    - TYAlertController
+    - TYCyclePagerView
+    - UICountingLabel
+    - WMPageController
+    - YPTabBarController
+    - YTKNetwork
+    - YYKit
 
 SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
@@ -196,12 +268,15 @@ SPEC CHECKSUMS:
   MOBFoundation: 981288b6bdff2e1a97ef05db6fceff982306a385
   PIXFeSpinner: 9e8a4d39f070bcc7edf45de580b7955a9f6e5209
   PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
+  RongCloudIM: 7b4f347758640d5cda8e0ac722110f8cfb8a6480
   SDAutoLayout: c5509e77ae75735d9a39f7bc83dba6d3f75d49d8
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  TYAlertController: c121090edb0bea7426f987da94cdddd81eef4231
   TYCyclePagerView: b70858c9b5d0e80e1e3129ff5ceb027eb0f76d44
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
   WMPageController: 0c7624d2b48e4f1ab92371688cf6744ed701575d
@@ -209,6 +284,6 @@ SPEC CHECKSUMS:
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 65551643a6e1591dc665d24259eb868386b1a470
+PODFILE CHECKSUM: ef8d040711ccbc65d1f868197324b99f3ffff37f
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3

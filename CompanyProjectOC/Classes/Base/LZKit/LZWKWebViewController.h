@@ -6,9 +6,9 @@
 //  Copyright © 2017年 LIZHAO. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "CommonBaseViewController.h"
 #import "LZWKWebView.h"
-@interface LZWKWebViewController : BaseViewController
+@interface LZWKWebViewController : CommonBaseViewController
 
 @property(nonatomic,strong)UIScrollView *  scrollview;
 @property(nonatomic,copy)NSString  * urlString;

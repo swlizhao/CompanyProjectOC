@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "BaseTabBarController.h"
+#import "AppDelegate+RCIM.h"
 #import "AppDelegate+ShareSDK.h"
+#import "AppDelegate+JPush.h"
+#import "BaseTabBarController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +20,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+   
+    //融云
+    [self initRCIMWithApplication:application didFinishLaunchingWithOptions:launchOptions];
+    
+    //极光
+    [self initJPushWithApplication:application didFinishLaunchingWithOptions:launchOptions];
+    
+    //shareSDK
+    [self initShareSDKWithApplication:application didFinishLaunchingWithOptions:launchOptions];
+    
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     BaseTabBarController * rootTabBarViewController = [[BaseTabBarController alloc]init];
     self.window.rootViewController = rootTabBarViewController;
@@ -24,7 +37,6 @@
     if (@available(iOS 11.0, *)){
         [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
     }
-    [self  registerShareSDK];
     return YES;
 }
 

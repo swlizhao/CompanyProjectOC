@@ -48,9 +48,9 @@
 }
 
 - (void)initConfig {
+    WeakSelf(weakSelf)
     self.navigationItem.title = @"设置";
     self.mainView.backgroundColor = RGB(245, 245, 245);
-    WeakSelf(weakSelf)
     self.mainView.baseViewTableViewSelectRowSenderBlock = ^(NSIndexPath *indexPath) {
         [weakSelf mainViewDidSelectRowWithIndexPath:indexPath];
     };
@@ -72,14 +72,14 @@
 #pragma mark - 初始化视图
 - (PersonalSetMainView *)mainView {
     if (!_mainView) {
-        _mainView = [[PersonalSetMainView alloc]initWithFrame:CGRectMake(0, STATUS_NAVIGATION_BAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - STATUS_NAVIGATION_BAR_HEIGHT - 50)];
+        _mainView = [[PersonalSetMainView alloc]initWithFrame:CGRectMake(0, STATUS_NAVIGATION_BAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - STATUS_NAVIGATION_BAR_HEIGHT - TAB_BAR_HEIGHT)];
     }
     return _mainView;
 }
 
 - (LZAdd *)exitLoginView {
     if (!_exitLoginView) {
-        _exitLoginView = [[LZAdd alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 50, SCREEN_WIDTH, 50)];
+        _exitLoginView = [[LZAdd alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - TAB_BAR_HEIGHT, SCREEN_WIDTH, TAB_BAR_HEIGHT)];
         _exitLoginView.backgroundColor = [UIColor redColor];
         _exitLoginView.titleColor = [UIColor whiteColor];
         _exitLoginView.titleFont = [UIFont systemFontOfSize:FONTSIZE_16];
