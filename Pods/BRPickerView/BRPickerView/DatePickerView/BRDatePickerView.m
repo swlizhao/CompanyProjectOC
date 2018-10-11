@@ -5,7 +5,7 @@
 //  Created by 任波 on 2017/8/11.
 //  Copyright © 2017年 renb. All rights reserved.
 //
-//  最新代码下载地址：https://github.com/borenfocus/BRPickerView
+//  最新代码下载地址：https://github.com/91renb/BRPickerView
 
 #import "BRDatePickerView.h"
 
@@ -90,6 +90,13 @@
         }
         
         [self initUI];
+        
+        NSDate *selectedDate = [self toDateWithDateString:_selectValue];
+        if (!selectedDate) {
+            selectedDate = [NSDate date];
+        }
+        // 滚动到默认选择的时间
+        [self.datePicker setDate:selectedDate animated:YES];
     }
     return self;
 }
@@ -113,7 +120,8 @@
         _datePicker.datePickerMode = _datePickerMode;
         // 设置该UIDatePicker的国际化Locale，以简体中文习惯显示日期，UIDatePicker控件默认使用iOS系统的国际化Locale
         _datePicker.locale = [[NSLocale alloc]initWithLocaleIdentifier:@"zh_CHS_CN"];
-        
+        // textColor 隐藏属性，使用KVC赋值
+        // [_datePicker setValue:[UIColor blackColor] forKey:@"textColor"];
         NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
         [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
         // 设置时间范围
@@ -125,10 +133,6 @@
             NSDate *maxDate = [formatter dateFromString:_maxDateStr];
             _datePicker.maximumDate = maxDate;
         }
-        
-        // 把当前时间赋值给 _datePicker
-        [_datePicker setDate:[self toDateWithDateString:_selectValue] animated:YES];
-        
         // 滚动改变值的响应事件
         [_datePicker addTarget:self action:@selector(didSelectValueChanged:) forControlEvents:UIControlEventValueChanged];
     }

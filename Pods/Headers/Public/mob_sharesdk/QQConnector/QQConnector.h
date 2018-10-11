@@ -1,1 +1,0 @@
-../../../../mob_sharesdk/SDK/ShareSDK/Support/PlatformConnector/QQConnector.framework/Headers/QQConnector.h

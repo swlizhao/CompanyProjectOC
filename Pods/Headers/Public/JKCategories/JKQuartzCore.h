@@ -1,1 +1,1 @@
-../../../JKCategories/JKCategories/JKQuartzCore.h
+../../../JKCategories/JKCategories/QuartzCore/JKQuartzCore.h

@@ -4,20 +4,39 @@ BRPickerView 封装的是iOS中常用的选择器组件。高度封装，只需�
 
 【**特别提示**】：
 
-- 当前最新版本为： `2.0.0` 。
+- 当前最新版本为： `2.1.3` 。
 - 如果不能找到最新版本，请先执行一下 `pod setup` ，待更新完成后；再执行 `pod search BRPickerView` 进行搜索，就会看到最新版本。
 
 # 2. 效果演示
 
 查看并运行 `BRPickerViewDemo.xcodeproj`
 
-| ![效果图1](https://github.com/borenfocus/BRPickerView/blob/fca58dbf6ac3c5f7f781e13cefdc27fdeaf59476/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/%E6%95%88%E6%9E%9C%E5%9B%BE.gif?raw=true) | ![效果图2](https://github.com/borenfocus/BRPickerView/blob/fca58dbf6ac3c5f7f781e13cefdc27fdeaf59476/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/%E6%95%88%E6%9E%9C%E5%9B%BE2.gif?raw=true) |
+| ![效果图1](https://github.com/91renb/BRPickerView/blob/0fb77e50ea397cbcb41be8778045eda7a77293bd/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/%E6%95%88%E6%9E%9C%E5%9B%BE.gif?raw=true) | ![效果图2](https://github.com/91renb/BRPickerView/blob/0fb77e50ea397cbcb41be8778045eda7a77293bd/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/%E6%95%88%E6%9E%9C%E5%9B%BE2.gif?raw=true) |
 | :--------------------------------------: | :--------------------------------------: |
 |               框架Demo运行效果图1               |               框架Demo运行效果图2               |
 
 # 3. 更新记录
 
-- 2018-01-25（V2.0.0）：
+- **2018-03-19（V2.1.3）**:
+
+  >- 修改地址选择器确认选择后的回调参数。
+  >- 现修改如下：可通过省市区的模型获取省市区的 name（名称）、code（id）、index（索引）`resultBlock:^(BRProvinceModel *province, BRCityModel *city, BRAreaModel *area) {}`
+  >- 去掉第三方依赖库 `MJExtension` ，修改为手动解析地址数据源。
+
+- **2018-03-11（V2.1.2）**:
+
+  >- 重命名了Github用户名，更新项目相关的路径。（提示：pod之前的版本不受影响）
+
+- **2018-02-28（V2.1.1）**：
+
+  >- 修复某些情况下无法用bundle加载本地数据源（BRCity.plist）bug。
+
+- **2018-01-26（V2.1.0）**:
+
+  >- 给地址选择器添加了一个方法（见方法4），提供数据源参数，支持外部传入地区数据源。
+  >- 提示：要注意数据源格式，参考 BRCity.json。可以把 BRCity.json 文件的内容放到后台去维护，通过后台接口获取地区数据源（即 BRCity.json 文件的内容）。
+
+- **2018-01-25（V2.0.0）**：
 
   > - 更新了地址数据源（BRCity.plist），地区信息是2018年最新最全的，与微信的地区信息完全一致。
   > - 支持自定义默认选择地址（格式：@[@"浙江省", @"杭州市", @"西湖区"]），支持下次点击进入地址选择器时，默认地址为上次选择的结果。
@@ -25,24 +44,29 @@ BRPickerView 封装的是iOS中常用的选择器组件。高度封装，只需�
   > - 添加了地址选择器显示类型，支持3种显示：只显示省份、显示省份和城市、显示省市区。
 
 
-- 2018-01-05（V1.3.0）:
+- **2018-01-05（V1.3.0）**:
 
   > - 添加取消选择的回调方法（点击背景或取消按钮会执行 `cancelBlock` ）
+  >
   > - 合并了字符串选择器 数组数据源和plist数据源对应的方法，`dataSource` 参数支持两种类型：
-  > - 1> 可以直接传数组：NSArray类型；
-  > - 2> 可以传plist文件名：NSString类型，带后缀名，plist文件的内容必须是数组格式。
+  >
+  >   1> 可以直接传数组：NSArray类型；
+  >
+  >   2> 可以传plist文件名：NSString类型，带后缀名，plist文件的内容必须是数组格式。
 
 
-- 2018-01-02（V1.2.0）：
+- **2018-01-02（V1.2.0）**：
 
   > - 添加支持自定义主题颜色的方法。
 
-- 2017-11-26（V1.1.0）：
+- **2017-11-26（V1.1.0）**：
 
-  > - 替换了第三方依赖库，用MJExtension 替换了 原来的YYModel，以前没有注意导入YYModel，同时又导入YYKit会导致重复导入而冲突（另外使用YYModel时，手动导入和pod导入 其中的头文件和方法名也不一样，所以很容易出错）。
+  > - 更换第三方依赖库。
+  >
+  >   用MJExtension 替换了 原来的YYModel，以前没有注意导入YYModel，同时又导入YYKit会导致重复导入而冲突（另外使用YYModel时，手动导入和pod导入 其中的头文件和方法名也不一样，所以很容易出错）。
 
 
-- 2017-11-16（V1.0.0）：
+- **2017-11-16（V1.0.0）**：
 
   > - 初始版本！
 
@@ -58,7 +82,7 @@ BRPickerView 封装的是iOS中常用的选择器组件。高度封装，只需�
 
 3. 导入头文件 ` #import <BRPickerView.h>`。
 
-   >注意：推荐使用最新版本：pod 'BRPickerView', '~> 2.0.0'
+   >注意：推荐使用最新版本：pod 'BRPickerView', '~> 2.1.3'
    >
 
 #### 4.2. 手动导入
@@ -67,8 +91,6 @@ BRPickerView 封装的是iOS中常用的选择器组件。高度封装，只需�
 
 2. 导入头文件 ` #import "BRPickerView.h"`。
 
-   > 注意：本框架依赖第三方MJExtension，所以手动导入框架时，还需要导入MJExtension框架。
-   >
 
 # 5. 系统要求
 
@@ -145,16 +167,16 @@ BRPickerView 封装的是iOS中常用的选择器组件。高度封装，只需�
 
 - 日期选择器的四种类型（dateType的4个枚举值）：
 
-| ![样式1：UIDatePickerModeTime](https://github.com/borenfocus/BRPickerView/blob/fca58dbf6ac3c5f7f781e13cefdc27fdeaf59476/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/date_type1.png?raw=true) | ![样式2：UIDatePickerModeDate](https://github.com/borenfocus/BRPickerView/blob/fca58dbf6ac3c5f7f781e13cefdc27fdeaf59476/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/date_type2.png?raw=true) |
+| ![样式1：UIDatePickerModeTime](https://github.com/91renb/BRPickerView/blob/fca58dbf6ac3c5f7f781e13cefdc27fdeaf59476/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/date_type1.png?raw=true) | ![样式2：UIDatePickerModeDate](https://github.com/91renb/BRPickerView/blob/fca58dbf6ac3c5f7f781e13cefdc27fdeaf59476/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/date_type2.png?raw=true) |
 | :--------------------------------------: | :--------------------------------------: |
 |         样式1：UIDatePickerModeTime         |         样式2：UIDatePickerModeDate         |
 |                                          |                                          |
-| ![样式3：UIDatePickerModeDateAndTime](https://github.com/borenfocus/BRPickerView/blob/fca58dbf6ac3c5f7f781e13cefdc27fdeaf59476/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/date_type3.png?raw=true) | ![样式4：UIDatePickerModeCountDownTimer](https://github.com/borenfocus/BRPickerView/blob/fca58dbf6ac3c5f7f781e13cefdc27fdeaf59476/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/date_type4.png?raw=true) |
+| ![样式3：UIDatePickerModeDateAndTime](https://github.com/91renb/BRPickerView/blob/fca58dbf6ac3c5f7f781e13cefdc27fdeaf59476/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/date_type3.png?raw=true) | ![样式4：UIDatePickerModeCountDownTimer](https://github.com/91renb/BRPickerView/blob/fca58dbf6ac3c5f7f781e13cefdc27fdeaf59476/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/date_type4.png?raw=true) |
 |     样式3：UIDatePickerModeDateAndTime      |    样式4：UIDatePickerModeCountDownTimer    |
 
 #### 6.2. 地址选择器：`BRAddressPickerView`
 
-​	查看 BRAddressPickerView.h 头文件，里面提供了3个方法，可根据自己的需求选择其中的一个方法进行使用。
+​	查看 BRAddressPickerView.h 头文件，里面提供了4个方法，可根据自己的需求选择其中的一个方法进行使用。
 
 ```objective-c
 /**
@@ -198,6 +220,26 @@ BRPickerView 封装的是iOS中常用的选择器组件。高度封装，只需�
                            themeColor:(UIColor *)themeColor
                           resultBlock:(BRAddressResultBlock)resultBlock
                           cancelBlock:(BRAddressCancelBlock)cancelBlock;
+
+/**
+ *  4.显示地址选择器（支持 设置选择器类型、传入地区数据源、设置自动选择、自定义主题颜色、取消选择的回调）
+ *
+ *  @param showType                 地址选择器显示类型
+ *  @param dataSource               地区数据源
+ *  @param defaultSelectedArr       默认选中的值(传数组，如：@[@"浙江省", @"杭州市", @"西湖区"])
+ *  @param isAutoSelect             是否自动选择，即选择完(滚动完)执行结果回调，传选择的结果值
+ *  @param themeColor               自定义主题颜色
+ *  @param resultBlock              选择后的回调
+ *  @param cancelBlock              取消选择的回调
+ *
+ */
++ (void)showAddressPickerWithShowType:(BRAddressPickerMode)showType
+                           dataSource:(NSArray *)dataSource
+                      defaultSelected:(NSArray *)defaultSelectedArr
+                         isAutoSelect:(BOOL)isAutoSelect
+                           themeColor:(UIColor *)themeColor
+                          resultBlock:(BRAddressResultBlock)resultBlock
+                          cancelBlock:(BRAddressCancelBlock)cancelBlock;
 ```
 
 方法使用：
@@ -205,8 +247,8 @@ BRPickerView 封装的是iOS中常用的选择器组件。高度封装，只需�
 ```objective-c
 // 【转换】：以@" "子字符串为基准将字符串分离成数组，如：@"浙江省 杭州市 西湖区" ——》@[@"浙江省", @"杭州市", @"西湖区"]
 NSArray *defaultSelArr = [weakSelf.addressTF.text componentsSeparatedByString:@" "];
-[BRAddressPickerView showAddressPickerWithShowType:BRAddressPickerModeArea defaultSelected:defaultSelArr isAutoSelect:YES themeColor:nil resultBlock:^(NSArray *selectAddressArr) {
-    weakSelf.addressTF.text = [NSString stringWithFormat:@"%@ %@ %@", selectAddressArr[0], selectAddressArr[1], selectAddressArr[2]];
+[BRAddressPickerView showAddressPickerWithShowType:BRAddressPickerModeArea defaultSelected:defaultSelArr isAutoSelect:YES themeColor:nil resultBlock:^(BRProvinceModel *province, BRCityModel *city, BRAreaModel *area) {
+    weakSelf.addressTF.text = [NSString stringWithFormat:@"%@ %@ %@", province.name, city.name, area.name];
 } cancelBlock:^{
     NSLog(@"点击了背景视图或取消按钮");
 }];
@@ -214,10 +256,10 @@ NSArray *defaultSelArr = [weakSelf.addressTF.text componentsSeparatedByString:@"
 
 - 地址选择器的3种显示类型（showType 的3个枚举值）：
 
-| ![省份](https://github.com/borenfocus/BRPickerView/blob/d400c274ff270ac4c805ac8b33f9ea3988e927e4/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/BRAddressPickerModeProvince.png?raw=true) | ![城市](https://github.com/borenfocus/BRPickerView/blob/d400c274ff270ac4c805ac8b33f9ea3988e927e4/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/BRAddressPickerModeCity.png?raw=true) |
+| ![省份](https://github.com/91renb/BRPickerView/blob/0fb77e50ea397cbcb41be8778045eda7a77293bd/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/BRAddressPickerModeProvince.png?raw=true) | ![城市](https://github.com/91renb/BRPickerView/blob/0fb77e50ea397cbcb41be8778045eda7a77293bd/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/BRAddressPickerModeCity.png?raw=true) |
 | :--------------------------------------: | :--------------------------------------: |
 |     样式1：BRAddressPickerModeProvince      |       样式2：BRAddressPickerModeCity        |
-| ![地区](https://github.com/borenfocus/BRPickerView/blob/d400c274ff270ac4c805ac8b33f9ea3988e927e4/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/BRAddressPickerModeArea.png?raw=true) |                                          |
+| ![地区](https://github.com/91renb/BRPickerView/blob/0fb77e50ea397cbcb41be8778045eda7a77293bd/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/BRAddressPickerModeArea.png?raw=true) |                                          |
 |       样式3：BRAddressPickerModeArea        |                                          |
 
 #### 6.3.  自定义字符串选择器：`BRStringPickerView`
@@ -303,11 +345,11 @@ NSArray *defaultSelArr = [weakSelf.otherTF.text componentsSeparatedByString:@"�
 
 - 字符串选择器效果图：
 
-| ![自定义单列字符串](https://github.com/borenfocus/BRPickerView/blob/d400c274ff270ac4c805ac8b33f9ea3988e927e4/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/string_single.png?raw=true) | ![自定义多列字符串](https://github.com/borenfocus/BRPickerView/blob/d400c274ff270ac4c805ac8b33f9ea3988e927e4/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/string_more.png?raw=true) |
+| ![自定义单列字符串](https://github.com/91renb/BRPickerView/blob/d400c274ff270ac4c805ac8b33f9ea3988e927e4/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/string_single.png?raw=true) | ![自定义多列字符串](https://github.com/91renb/BRPickerView/blob/d400c274ff270ac4c805ac8b33f9ea3988e927e4/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/string_more.png?raw=true) |
 | :--------------------------------------: | :--------------------------------------: |
 |            单列字符串选择器（默认主题色样式）             |            双列字符串选择器（自定义主题色样式）            |
 
-| ![3列效果图](https://github.com/borenfocus/BRPickerView/blob/fca58dbf6ac3c5f7f781e13cefdc27fdeaf59476/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/string_more3.png?raw=true) | ![4列效果图](https://github.com/borenfocus/BRPickerView/blob/fca58dbf6ac3c5f7f781e13cefdc27fdeaf59476/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/string_more4.png?raw=true) |
+| ![3列效果图](https://github.com/91renb/BRPickerView/blob/fca58dbf6ac3c5f7f781e13cefdc27fdeaf59476/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/string_more3.png?raw=true) | ![4列效果图](https://github.com/91renb/BRPickerView/blob/fca58dbf6ac3c5f7f781e13cefdc27fdeaf59476/BRPickerViewDemo/%E6%95%88%E6%9E%9C%E5%9B%BE/string_more4.png?raw=true) |
 | :--------------------------------------: | :--------------------------------------: |
 |            3列字符串选择器（自定义主题色样式）            |            4列字符串选择器（自定义主题色样式）            |
 

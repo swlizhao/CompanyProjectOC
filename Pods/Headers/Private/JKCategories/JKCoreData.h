@@ -1,1 +1,1 @@
-../../../JKCategories/JKCategories/JKCoreData.h
+../../../JKCategories/JKCategories/CoreData/JKCoreData.h

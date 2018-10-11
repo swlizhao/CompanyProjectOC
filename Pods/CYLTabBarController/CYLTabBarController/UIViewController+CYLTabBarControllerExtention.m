@@ -16,11 +16,15 @@
 #pragma mark - public Methods
 
 - (UIViewController *)cyl_popSelectTabBarChildViewControllerAtIndex:(NSUInteger)index {
+    return [self cyl_popSelectTabBarChildViewControllerAtIndex:index animated:NO];
+}
+
+- (UIViewController *)cyl_popSelectTabBarChildViewControllerAtIndex:(NSUInteger)index animated:(BOOL)animated {
     UIViewController *viewController = [self cyl_getViewControllerInsteadOfNavigationController];
     [viewController checkTabBarChildControllerValidityAtIndex:index];
-    [viewController.navigationController popToRootViewControllerAnimated:NO];
     CYLTabBarController *tabBarController = [viewController cyl_tabBarController];
     tabBarController.selectedIndex = index;
+    [viewController.navigationController popToRootViewControllerAnimated:animated];
     UIViewController *selectedTabBarChildViewController = tabBarController.selectedViewController;
     return [selectedTabBarChildViewController cyl_getViewControllerInsteadOfNavigationController];
 }
@@ -274,9 +278,7 @@
         NSString *reason = [NSString stringWithFormat:formatString,
                             @(__PRETTY_FUNCTION__),
                             @(__LINE__)];
-        @throw [NSException exceptionWithName:NSGenericException
-                                       reason:reason
-                                     userInfo:nil];
+        NSLog(@"🔴类名与方法名：%@（在第%@行），描述：%@", @(__PRETTY_FUNCTION__), @(__LINE__), reason);
     }
 }
 

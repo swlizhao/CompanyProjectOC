@@ -1,1 +1,1 @@
-../../../JKCategories/JKCategories/JKFoundation.h
+../../../JKCategories/JKCategories/Foundation/JKFoundation.h
