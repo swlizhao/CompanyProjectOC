@@ -24,11 +24,6 @@
 
 - (void)initHomeUI {
    [self.view  addSubview:self.mainView];
-    [[RequestServerData getServerInstance]getWithCity:@"太原" success:^(NSURLSessionDataTask *task, id responseObject) {
-    
-           NSDictionary * result = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-            NSLog(@"result:%@",result);
-    } ];
 }
 
 - (void)initHomeConfig {
@@ -36,6 +31,7 @@
     self.navigationItem.title = @"首页";
 }
 
+#pragma mark - 懒加载视图
 - (HomeMainView *)mainView {
     if (_mainView) {
         return _mainView;

@@ -45,6 +45,4 @@ typedef void(^RequestFailBlock)(NSURLSessionDataTask * task, NSError *  error);
 //前往appstore
 - (void)goToAppStore;
 
-- (void)getWithCity:(NSString *)city
-            success:(RequestSuccessBlock)success;
 @end

@@ -105,11 +105,5 @@
     [[UIApplication sharedApplication] openURL:url];
 }
 
-- (void)getWithCity:(NSString *)city
-            success:(RequestSuccessBlock)success {
-    NSMutableDictionary *parame = [NSMutableDictionary dictionary];
-    [parame setObject:city forKeyedSubscript:@"city"];
-        [self postAppStoreDataWithUrl:@"/open/api/weather/json.shtml" math:@"GET" parameters:parame progress:nil success:success];
-}
 
 @end
