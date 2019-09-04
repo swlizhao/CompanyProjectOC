@@ -13,18 +13,18 @@
  小视频消息的类型名
  */
 #define RCSightMessageTypeIdentifier @"RC:SightMsg"
-
+@class AVAsset;
 /**
  小视频消息类
 
  @discussion 小视频消息类，此消息会进行存储并计入未读消息数。
  */
-@interface RCSightMessage : RCMessageContent <NSCoding>
+@interface RCSightMessage : RCMediaMessageContent <NSCoding>
 
 /*!
  本地URL地址
  */
-@property(nonatomic, readonly) NSString *localPath;
+@property(nonatomic, copy) NSString *localPath;
 
 /*!
  网络URL地址
@@ -51,11 +51,11 @@
  */
 @property(nonatomic, strong, readonly) UIImage *thumbnailImage;
 
-
 /**
  开发者使用的扩展字段
  */
 @property(nonatomic, copy) NSString *extra;
+
 
 /**
  创建小视频消息的便利构造方法

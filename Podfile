@@ -51,5 +51,4 @@ pod 'TYCyclePagerView'
 pod 'YTKNetwork', '~> 2.0.4'
 pod 'RongCloudIM', '~> 2.9.0'
 pod 'pop', '~> 1.0.10'
-pod 'TYAlertController', '~> 1.2.0'
 end

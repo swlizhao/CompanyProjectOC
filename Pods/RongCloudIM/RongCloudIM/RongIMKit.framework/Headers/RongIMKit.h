@@ -34,6 +34,7 @@ FOUNDATION_EXPORT const unsigned char RongIMKitVersionString[];
 /// 消息Cell相关类
 #import <RongIMKit/RCFileMessageCell.h>
 #import <RongIMKit/RCImageMessageCell.h>
+#import <RongIMKit/RCGIFMessageCell.h>
 #import <RongIMKit/RCImageMessageProgressView.h>
 #import <RongIMKit/RCLocationMessageCell.h>
 #import <RongIMKit/RCMessageBaseCell.h>

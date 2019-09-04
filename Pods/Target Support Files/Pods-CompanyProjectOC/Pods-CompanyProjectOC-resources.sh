@@ -3,10 +3,15 @@ set -e
 set -u
 set -o pipefail
 
+function on_error {
+  echo "$(realpath -mq "${0}"):$1: error: Unexpected failure"
+}
+trap 'on_error $LINENO' ERR
+
 if [ -z ${UNLOCALIZED_RESOURCES_FOLDER_PATH+x} ]; then
-    # If UNLOCALIZED_RESOURCES_FOLDER_PATH is not set, then there's nowhere for us to copy
-    # resources to, so exit 0 (signalling the script phase was successful).
-    exit 0
+  # If UNLOCALIZED_RESOURCES_FOLDER_PATH is not set, then there's nowhere for us to copy
+  # resources to, so exit 0 (signalling the script phase was successful).
+  exit 0
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
@@ -113,8 +118,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/RongCloudIM/RongCloudIM/JrmfIMLib/WalletResource.bundle"
   install_resource "${PODS_ROOT}/RongCloudIM/RongCloudIM/RongSticker.bundle"
   install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
-  install_resource "${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/Required/ShareSDK.bundle"
-  install_resource "${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_AliSocial.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_QQ.bundle"
+  install_resource "${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_SinaWeibo.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_WeChat.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/Appirater/Appirater.bundle"
@@ -138,8 +147,12 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/RongCloudIM/RongCloudIM/JrmfIMLib/WalletResource.bundle"
   install_resource "${PODS_ROOT}/RongCloudIM/RongCloudIM/RongSticker.bundle"
   install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
-  install_resource "${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/Required/ShareSDK.bundle"
-  install_resource "${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_AliSocial.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_QQ.bundle"
+  install_resource "${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_SinaWeibo.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_WeChat.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

@@ -10,4 +10,12 @@
 
 @implementation CommonBaseModel
 
+
+
+
+
+
+
+
+
 @end

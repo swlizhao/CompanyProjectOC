@@ -12,7 +12,7 @@
 #import <RongIMLib/RongIMLib.h>
 #import <UIKit/UIKit.h>
 
-#define RC_ChatSessionInputBar_Height 50.f
+#define RC_ChatSessionInputBar_Height 49.5f
 ///输入栏扩展输入的唯一标示
 #define INPUT_MENTIONED_SELECT_TAG 1000
 #define PLUGIN_BOARD_ITEM_ALBUM_TAG 1001
@@ -136,7 +136,11 @@ typedef NS_ENUM(NSInteger, KBottomBarStatus) {
     /*!
      语音消息输入模式
      */
-    KBottomBarRecordStatus
+    KBottomBarRecordStatus,
+    /*!
+     常用语输入模式
+     */
+    KBottomBarCommonPhrasesStatus
 };
 
 /*!
@@ -148,6 +152,11 @@ typedef NS_ENUM(NSInteger, KBottomBarStatus) {
  输入工具栏的数据源
  */
 @protocol RCChatSessionInputBarControlDataSource;
+
+/**
+ 图片编辑的协议
+ */
+@protocol RCPictureEditDelegate;
 
 /*!
  输入工具栏
@@ -173,6 +182,11 @@ typedef NS_ENUM(NSInteger, KBottomBarStatus) {
  输入工具栏获取用户信息的回调
  */
 @property(weak, nonatomic) id<RCChatSessionInputBarControlDataSource> dataSource;
+
+/**
+ 点击编辑按钮会调用该代理的onClickEditPicture方法
+ */
+@property(weak, nonatomic) id<RCPictureEditDelegate> photoEditorDelegate;
 
 /*!
  公众服务菜单的容器View
@@ -258,6 +272,13 @@ typedef NS_ENUM(NSInteger, KBottomBarStatus) {
  文本输入框的高度
  */
 @property(assign, nonatomic) float inputTextview_height __deprecated_msg("已废弃，请勿使用。");
+
+/**
+ 输入框最大输入行数
+ 
+ @discussion 该变量设置范围为: 1~6, 超过该范围会自动调整为边界值
+ */
+@property(nonatomic, assign) NSInteger maxInputLines;
 
 /*!
  公众服务账号菜单
@@ -367,6 +388,13 @@ typedef NS_ENUM(NSInteger, KBottomBarStatus) {
  */
 - (void)containerViewSizeChanged;
 
+/**
+ 内容区域大小发生变化。
+ 
+ @discussion 当本view所在的view frame发生变化，需要重新计算本view的frame时，调用此方法，无动画
+ */
+- (void)containerViewSizeChangedNoAnnimation;
+
 /*!
  设置默认的输入框类型
 
@@ -410,6 +438,15 @@ typedef NS_ENUM(NSInteger, KBottomBarStatus) {
 - (void)openFileSelector;
 
 - (void)openDynamicFunction:(NSInteger)functionTag;
+
+/*!
+ 常用语列表设置
+ 
+ @param commonPhrasesList 您需要展示的常用语列表
+ 
+ @discussion 常用语条数需大于 0 条，每条内容最多可配置 30 个字，且只支持单聊。
+ */
+-(BOOL)setCommonPhrasesList:(NSArray<NSString *> *)commonPhrasesList;
 
 /*!
  更新输入框的Frame
@@ -496,6 +533,13 @@ typedef NS_ENUM(NSInteger, KBottomBarStatus) {
  @param sendButton 发送按钮
  */
 - (void)emojiView:(RCEmojiBoardView *)emojiView didTouchSendButton:(UIButton *)sendButton;
+
+/*!
+ 点击常用语的回调
+ 
+ @param commonPhrases  常用语
+ */
+- (void)commonPhrasesViewDidTouch:(NSString *)commonPhrases;
 
 /*!
  开始录制语音消息
@@ -600,3 +644,21 @@ typedef NS_ENUM(NSInteger, KBottomBarStatus) {
 - (RCUserInfo *)getSelectingUserInfo:(NSString *)userId;
 
 @end
+
+/**
+ 图片编辑的代理
+ */
+@protocol RCPictureEditDelegate <NSObject>
+
+/**
+ 点击编辑按钮时的回调，可以通过rootCtrl控制器进行页面的跳转，在源码中默认跳转到RCPictureEditViewController
+
+ @param rootCtrl 图片编辑根控制器，用于页面跳转
+ @param originalImage 原图片
+ @param editCompletion 编辑过的图片通过Block回传给SDK
+ */
+- (void)onClickEditPicture: (UIViewController *)rootCtrl originalImage: (UIImage *)originalImage editCompletion:(void (^)(UIImage *editedImage))editCompletion;
+
+@end
+
+

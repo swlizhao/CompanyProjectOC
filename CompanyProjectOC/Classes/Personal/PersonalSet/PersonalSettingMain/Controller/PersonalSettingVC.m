@@ -23,7 +23,7 @@
 
 - (NSArray *)classNames {
     if (!_classNames) {
-        _classNames = [NSArray arrayWithObjects:@"AccountSecurityMainVC",@"AddressListVC",@"2",@"3" ,@"4",nil];
+        _classNames = [NSArray arrayWithObjects:@"AccountSecurityMainVC",@"AddressListVC",@"2",@"PersonalFeedBackViewController" ,@"4",nil];
     }
     return _classNames;
 }
@@ -64,9 +64,15 @@
 }
 
 - (void)mainViewDidSelectRowWithIndexPath:(NSIndexPath *)indexPath {
+ 
+    if(indexPath.row == 3){
+        PersonalFeedBackViewController *vc = [[PersonalFeedBackViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+        return;
+    }
+    
     UIViewController * vc = [[NSClassFromString(self.classNames[indexPath.row]) alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
-     
 }
 
 #pragma mark - 初始化视图

@@ -62,7 +62,7 @@ NS_ASSUME_NONNULL_BEGIN
  视频的本地或者远程url，
  @discussion 如果开启了autoPlay设置该属性会自动调用 play 方法
  */
-@property(strong, nonatomic) NSURL *assetURL;
+@property(strong, nonatomic) NSURL *rcSightURL;
 
 /**
  第一帧的图像
@@ -84,7 +84,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param image 图片显示图
  */
-- (void)setThumbnail:(nullable UIImage *)image;
+- (void)setFirstFrameThumbnail:(nullable UIImage *)image;
 
 /**
  开始播放本地小视频，或者下载视频文件到本地播放
@@ -102,6 +102,7 @@ NS_ASSUME_NONNULL_BEGIN
   @discussion 该方法不会终止下载操作，下载完成后会缓存视频文件，但是不会播放。
  */
 - (void)reset;
+-(void)setLoadingCenter:(CGPoint)center;
 
 @end
 

@@ -209,6 +209,17 @@
 		B07A553D2101E18400CE83C0 /* CommonBaseTableHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B07A553C2101E18400CE83C0 /* CommonBaseTableHeaderFooterView.m */; };
 		B07A55402101E1C200CE83C0 /* CommonBaseTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B07A553F2101E1C200CE83C0 /* CommonBaseTextView.m */; };
 		B07A55432101E21800CE83C0 /* ComonBaseImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B07A55422101E21800CE83C0 /* ComonBaseImagePickerController.m */; };
+		F10156E921BE6B8000826349 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F10156E821BE6B8000826349 /* UserInfoModel.m */; };
+		F10156ED21BE6D7D00826349 /* LoginHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F10156EC21BE6D7D00826349 /* LoginHelper.m */; };
+		F10156F021BE6F6800826349 /* CacheTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F10156EF21BE6F6800826349 /* CacheTools.m */; };
+		F1865315229F738B002C3F92 /* ApiResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F1865314229F738B002C3F92 /* ApiResultModel.m */; };
+		F1865318229F74F7002C3F92 /* NetWorkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F1865317229F74F7002C3F92 /* NetWorkTool.m */; };
+		F186531B229F7AC9002C3F92 /* ApiTokenHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F186531A229F7AC9002C3F92 /* ApiTokenHelper.m */; };
+		F186531F229F7ECC002C3F92 /* systemConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = F186531E229F7ECC002C3F92 /* systemConfig.plist */; };
+		F1865322229F8101002C3F92 /* totalPoint.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1865321229F8101002C3F92 /* totalPoint.plist */; };
+		F1865325229F85E1002C3F92 /* CustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F1865324229F85E1002C3F92 /* CustomNavigationBar.m */; };
+		F186533022A0DF9D002C3F92 /* PersonalFeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F186532F22A0DF9D002C3F92 /* PersonalFeedBackViewController.swift */; };
+		F18A6550231F6702005CD8B7 /* AdvertisingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18A654F231F6702005CD8B7 /* AdvertisingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -600,6 +611,27 @@
 		B07A553F2101E1C200CE83C0 /* CommonBaseTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonBaseTextView.m; sourceTree = "<group>"; };
 		B07A55412101E21800CE83C0 /* ComonBaseImagePickerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComonBaseImagePickerController.h; sourceTree = "<group>"; };
 		B07A55422101E21800CE83C0 /* ComonBaseImagePickerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComonBaseImagePickerController.m; sourceTree = "<group>"; };
+		F10156E721BE6B8000826349 /* UserInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoModel.h; sourceTree = "<group>"; };
+		F10156E821BE6B8000826349 /* UserInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoModel.m; sourceTree = "<group>"; };
+		F10156EB21BE6D7D00826349 /* LoginHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginHelper.h; sourceTree = "<group>"; };
+		F10156EC21BE6D7D00826349 /* LoginHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginHelper.m; sourceTree = "<group>"; };
+		F10156EE21BE6F6800826349 /* CacheTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheTools.h; sourceTree = "<group>"; };
+		F10156EF21BE6F6800826349 /* CacheTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacheTools.m; sourceTree = "<group>"; };
+		F1865313229F738B002C3F92 /* ApiResultModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiResultModel.h; sourceTree = "<group>"; };
+		F1865314229F738B002C3F92 /* ApiResultModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiResultModel.m; sourceTree = "<group>"; };
+		F1865316229F74F7002C3F92 /* NetWorkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorkTool.h; sourceTree = "<group>"; };
+		F1865317229F74F7002C3F92 /* NetWorkTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkTool.m; sourceTree = "<group>"; wrapsLines = 0; };
+		F1865319229F7AC9002C3F92 /* ApiTokenHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiTokenHelper.h; sourceTree = "<group>"; };
+		F186531A229F7AC9002C3F92 /* ApiTokenHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiTokenHelper.m; sourceTree = "<group>"; };
+		F186531D229F7C06002C3F92 /* EnumConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumConfig.h; sourceTree = "<group>"; };
+		F186531E229F7ECC002C3F92 /* systemConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = systemConfig.plist; sourceTree = "<group>"; };
+		F1865321229F8101002C3F92 /* totalPoint.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = totalPoint.plist; sourceTree = "<group>"; };
+		F1865323229F85E1002C3F92 /* CustomNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomNavigationBar.h; sourceTree = "<group>"; };
+		F1865324229F85E1002C3F92 /* CustomNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationBar.m; sourceTree = "<group>"; };
+		F186532E22A0DF9C002C3F92 /* CompanyProjectOC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CompanyProjectOC-Bridging-Header.h"; sourceTree = "<group>"; };
+		F186532F22A0DF9D002C3F92 /* PersonalFeedBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalFeedBackViewController.swift; sourceTree = "<group>"; };
+		F18A654E231F6702005CD8B7 /* AdvertisingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdvertisingViewController.h; sourceTree = "<group>"; };
+		F18A654F231F6702005CD8B7 /* AdvertisingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdvertisingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -740,6 +772,7 @@
 				033D85EC1FFDFFDA006BA669 /* PersonalSettingMain */,
 				035049FC2048DA2400BDBCF2 /* PersonalAccountSecurity */,
 				033F8CAB2048050F001A0887 /* PersonalAddressMain */,
+				F186532A22A0DED9002C3F92 /* PersonalFeedback */,
 			);
 			path = PersonalSet;
 			sourceTree = "<group>";
@@ -2059,10 +2092,12 @@
 				188A44511F885F9700212E35 /* Config */,
 				B051C2E020FDC98E00B47761 /* Common */,
 				188A44531F885FC300212E35 /* Other */,
+				F18A654D231F66B7005CD8B7 /* Advertising */,
 				188A44541F885FDA00212E35 /* Home */,
 				188A44551F885FE600212E35 /* Types */,
 				032F918920455A9900D5A835 /* Message */,
 				035070792046612500B810E2 /* NewsInformation */,
+				F10156EA21BE6D3E00826349 /* LoginHelper */,
 				188A44561F885FFD00212E35 /* ShoppingCart */,
 				188A44571F88601D00212E35 /* Personal */,
 				188A44581F88609300212E35 /* Login */,
@@ -2070,6 +2105,7 @@
 				B0620DA12106DAD6003622CE /* RegisterNext */,
 				188A445A1F8860CC00212E35 /* Forgot */,
 				B0620DA02106DAC1003622CE /* ForgotNext */,
+				F18A654B23162BB0005CD8B7 /* Live */,
 				188A445B1F8860D600212E35 /* Tools */,
 				188A445C1F8860E400212E35 /* Vendor */,
 				188A445F1F88612000212E35 /* Base */,
@@ -2081,6 +2117,7 @@
 		188A44501F885F7C00212E35 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F1865320229F7F7D002C3F92 /* SystemPlist */,
 				03504A2620495ABE00BDBCF2 /* Audio */,
 				035686F42043E1D500027F31 /* Plist */,
 				188A44601F88614400212E35 /* Images */,
@@ -2092,8 +2129,10 @@
 		188A44511F885F9700212E35 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				F186532E22A0DF9C002C3F92 /* CompanyProjectOC-Bridging-Header.h */,
 				188A44B01F886BEE00212E35 /* ProjectHeader.pch */,
 				188A44B11F886C0B00212E35 /* Contact.h */,
+				F186531D229F7C06002C3F92 /* EnumConfig.h */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -2203,6 +2242,12 @@
 			children = (
 				188A44DB1F88DC7300212E35 /* Tools.h */,
 				188A44DC1F88DC7300212E35 /* Tools.m */,
+				F10156EE21BE6F6800826349 /* CacheTools.h */,
+				F10156EF21BE6F6800826349 /* CacheTools.m */,
+				F1865316229F74F7002C3F92 /* NetWorkTool.h */,
+				F1865317229F74F7002C3F92 /* NetWorkTool.m */,
+				F1865319229F7AC9002C3F92 /* ApiTokenHelper.h */,
+				F186531A229F7AC9002C3F92 /* ApiTokenHelper.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -2259,7 +2304,6 @@
 		188A44621F8861FE00212E35 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				188A442B1F885F3E00212E35 /* Info.plist */,
 				188A442C1F885F3E00212E35 /* main.m */,
 			);
 			path = "Supporting Files";
@@ -2756,6 +2800,10 @@
 			isa = PBXGroup;
 			children = (
 				B0266F82213A2DB900E39DF6 /* BaseModel */,
+				F10156E721BE6B8000826349 /* UserInfoModel.h */,
+				F10156E821BE6B8000826349 /* UserInfoModel.m */,
+				F1865313229F738B002C3F92 /* ApiResultModel.h */,
+				F1865314229F738B002C3F92 /* ApiResultModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2773,6 +2821,8 @@
 			children = (
 				B0620D9C2106C37D003622CE /* LoginChildView */,
 				B073B8E92105E0000018563C /* UIKit_Custom */,
+				F1865323229F85E1002C3F92 /* CustomNavigationBar.h */,
+				F1865324229F85E1002C3F92 /* CustomNavigationBar.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2957,6 +3007,81 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F10156EA21BE6D3E00826349 /* LoginHelper */ = {
+			isa = PBXGroup;
+			children = (
+				F10156EB21BE6D7D00826349 /* LoginHelper.h */,
+				F10156EC21BE6D7D00826349 /* LoginHelper.m */,
+			);
+			path = LoginHelper;
+			sourceTree = "<group>";
+		};
+		F1865320229F7F7D002C3F92 /* SystemPlist */ = {
+			isa = PBXGroup;
+			children = (
+				188A442B1F885F3E00212E35 /* Info.plist */,
+				F186531E229F7ECC002C3F92 /* systemConfig.plist */,
+				F1865321229F8101002C3F92 /* totalPoint.plist */,
+			);
+			path = SystemPlist;
+			sourceTree = "<group>";
+		};
+		F186532A22A0DED9002C3F92 /* PersonalFeedback */ = {
+			isa = PBXGroup;
+			children = (
+				F186532D22A0DF08002C3F92 /* Model */,
+				F186532C22A0DEFF002C3F92 /* Views */,
+				F186532B22A0DEF2002C3F92 /* Controller */,
+			);
+			path = PersonalFeedback;
+			sourceTree = "<group>";
+		};
+		F186532B22A0DEF2002C3F92 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F186532F22A0DF9D002C3F92 /* PersonalFeedBackViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F186532C22A0DEFF002C3F92 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F186532D22A0DF08002C3F92 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F18A654B23162BB0005CD8B7 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				F18A654C23162C06005CD8B7 /* Controllers */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		F18A654C23162C06005CD8B7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F18A654D231F66B7005CD8B7 /* Advertising */ = {
+			isa = PBXGroup;
+			children = (
+				F18A654E231F6702005CD8B7 /* AdvertisingViewController.h */,
+				F18A654F231F6702005CD8B7 /* AdvertisingViewController.m */,
+			);
+			path = Advertising;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3026,6 +3151,7 @@
 				TargetAttributes = {
 					188A44191F885F3E00212E35 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Manual;
 					};
 					188A44311F885F3E00212E35 = {
@@ -3096,10 +3222,12 @@
 				033F8C9C2047F32D001A0887 /* PersonalMainDatas.json in Resources */,
 				188A44251F885F3E00212E35 /* Main.storyboard in Resources */,
 				033D85EA1FFDFAD6006BA669 /* img_set_white.png in Resources */,
+				F1865322229F8101002C3F92 /* totalPoint.plist in Resources */,
 				03504A142048FA1000BDBCF2 /* img_edit.png in Resources */,
 				033F8C00204794DB001A0887 /* img_receivedGoods.png in Resources */,
 				036EBA281FD2A2A70067A3C0 /* Login.storyboard in Resources */,
 				033F8C0A204796B0001A0887 /* img_sendGoods.png in Resources */,
+				F186531F229F7ECC002C3F92 /* systemConfig.plist in Resources */,
 				03504A122048F7F900BDBCF2 /* img_trash.png in Resources */,
 				03A15C7F204A8FFC0038829C /* img_voucher.png in Resources */,
 				033F8C0C204796F8001A0887 /* img_noPay.png in Resources */,
@@ -3152,7 +3280,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CompanyProjectOC/Pods-CompanyProjectOC-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CompanyProjectOC/Pods-CompanyProjectOC-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/Appirater/Appirater.bundle",
 				"${PODS_ROOT}/BButton/BButton/resources/FontAwesome.ttf",
 				"${PODS_ROOT}/BRPickerView/BRPickerView/AddressPickerView/BRPickerView.bundle",
@@ -3174,8 +3302,12 @@
 				"${PODS_ROOT}/RongCloudIM/RongCloudIM/JrmfIMLib/WalletResource.bundle",
 				"${PODS_ROOT}/RongCloudIM/RongCloudIM/RongSticker.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
-				"${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/Required/ShareSDK.bundle",
-				"${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_AliSocial.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_QQ.bundle",
+				"${PODS_ROOT}/mob_sharesdk/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_SinaWeibo.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK_JS_WeChat.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -3199,11 +3331,15 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RongSticker.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDK_JS_AliSocial.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDK_JS_QQ.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDK_JS_SinaWeibo.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDK_JS_WeChat.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CompanyProjectOC/Pods-CompanyProjectOC-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CompanyProjectOC/Pods-CompanyProjectOC-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -3232,11 +3368,13 @@
 				033D85FD1FFE1520006BA669 /* PersonalSetMainView.m in Sources */,
 				B0620DB721070F30003622CE /* RegisterNextMainView.m in Sources */,
 				B051C30320FDF81C00B47761 /* AppDelegate+JPush.m in Sources */,
+				F18A6550231F6702005CD8B7 /* AdvertisingViewController.m in Sources */,
 				036EBA131FD29FC40067A3C0 /* BaseTableViewHeaderFooterView.m in Sources */,
 				180D65D51F8A016A00E39B2D /* ForgotVC.m in Sources */,
 				033D86001FFE1CFF006BA669 /* PersonalSetMainCell.m in Sources */,
 				033F8CA12047F9CB001A0887 /* PersonalSettingMainModel.m in Sources */,
 				B05BF6ED210178AC00C6222F /* CommonBaseTextField.m in Sources */,
+				F10156E921BE6B8000826349 /* UserInfoModel.m in Sources */,
 				036EBA5F1FD2A8DD0067A3C0 /* PersonalMainVM.m in Sources */,
 				03504A0A2048E54B00BDBCF2 /* AddressListCell.m in Sources */,
 				03504A1A204920D700BDBCF2 /* PersonalHeadView.m in Sources */,
@@ -3255,6 +3393,7 @@
 				B051C2E820FDCAD700B47761 /* CommonBaseModel.m in Sources */,
 				036EBA561FD2A87C0067A3C0 /* PersonalMainModel.m in Sources */,
 				188A44C21F8884EA00212E35 /* LoginVC.m in Sources */,
+				F1865318229F74F7002C3F92 /* NetWorkTool.m in Sources */,
 				036EBA2E1FD2A7050067A3C0 /* HomeMainModel.m in Sources */,
 				035687102044148200027F31 /* ProductCategoryRightCollectionViewCell.m in Sources */,
 				033F8C642047DECE001A0887 /* PersonalCollectionProductVC.m in Sources */,
@@ -3293,7 +3432,9 @@
 				031659C11FD4DF7000CF6419 /* ShoppingCartDetailVM.m in Sources */,
 				033F8C522047D821001A0887 /* PersonalVoucherUseVC.m in Sources */,
 				03F5A98A2046897500F471C2 /* BaseCollectionReusableView.m in Sources */,
+				F10156ED21BE6D7D00826349 /* LoginHelper.m in Sources */,
 				03F5A98320467B4A00F471C2 /* NewsVideoVC.m in Sources */,
+				F10156F021BE6F6800826349 /* CacheTools.m in Sources */,
 				188A44A41F88680500212E35 /* ProductCategoriesMainVC.m in Sources */,
 				036EBA441FD2A7BE0067A3C0 /* ProductCategoriesVM.m in Sources */,
 				036EBA181FD2A0060067A3C0 /* LZWKWebViewController.m in Sources */,
@@ -3327,6 +3468,7 @@
 				B07A55432101E21800CE83C0 /* ComonBaseImagePickerController.m in Sources */,
 				03504A2220492EEA00BDBCF2 /* AccountSecurityMainView.m in Sources */,
 				180D65CC1F8A011B00E39B2D /* RegisterVC.m in Sources */,
+				F1865315229F738B002C3F92 /* ApiResultModel.m in Sources */,
 				033F8C5B2047D923001A0887 /* PersonalCollectionBaseVC.m in Sources */,
 				033F8C8B2047E1F4001A0887 /* PersonalOrderAllVC.m in Sources */,
 				188A449A1F88671800212E35 /* BaseTableView.m in Sources */,
@@ -3339,6 +3481,7 @@
 				B073B8E82105CA460018563C /* CommonBaseWKWebViewController.m in Sources */,
 				188A44D51F88A97900212E35 /* RequestServerData.m in Sources */,
 				0356870A2044052000027F31 /* ProductCategoryLeftTableViewCell.m in Sources */,
+				F1865325229F85E1002C3F92 /* CustomNavigationBar.m in Sources */,
 				035686FF2043F3DB00027F31 /* ShoppingCartMoreCCell.m in Sources */,
 				B051C2E420FDC9D200B47761 /* CommonBaseRequest.m in Sources */,
 				03722E4A1FFF279A00B28AFD /* LZLocation.m in Sources */,
@@ -3356,6 +3499,7 @@
 				031659BB1FD4DF3400CF6419 /* ShoppingCartDetailModel.m in Sources */,
 				035686F02043DDB500027F31 /* ShoppingCartMoreCell.m in Sources */,
 				B051C2EE20FDCB5700B47761 /* CommonBaseViewModel.m in Sources */,
+				F186531B229F7AC9002C3F92 /* ApiTokenHelper.m in Sources */,
 				036EBA1F1FD2A0520067A3C0 /* UIButton+LZButtonSenderStatus.m in Sources */,
 				036EBA7B1FD2B4640067A3C0 /* MBProgressHUD+MJ.m in Sources */,
 				033F8C5E2047DC03001A0887 /* PersonalWalletMainView.m in Sources */,
@@ -3365,6 +3509,7 @@
 				188A44971F8866FD00212E35 /* BaseView.m in Sources */,
 				180D65BA1F8A009C00E39B2D /* PersonalSettingVC.m in Sources */,
 				036EB2BC202826C500A15478 /* UIView+Shadow.m in Sources */,
+				F186533022A0DF9D002C3F92 /* PersonalFeedBackViewController.swift in Sources */,
 				036EBA201FD2A0520067A3C0 /* UIButton+LZTimerDown.m in Sources */,
 				03504A2520492F8600BDBCF2 /* AccountSecurityMainViewCell.m in Sources */,
 				03F5A97B20467B0D00F471C2 /* NewsFocusVC.m in Sources */,
@@ -3491,6 +3636,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -3539,6 +3685,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -3548,17 +3695,21 @@
 			baseConfigurationReference = 836389BB377D4B40F6CAB953 /* Pods-CompanyProjectOC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = R6HA2K2BP9;
-				GCC_PREFIX_HEADER = /Users/quanqiuwa/Documents/GitHub/CompanyProjectOC/CompanyProjectOC/Classes/Config/ProjectHeader.pch;
-				INFOPLIST_FILE = "$(SRCROOT)/CompanyProjectOC/Classes/Other/Supporting Files/Info.plist";
+				GCC_PREFIX_HEADER = "/Users/lizhao/Desktop/GitHubProject/iOS项目/CompanyProjectOC/CompanyProjectOC/Classes/Config/ProjectHeader.pch";
+				INFOPLIST_FILE = "/Users/lizhao/Desktop/GitHubProject/iOS项目/CompanyProjectOC/CompanyProjectOC/Classes/Resources/SystemPlist/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.quanqiuwa.crowdsourcing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "0447da8b-e354-425d-b797-398373e48167";
 				PROVISIONING_PROFILE_SPECIFIER = "众包测试证书20180721";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/lizhao/Desktop/GitHubProject/iOS项目/CompanyProjectOC/CompanyProjectOC/Classes/Config/CompanyProjectOC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3568,16 +3719,19 @@
 			baseConfigurationReference = 695B4C447ADAB6CFFB74BA7B /* Pods-CompanyProjectOC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				GCC_PREFIX_HEADER = /Users/quanqiuwa/Documents/GitHub/CompanyProjectOC/CompanyProjectOC/Classes/Config/ProjectHeader.pch;
-				INFOPLIST_FILE = "$(SRCROOT)/CompanyProjectOC/Classes/Other/Supporting Files/Info.plist";
+				GCC_PREFIX_HEADER = "/Users/lizhao/Desktop/GitHubProject/iOS项目/CompanyProjectOC/CompanyProjectOC/Classes/Config/ProjectHeader.pch";
+				INFOPLIST_FILE = "/Users/lizhao/Desktop/GitHubProject/iOS项目/CompanyProjectOC/CompanyProjectOC/Classes/Resources/SystemPlist/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.quanqiuwa.crowdsourcing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/lizhao/Desktop/GitHubProject/iOS项目/CompanyProjectOC/CompanyProjectOC/Classes/Config/CompanyProjectOC-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -3585,6 +3739,7 @@
 		188A444A1F885F3E00212E35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CompanyProjectOCTests/Info.plist;
@@ -3599,6 +3754,7 @@
 		188A444B1F885F3E00212E35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CompanyProjectOCTests/Info.plist;
@@ -3613,6 +3769,7 @@
 		188A444D1F885F3E00212E35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CompanyProjectOCUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -3626,6 +3783,7 @@
 		188A444E1F885F3E00212E35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CompanyProjectOCUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

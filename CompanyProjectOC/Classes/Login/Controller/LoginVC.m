@@ -25,6 +25,8 @@
     // [self commitLoginDataToServer];
     // [self commitPhotoDataToServer];
     // [self getAppStoreAppVersionInfo];
+    
+//   NSURLRequestUseProtocolCachePolicy
 }
 
 - (void)setup {

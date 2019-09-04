@@ -8,7 +8,9 @@
 
 #ifndef ProjectHeader_pch
 #define ProjectHeader_pch
-#import "Contact.h"
+
+#import "CompanyProjectOC-Swift.h"//引入swift文件
+
 #import "LZConfig.h"
 #import "SVProgressHUD.h"
 #import "MBProgressHUD+MJ.h"
@@ -25,4 +27,5 @@
 
 #import "LoginVC.h"
 
+#import "Contact.h"
 #endif /* ProjectHeader_pch */

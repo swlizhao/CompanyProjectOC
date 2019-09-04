@@ -1,1 +1,0 @@
-../../../../MOBFoundation/MOBFoundation.framework/Headers/UIImageView+MOBFWebCache.h

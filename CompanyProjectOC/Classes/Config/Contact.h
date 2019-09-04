@@ -60,6 +60,21 @@
 #define KWIDTH_SCALE    [UIScreen mainScreen].bounds.size.width/375.0f
 
 
+#define KSystemConfigPlist(p) [CacheTools getKeyValueWithSystemConfigPlist:(p)]
+//接口测试地址和测试h5地址
+#define APIURLTest KCONFIGPLIST(@"ApiUrlTest")
+#define html5urlTest KCONFIGPLIST(@"H5UrlTest")
+/**
+ 安装地址，1-正式线  2-测试线 3-本地测试线
+ 
+ @param @"InstallationType" @"InstallationAddress" description
+ @return
+ */
+#define InstallationAddress KSystemConfigPlist(@"InstallationAddress")
+
+
+
+
 #define QQID     @"1106650129"
 #define QQKEY    @"jCuN4Lhqc2xR7ZFQ"
 #define WXID     @"wxd4fc4d2cb1e0f8bb"

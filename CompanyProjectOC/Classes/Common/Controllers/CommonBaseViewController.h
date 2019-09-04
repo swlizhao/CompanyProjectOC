@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CustomNavigationBar.h"
 @interface CommonBaseViewController : UIViewController
+/**
+ * navBar  自定义导航栏
+ *
+ **/
+@property(nonatomic,strong)CustomNavigationBar * navBar;
 
 @end

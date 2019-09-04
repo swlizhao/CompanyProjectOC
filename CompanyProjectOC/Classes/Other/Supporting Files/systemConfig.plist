@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>InstallationVersion</key>
+	<dict>
+		<key>Description</key>
+		<string>安装版本类型：1是正式版，2是企业版</string>
+		<key>Value</key>
+		<string>1</string>
+	</dict>
+	<key>InstallationAddress</key>
+	<dict>
+		<key>Description</key>
+		<string>安装版本地址api和h5：1是正式线，2是测试线，3是本地地址</string>
+		<key>Value</key>
+		<string>3</string>
+	</dict>
+</dict>
+</plist>
