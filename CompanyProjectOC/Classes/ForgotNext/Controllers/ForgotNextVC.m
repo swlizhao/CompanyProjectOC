@@ -8,7 +8,6 @@
 
 #import "ForgotNextVC.h"
 #import "ForgotNextMainView.h"
-#import "LoginVC.h"
 @interface ForgotNextVC ()
 @property(nonatomic,strong)ForgotNextMainView * mainView;
 @end

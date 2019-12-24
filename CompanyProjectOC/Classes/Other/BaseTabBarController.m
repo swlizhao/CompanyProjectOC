@@ -79,15 +79,7 @@
     self.viewControllers = @[homeMainNC,categoriesMainNC,newsNC,shoppingCartMainNC,personalMainNC];
 }
 
-//storyboard 入口
-- (void)setupStoryBoardViewControllers {
-    UINavigationController * homeMainNC = [STORYBOARD_MAIN  instantiateViewControllerWithIdentifier:@"HomeMainNC"];
-    UINavigationController * categoriesMainNC = [STORYBOARD_MAIN  instantiateViewControllerWithIdentifier:@"ProductCategoriesMainNC"];
-     UINavigationController * msgCartMainNC = [STORYBOARD_MAIN  instantiateViewControllerWithIdentifier:@"MessageMainNC"];
-    UINavigationController * shoppingCartMainNC = [STORYBOARD_MAIN  instantiateViewControllerWithIdentifier:@"ShoppingCartMainNC"];
-    UINavigationController * personalMainNC = [STORYBOARD_MAIN  instantiateViewControllerWithIdentifier:@"PersonalMainNC"];
-    self.viewControllers = @[homeMainNC,categoriesMainNC,msgCartMainNC,shoppingCartMainNC,personalMainNC];
-}
+
 
 - (void)setupTabBarItemsAttributes {
     NSDictionary * homeTabBarItemsAttributes = @{

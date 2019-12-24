@@ -12,6 +12,7 @@
 #import "PersonalSettingVC.h"
 #import "MessageMainVC.h"
 #import "PersonalOrderBaseVC.h"
+#import "LoginViewController.h"
 @interface PersonalMainVC ()
 
 @property(nonatomic,strong)LZNavView * navView;
@@ -88,9 +89,14 @@
 
 - (void)tableViewHeadViewActionWithBtn:(UIButton *)button {
     dispatch_async(dispatch_get_main_queue(), ^{
-      LoginVC * loginVC = [[LoginVC alloc]init];
-      BaseNavigationController * loginNC = [[BaseNavigationController alloc]initWithRootViewController:loginVC];
-      [self  presentViewController:loginNC animated:YES completion:nil];
+        
+        LoginViewController * loginVC = [[LoginViewController alloc]init ];
+        BaseNavigationController * loginNC = [[BaseNavigationController alloc]initWithRootViewController:loginVC];
+        [self presentViewController:loginNC animated:YES completion:nil];
+        
+//      LoginVC * loginVC = [[LoginVC alloc]init];
+//      BaseNavigationController * loginNC = [[BaseNavigationController alloc]initWithRootViewController:loginVC];
+//      [self  presentViewController:loginNC animated:YES completion:nil];
     });
 }
 

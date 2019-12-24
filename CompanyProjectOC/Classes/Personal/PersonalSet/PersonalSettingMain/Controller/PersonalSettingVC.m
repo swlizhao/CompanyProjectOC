@@ -9,7 +9,7 @@
 #import "PersonalSettingVC.h"
 #import "PersonalSetMainView.h"
 #import "LZAdd.h"
-
+#import "PersonalFeedBackViewController.h"
 
 @interface PersonalSettingVC ()
 
@@ -98,20 +98,20 @@
     NSLog(@"我是分享..");
     //1、创建分享参数
     NSArray* imageArray = @[[UIImage imageNamed:@"img_arrow_left_22"]];
-//    （注意：图片必须要在Xcode左边目录里面，名称必须要传正确，如果要分享网络图片，可以这样传iamge参数 images:@[@"http://mob.com/Assets/images/logo.png?v=20150320"]）
-    if (imageArray) {
-        NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
-        [shareParams SSDKSetupShareParamsByText:@"分享内容"
-                                         images:imageArray
-                                            url:[NSURL URLWithString:@"http://mob.com"]
-                                          title:@"分享标题"
-                                           type:SSDKContentTypeAuto];
-        
-        [ShareSDK share:SSDKPlatformTypeWechat  parameters:shareParams onStateChanged:^(SSDKResponseState state, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error) {
-            NSLog(@"状态：%ld",(long)state);
-            //状态变更回调处理
-        }];
-    }
+////    （注意：图片必须要在Xcode左边目录里面，名称必须要传正确，如果要分享网络图片，可以这样传iamge参数 images:@[@"http://mob.com/Assets/images/logo.png?v=20150320"]）
+//    if (imageArray) {
+//        NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
+//        [shareParams SSDKSetupShareParamsByText:@"分享内容"
+//                                         images:imageArray
+//                                            url:[NSURL URLWithString:@"http://mob.com"]
+//                                          title:@"分享标题"
+//                                           type:SSDKContentTypeAuto];
+//        
+//        [ShareSDK share:SSDKPlatformTypeWechat  parameters:shareParams onStateChanged:^(SSDKResponseState state, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error) {
+//            NSLog(@"状态：%ld",(long)state);
+//            //状态变更回调处理
+//        }];
+//    }
 
 }
 

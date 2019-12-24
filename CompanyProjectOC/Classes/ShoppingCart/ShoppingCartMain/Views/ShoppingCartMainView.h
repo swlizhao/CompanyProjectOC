@@ -10,6 +10,7 @@
 #import "ShoppingCartSectionView.h"
 #import "ShoppingCartMainCell.h"
 #import "ShoppingCartMoreCell.h"
+#import "BaseTableView.h"
 @class ShoppingCartMainVC;
 @interface ShoppingCartMainView : BaseView <UITableViewDelegate ,UITableViewDataSource,FSPageContentViewDelegate>
 

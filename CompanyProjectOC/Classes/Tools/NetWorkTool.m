@@ -43,7 +43,7 @@
 
 
 /**
- *  POST请求
+ * POST请求
  * @param parameters 参数
  * @param resultBlock 结果回调
  *

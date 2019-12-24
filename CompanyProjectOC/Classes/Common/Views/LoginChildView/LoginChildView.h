@@ -14,4 +14,5 @@
 @property(nonatomic,strong)CommonBaseButton * button;
 @property(nonatomic,strong)CommonBaseImageView * lineImgView;
 @property(nonatomic,assign)BOOL isWarning;
+
 @end

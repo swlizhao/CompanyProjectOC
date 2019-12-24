@@ -106,8 +106,6 @@
 		036EBA191FD2A0060067A3C0 /* LZWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 036EBA151FD2A0040067A3C0 /* LZWKWebView.m */; };
 		036EBA1F1FD2A0520067A3C0 /* UIButton+LZButtonSenderStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 036EBA1C1FD2A0520067A3C0 /* UIButton+LZButtonSenderStatus.m */; };
 		036EBA201FD2A0520067A3C0 /* UIButton+LZTimerDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 036EBA1E1FD2A0520067A3C0 /* UIButton+LZTimerDown.m */; };
-		036EBA271FD2A2A70067A3C0 /* Personal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036EBA231FD2A2A70067A3C0 /* Personal.storyboard */; };
-		036EBA281FD2A2A70067A3C0 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036EBA251FD2A2A70067A3C0 /* Login.storyboard */; };
 		036EBA2B1FD2A3D90067A3C0 /* HomeMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 036EBA2A1FD2A3D90067A3C0 /* HomeMainView.m */; };
 		036EBA2E1FD2A7050067A3C0 /* HomeMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 036EBA2D1FD2A7050067A3C0 /* HomeMainModel.m */; };
 		036EBA341FD2A7330067A3C0 /* HomeMainVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 036EBA331FD2A7330067A3C0 /* HomeMainVM.m */; };
@@ -160,7 +158,6 @@
 		180D65CC1F8A011B00E39B2D /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65CB1F8A011B00E39B2D /* RegisterVC.m */; };
 		180D65D51F8A016A00E39B2D /* ForgotVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D65D41F8A016A00E39B2D /* ForgotVC.m */; };
 		188A441F1F885F3E00212E35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188A441E1F885F3E00212E35 /* AppDelegate.m */; };
-		188A44251F885F3E00212E35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188A44231F885F3E00212E35 /* Main.storyboard */; };
 		188A44271F885F3E00212E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188A44261F885F3E00212E35 /* Assets.xcassets */; };
 		188A442A1F885F3E00212E35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188A44281F885F3E00212E35 /* LaunchScreen.storyboard */; };
 		188A442D1F885F3E00212E35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 188A442C1F885F3E00212E35 /* main.m */; };
@@ -175,7 +172,6 @@
 		188A44B41F88709200212E35 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188A44B31F88709200212E35 /* BaseNavigationController.m */; };
 		188A44B71F8870BD00212E35 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188A44B61F8870BD00212E35 /* BaseTabBarController.m */; };
 		188A44BA1F8870ED00212E35 /* BasePlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 188A44B91F8870ED00212E35 /* BasePlusButton.m */; };
-		188A44C21F8884EA00212E35 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 188A44C11F8884EA00212E35 /* LoginVC.m */; };
 		188A44D01F88A6E500212E35 /* img_arrow_right_16.png in Resources */ = {isa = PBXBuildFile; fileRef = 188A44CF1F88A6E500212E35 /* img_arrow_right_16.png */; };
 		188A44D51F88A97900212E35 /* RequestServerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 188A44D41F88A97900212E35 /* RequestServerData.m */; };
 		188A44D81F88C62200212E35 /* appIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 188A44D71F88C62200212E35 /* appIcon@2x.png */; };
@@ -212,13 +208,16 @@
 		F10156E921BE6B8000826349 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F10156E821BE6B8000826349 /* UserInfoModel.m */; };
 		F10156ED21BE6D7D00826349 /* LoginHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F10156EC21BE6D7D00826349 /* LoginHelper.m */; };
 		F10156F021BE6F6800826349 /* CacheTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F10156EF21BE6F6800826349 /* CacheTools.m */; };
+		F12A093D23B10A87005DD8D2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F12A093C23B10A87005DD8D2 /* LoginViewController.m */; };
+		F12A094623B1A3E3005DD8D2 /* PersonalFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F12A094523B1A3E3005DD8D2 /* PersonalFeedBackViewController.m */; };
+		F171197A2364374F0045C8F6 /* ListPageInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F17119792364374F0045C8F6 /* ListPageInfoModel.m */; };
+		F171197D23643E0A0045C8F6 /* DataTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F171197C23643E0A0045C8F6 /* DataTools.m */; };
 		F1865315229F738B002C3F92 /* ApiResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F1865314229F738B002C3F92 /* ApiResultModel.m */; };
 		F1865318229F74F7002C3F92 /* NetWorkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F1865317229F74F7002C3F92 /* NetWorkTool.m */; };
 		F186531B229F7AC9002C3F92 /* ApiTokenHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F186531A229F7AC9002C3F92 /* ApiTokenHelper.m */; };
 		F186531F229F7ECC002C3F92 /* systemConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = F186531E229F7ECC002C3F92 /* systemConfig.plist */; };
 		F1865322229F8101002C3F92 /* totalPoint.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1865321229F8101002C3F92 /* totalPoint.plist */; };
 		F1865325229F85E1002C3F92 /* CustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F1865324229F85E1002C3F92 /* CustomNavigationBar.m */; };
-		F186533022A0DF9D002C3F92 /* PersonalFeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F186532F22A0DF9D002C3F92 /* PersonalFeedBackViewController.swift */; };
 		F18A6550231F6702005CD8B7 /* AdvertisingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18A654F231F6702005CD8B7 /* AdvertisingViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -415,8 +414,6 @@
 		036EBA1C1FD2A0520067A3C0 /* UIButton+LZButtonSenderStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LZButtonSenderStatus.m"; sourceTree = "<group>"; };
 		036EBA1D1FD2A0520067A3C0 /* UIButton+LZTimerDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+LZTimerDown.h"; sourceTree = "<group>"; };
 		036EBA1E1FD2A0520067A3C0 /* UIButton+LZTimerDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LZTimerDown.m"; sourceTree = "<group>"; };
-		036EBA241FD2A2A70067A3C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Personal.storyboard; sourceTree = "<group>"; };
-		036EBA261FD2A2A70067A3C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		036EBA291FD2A3D90067A3C0 /* HomeMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeMainView.h; sourceTree = "<group>"; };
 		036EBA2A1FD2A3D90067A3C0 /* HomeMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeMainView.m; sourceTree = "<group>"; };
 		036EBA2C1FD2A7050067A3C0 /* HomeMainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeMainModel.h; sourceTree = "<group>"; };
@@ -514,7 +511,6 @@
 		188A441A1F885F3E00212E35 /* CompanyProjectOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompanyProjectOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188A441D1F885F3E00212E35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		188A441E1F885F3E00212E35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		188A44241F885F3E00212E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		188A44261F885F3E00212E35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		188A44291F885F3E00212E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		188A442B1F885F3E00212E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -545,8 +541,6 @@
 		188A44B61F8870BD00212E35 /* BaseTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
 		188A44B81F8870ED00212E35 /* BasePlusButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasePlusButton.h; sourceTree = "<group>"; };
 		188A44B91F8870ED00212E35 /* BasePlusButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasePlusButton.m; sourceTree = "<group>"; };
-		188A44C01F8884EA00212E35 /* LoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
-		188A44C11F8884EA00212E35 /* LoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		188A44CF1F88A6E500212E35 /* img_arrow_right_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_arrow_right_16.png; sourceTree = "<group>"; };
 		188A44D31F88A97900212E35 /* RequestServerData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestServerData.h; sourceTree = "<group>"; };
 		188A44D41F88A97900212E35 /* RequestServerData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestServerData.m; sourceTree = "<group>"; };
@@ -617,6 +611,14 @@
 		F10156EC21BE6D7D00826349 /* LoginHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginHelper.m; sourceTree = "<group>"; };
 		F10156EE21BE6F6800826349 /* CacheTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheTools.h; sourceTree = "<group>"; };
 		F10156EF21BE6F6800826349 /* CacheTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacheTools.m; sourceTree = "<group>"; };
+		F12A093B23B10A87005DD8D2 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		F12A093C23B10A87005DD8D2 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		F12A094423B1A3E3005DD8D2 /* PersonalFeedBackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalFeedBackViewController.h; sourceTree = "<group>"; };
+		F12A094523B1A3E3005DD8D2 /* PersonalFeedBackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalFeedBackViewController.m; sourceTree = "<group>"; };
+		F17119782364374F0045C8F6 /* ListPageInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListPageInfoModel.h; sourceTree = "<group>"; };
+		F17119792364374F0045C8F6 /* ListPageInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListPageInfoModel.m; sourceTree = "<group>"; };
+		F171197B23643E0A0045C8F6 /* DataTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataTools.h; sourceTree = "<group>"; };
+		F171197C23643E0A0045C8F6 /* DataTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataTools.m; sourceTree = "<group>"; };
 		F1865313229F738B002C3F92 /* ApiResultModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiResultModel.h; sourceTree = "<group>"; };
 		F1865314229F738B002C3F92 /* ApiResultModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiResultModel.m; sourceTree = "<group>"; };
 		F1865316229F74F7002C3F92 /* NetWorkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorkTool.h; sourceTree = "<group>"; };
@@ -629,7 +631,6 @@
 		F1865323229F85E1002C3F92 /* CustomNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomNavigationBar.h; sourceTree = "<group>"; };
 		F1865324229F85E1002C3F92 /* CustomNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationBar.m; sourceTree = "<group>"; };
 		F186532E22A0DF9C002C3F92 /* CompanyProjectOC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CompanyProjectOC-Bridging-Header.h"; sourceTree = "<group>"; };
-		F186532F22A0DF9D002C3F92 /* PersonalFeedBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalFeedBackViewController.swift; sourceTree = "<group>"; };
 		F18A654E231F6702005CD8B7 /* AdvertisingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdvertisingViewController.h; sourceTree = "<group>"; };
 		F18A654F231F6702005CD8B7 /* AdvertisingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdvertisingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -2244,6 +2245,8 @@
 				188A44DC1F88DC7300212E35 /* Tools.m */,
 				F10156EE21BE6F6800826349 /* CacheTools.h */,
 				F10156EF21BE6F6800826349 /* CacheTools.m */,
+				F171197B23643E0A0045C8F6 /* DataTools.h */,
+				F171197C23643E0A0045C8F6 /* DataTools.m */,
 				F1865316229F74F7002C3F92 /* NetWorkTool.h */,
 				F1865317229F74F7002C3F92 /* NetWorkTool.m */,
 				F1865319229F7AC9002C3F92 /* ApiTokenHelper.h */,
@@ -2293,9 +2296,6 @@
 		188A44611F88615000212E35 /* InterfaceBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				188A44231F885F3E00212E35 /* Main.storyboard */,
-				036EBA251FD2A2A70067A3C0 /* Login.storyboard */,
-				036EBA231FD2A2A70067A3C0 /* Personal.storyboard */,
 				188A44281F885F3E00212E35 /* LaunchScreen.storyboard */,
 			);
 			path = InterfaceBuilder;
@@ -2518,8 +2518,8 @@
 		188A447E1F8865F200212E35 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				188A44C01F8884EA00212E35 /* LoginVC.h */,
-				188A44C11F8884EA00212E35 /* LoginVC.m */,
+				F12A093B23B10A87005DD8D2 /* LoginViewController.h */,
+				F12A093C23B10A87005DD8D2 /* LoginViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2800,6 +2800,8 @@
 			isa = PBXGroup;
 			children = (
 				B0266F82213A2DB900E39DF6 /* BaseModel */,
+				F17119782364374F0045C8F6 /* ListPageInfoModel.h */,
+				F17119792364374F0045C8F6 /* ListPageInfoModel.m */,
 				F10156E721BE6B8000826349 /* UserInfoModel.h */,
 				F10156E821BE6B8000826349 /* UserInfoModel.m */,
 				F1865313229F738B002C3F92 /* ApiResultModel.h */,
@@ -3039,7 +3041,8 @@
 		F186532B22A0DEF2002C3F92 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F186532F22A0DF9D002C3F92 /* PersonalFeedBackViewController.swift */,
+				F12A094423B1A3E3005DD8D2 /* PersonalFeedBackViewController.h */,
+				F12A094523B1A3E3005DD8D2 /* PersonalFeedBackViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3213,19 +3216,16 @@
 				03A15C89204A90F20038829C /* img_account.png in Resources */,
 				033F8C0820479680001A0887 /* img_shouhou.png in Resources */,
 				188A44D81F88C62200212E35 /* appIcon@2x.png in Resources */,
-				036EBA271FD2A2A70067A3C0 /* Personal.storyboard in Resources */,
 				03A15C96204A934E0038829C /* img_version.png in Resources */,
 				032F918620452D8000D5A835 /* img_shoppingCart_select.png in Resources */,
 				188A44DA1F88C63F00212E35 /* appIcon@3x.png in Resources */,
 				0346AB1D2017105C005EBBCD /* img_arrow_left_22.png in Resources */,
 				03504A1C20492D7300BDBCF2 /* AccountSecurityData.json in Resources */,
 				033F8C9C2047F32D001A0887 /* PersonalMainDatas.json in Resources */,
-				188A44251F885F3E00212E35 /* Main.storyboard in Resources */,
 				033D85EA1FFDFAD6006BA669 /* img_set_white.png in Resources */,
 				F1865322229F8101002C3F92 /* totalPoint.plist in Resources */,
 				03504A142048FA1000BDBCF2 /* img_edit.png in Resources */,
 				033F8C00204794DB001A0887 /* img_receivedGoods.png in Resources */,
-				036EBA281FD2A2A70067A3C0 /* Login.storyboard in Resources */,
 				033F8C0A204796B0001A0887 /* img_sendGoods.png in Resources */,
 				F186531F229F7ECC002C3F92 /* systemConfig.plist in Resources */,
 				03504A122048F7F900BDBCF2 /* img_trash.png in Resources */,
@@ -3381,6 +3381,7 @@
 				033F8CB620480588001A0887 /* AddAddressVC.m in Sources */,
 				03504A042048DA8800BDBCF2 /* AccountSecurityMainVC.m in Sources */,
 				033F8C4F2047D7DD001A0887 /* PersonalVouchersBaseVC.m in Sources */,
+				F12A093D23B10A87005DD8D2 /* LoginViewController.m in Sources */,
 				036EBA2B1FD2A3D90067A3C0 /* HomeMainView.m in Sources */,
 				B050652220FF232900247D94 /* CommonBaseTableView.m in Sources */,
 				031659971FD4D97400CF6419 /* ForgotMainView.m in Sources */,
@@ -3392,7 +3393,6 @@
 				036EB2BF20285A5D00A15478 /* AppDelegate+ShareSDK.m in Sources */,
 				B051C2E820FDCAD700B47761 /* CommonBaseModel.m in Sources */,
 				036EBA561FD2A87C0067A3C0 /* PersonalMainModel.m in Sources */,
-				188A44C21F8884EA00212E35 /* LoginVC.m in Sources */,
 				F1865318229F74F7002C3F92 /* NetWorkTool.m in Sources */,
 				036EBA2E1FD2A7050067A3C0 /* HomeMainModel.m in Sources */,
 				035687102044148200027F31 /* ProductCategoryRightCollectionViewCell.m in Sources */,
@@ -3400,6 +3400,7 @@
 				033F8C942047E234001A0887 /* PersonalOrderRecieveVC.m in Sources */,
 				031659BE1FD4DF5F00CF6419 /* ShoppingCartDetailMainView.m in Sources */,
 				030E63631FD67EA30011D967 /* LoadingView.m in Sources */,
+				F12A094623B1A3E3005DD8D2 /* PersonalFeedBackViewController.m in Sources */,
 				B050651F20FF230A00247D94 /* CommonBaseScrollView.m in Sources */,
 				B050652820FF238700247D94 /* CommonBaseTableViewCell.m in Sources */,
 				B07A553D2101E18400CE83C0 /* CommonBaseTableHeaderFooterView.m in Sources */,
@@ -3419,6 +3420,7 @@
 				031659A61FD4D9E900CF6419 /* LoginMainView.m in Sources */,
 				033F8C4C2047D7B5001A0887 /* PersonalIntegralVC.m in Sources */,
 				033F8C612047DEBD001A0887 /* PersonalCollectionShopVC.m in Sources */,
+				F171197A2364374F0045C8F6 /* ListPageInfoModel.m in Sources */,
 				033F8C552047D87B001A0887 /* PersonalVoucherUsedVC.m in Sources */,
 				B051C2F120FDCB8E00B47761 /* CommonBaseView.m in Sources */,
 				0356870D2044071C00027F31 /* UIView+LZTools.m in Sources */,
@@ -3448,6 +3450,7 @@
 				B05BF6EA2101781E00C6222F /* CommonBaseLabel.m in Sources */,
 				B050652E20FF24F700247D94 /* CommonBaseTabBarViewController.m in Sources */,
 				188A44B71F8870BD00212E35 /* BaseTabBarController.m in Sources */,
+				F171197D23643E0A0045C8F6 /* DataTools.m in Sources */,
 				031659A01FD4D9BC00CF6419 /* RegisterMainView.m in Sources */,
 				036EBA371FD2A74A0067A3C0 /* HomeDetailModel.m in Sources */,
 				03504A072048DBDA00BDBCF2 /* AddressListMainView.m in Sources */,
@@ -3509,7 +3512,6 @@
 				188A44971F8866FD00212E35 /* BaseView.m in Sources */,
 				180D65BA1F8A009C00E39B2D /* PersonalSettingVC.m in Sources */,
 				036EB2BC202826C500A15478 /* UIView+Shadow.m in Sources */,
-				F186533022A0DF9D002C3F92 /* PersonalFeedBackViewController.swift in Sources */,
 				036EBA201FD2A0520067A3C0 /* UIButton+LZTimerDown.m in Sources */,
 				03504A2520492F8600BDBCF2 /* AccountSecurityMainViewCell.m in Sources */,
 				03F5A97B20467B0D00F471C2 /* NewsFocusVC.m in Sources */,
@@ -3549,30 +3551,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		036EBA231FD2A2A70067A3C0 /* Personal.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				036EBA241FD2A2A70067A3C0 /* Base */,
-			);
-			name = Personal.storyboard;
-			sourceTree = "<group>";
-		};
-		036EBA251FD2A2A70067A3C0 /* Login.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				036EBA261FD2A2A70067A3C0 /* Base */,
-			);
-			name = Login.storyboard;
-			sourceTree = "<group>";
-		};
-		188A44231F885F3E00212E35 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				188A44241F885F3E00212E35 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		188A44281F885F3E00212E35 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -3698,15 +3676,15 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = R6HA2K2BP9;
+				DEVELOPMENT_TEAM = D798JR4HSC;
 				GCC_PREFIX_HEADER = "/Users/lizhao/Desktop/GitHubProject/iOS项目/CompanyProjectOC/CompanyProjectOC/Classes/Config/ProjectHeader.pch";
 				INFOPLIST_FILE = "/Users/lizhao/Desktop/GitHubProject/iOS项目/CompanyProjectOC/CompanyProjectOC/Classes/Resources/SystemPlist/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.quanqiuwa.crowdsourcing;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hedongshihou.hedongquanzi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "0447da8b-e354-425d-b797-398373e48167";
-				PROVISIONING_PROFILE_SPECIFIER = "众包测试证书20180721";
+				PROVISIONING_PROFILE_SPECIFIER = provisioningProfile_hedongquanzi;
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/lizhao/Desktop/GitHubProject/iOS项目/CompanyProjectOC/CompanyProjectOC/Classes/Config/CompanyProjectOC-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -3727,7 +3705,7 @@
 				INFOPLIST_FILE = "/Users/lizhao/Desktop/GitHubProject/iOS项目/CompanyProjectOC/CompanyProjectOC/Classes/Resources/SystemPlist/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.quanqiuwa.crowdsourcing;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hedongshihou.hedongquanzi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/lizhao/Desktop/GitHubProject/iOS项目/CompanyProjectOC/CompanyProjectOC/Classes/Config/CompanyProjectOC-Bridging-Header.h";
@@ -3739,7 +3717,6 @@
 		188A444A1F885F3E00212E35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CompanyProjectOCTests/Info.plist;
@@ -3754,7 +3731,6 @@
 		188A444B1F885F3E00212E35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CompanyProjectOCTests/Info.plist;
@@ -3769,7 +3745,6 @@
 		188A444D1F885F3E00212E35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CompanyProjectOCUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -3783,7 +3758,6 @@
 		188A444E1F885F3E00212E35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CompanyProjectOCUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

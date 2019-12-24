@@ -17,11 +17,6 @@
 
 #define  APPLE_ID          @"1193489212"
 
-#define  STORYBOARD_MAIN   [UIStoryboard  storyboardWithName:@"Main" bundle:nil]
-
-#define  STORYBOARD_PERSONAL   [UIStoryboard   storyboardWithName:@"Personal" bundle:nil]
-
-#define  STORYBOARD_LOGIN   [UIStoryboard  storyboardWithName:@"Login" bundle:nil]
 
 #define SCREEN_WIDTH   [UIScreen mainScreen].bounds.size.width
 

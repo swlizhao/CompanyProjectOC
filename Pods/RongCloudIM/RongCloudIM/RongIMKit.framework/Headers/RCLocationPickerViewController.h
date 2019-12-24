@@ -32,17 +32,17 @@ typedef void (^OnPoiSearchResult)(NSArray *pois, BOOL clearPreviousResult, BOOL 
 /*!
  地理位置选择完成之后的回调
  */
-@property(nonatomic, weak) id<RCLocationPickerViewControllerDelegate> delegate;
+@property (nonatomic, weak) id<RCLocationPickerViewControllerDelegate> delegate;
 
 /*!
  位置选择的数据源
  */
-@property(nonatomic, strong) id<RCLocationPickerViewControllerDataSource> dataSource;
+@property (nonatomic, strong) id<RCLocationPickerViewControllerDataSource> dataSource;
 
 /*!
  mapViewContainer
  */
-@property(nonatomic, strong) IBOutlet UIView *mapViewContainer;
+@property (nonatomic, strong) IBOutlet UIView *mapViewContainer;
 
 /*!
  初始化地理位置选取的ViewController

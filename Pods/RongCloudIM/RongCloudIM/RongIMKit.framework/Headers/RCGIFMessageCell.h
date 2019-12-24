@@ -6,8 +6,9 @@
 //  Copyright © 2018年 RongCloud. All rights reserved.
 //
 
-#import <RongIMKit/RongIMKit.h>
+#import "RCMessageCell.h"
 #import "RCGIFImageView.h"
+#import "RCImageMessageProgressView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,12 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  显示图片缩略图的View
  */
-@property(nonatomic, strong) RCGIFImageView *gifImageView;
+@property (nonatomic, strong) RCGIFImageView *gifImageView;
 
 /*!
  显示发送进度的View
  */
-@property(nonatomic, strong) RCImageMessageProgressView *progressView;
+@property (nonatomic, strong) RCImageMessageProgressView *progressView;
 
 @end
 

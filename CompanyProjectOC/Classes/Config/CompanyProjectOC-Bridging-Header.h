@@ -7,4 +7,3 @@
  **/
 //导入OC头文件
 #import "CommonBaseViewController.h"
-#import "ShoppingCartMainVC.h"

@@ -10,7 +10,6 @@
 //  （勿动.h文件中内容）
 //  2016-12-06 V 1.2 Https版本
 
-
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
@@ -19,18 +18,18 @@
  *
  *  @param responseObj 请求成功返回的数据
  */
-typedef void (^JYResponseSuccess)(NSURLSessionDataTask * task, NSDictionary * responseObj);
+typedef void (^JYResponseSuccess)(NSURLSessionDataTask *task, NSDictionary *responseObj);
 
 /**
  *  宏定义请求失败的block
  *
  *  @param error 报错信息
  */
-typedef void (^JYResponseFail)(NSURLSessionDataTask * task, NSError * error);
-
-
+typedef void (^JYResponseFail)(NSURLSessionDataTask *task, NSError *error);
 
 @interface JYangLib : NSObject
+
++ (NSString *)SDK_Version;
 
 /**
  获取网络图片
@@ -41,8 +40,7 @@ typedef void (^JYResponseFail)(NSURLSessionDataTask * task, NSError * error);
  */
 + (void)JYangLibsetImageWithImageView:(UIImageView *)imageView URL:(NSURL *)url placeholderImage:(UIImage *)placeholder;
 
-
-+ (void)JYangLibDownloadImageWithUrl:(NSURL *)url block:(void(^)(UIImage * image))block;
++ (void)JYangLibDownloadImageWithUrl:(NSURL *)url block:(void (^)(UIImage *image))block;
 
 #pragma mark - 等待框
 /**
@@ -70,13 +68,14 @@ typedef void (^JYResponseFail)(NSURLSessionDataTask * task, NSError * error);
 
 /**
  提示框
- 
+
  @param hint 提示文字
  @param viewController 显示视图
  @param completion 提示消失之后的回调
  */
-+ (void)JYangLibShowWait:(NSString *)hint InViewController:(UIViewController *)viewController completion:(void(^)(BOOL dismissed))completion;
-
++ (void)JYangLibShowWait:(NSString *)hint
+        InViewController:(UIViewController *)viewController
+              completion:(void (^)(BOOL dismissed))completion;
 
 + (void)mf_showProgressHUDWith:(NSString *)title inView:(UIView *)view;
 + (void)mf_hideHUDInView:(UIView *)view;
@@ -84,23 +83,41 @@ typedef void (^JYResponseFail)(NSURLSessionDataTask * task, NSError * error);
 #pragma mark - 网络请求
 /**
  普通post方法请求网络数据
- 
+
  @param reqUrl  请求网址路径
  @param param   请求参数
  @param success 成功回调
  @param fail    失败回调
  */
-+ (NSURLSessionDataTask *)postGetRequestWithLink:(NSString *)reqUrl parameter:(NSString *)param Success:(JYResponseSuccess)success Fail:(JYResponseFail)fail;
++ (NSURLSessionDataTask *)postGetRequestWithLink:(NSString *)reqUrl
+                                       parameter:(NSString *)param
+                                         success:(JYResponseSuccess)success
+                                            fail:(JYResponseFail)fail;
 
 #pragma mark - Msg
 + (void)mf_collectErrorMsg:(NSString *)partnerId userId:(NSString *)userId;
 
 + (NSString *)GetJYangToolLibMsg;
 
-+ (void)mf_setUserIcon:(NSString *)uId className:(NSString *)name with:(UIImageView *)uIcon webImage:(NSString *)iconStr defaultImage:(UIImage *)defaultImage;
++ (void)mf_setUserIcon:(NSString *)uId
+             className:(NSString *)name
+                  with:(UIImageView *)uIcon
+              webImage:(NSString *)iconStr
+          defaultImage:(UIImage *)defaultImage;
 
-+ (void)mf_setUserIcon:(NSString *)uId className:(NSString *)name with:(UIImageView *)uIcon webImage:(NSString *)iconStr defaultImage:(UIImage *)defaultImage block:(void(^)(NSString * imageStr,UIImage * uImage,NSString * user_nickname))block;
++ (void)mf_setUserIcon:(NSString *)uId
+             className:(NSString *)name
+                  with:(UIImageView *)uIcon
+              webImage:(NSString *)iconStr
+          defaultImage:(UIImage *)defaultImage
+                 block:(void (^)(NSString *imageStr, UIImage *uImage, NSString *user_nickname))block;
 
-+ (NSURLSessionDataTask * )mf_post:(NSString *)urlStr param:(NSDictionary *)mdic block:(void(^)(id obj,NSError * err))block;
++ (NSURLSessionDataTask *)mf_post:(NSString *)urlStr
+                            param:(NSDictionary *)mdic
+                            block:(void (^)(id obj, NSError *err))block;
+
++ (void)setCustomerFontName:(NSString *)fontName;
+
++ (UIFont *)MFYUEFontWithSize:(CGFloat)size;
 
 @end
