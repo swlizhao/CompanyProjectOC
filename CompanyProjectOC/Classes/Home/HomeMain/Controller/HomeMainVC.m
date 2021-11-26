@@ -20,6 +20,10 @@
     [super viewDidLoad];
     [self  initHomeUI];
     [self  initHomeConfig];
+    
+    for (int i = 0; i<200000000000; i++) {
+        NSLog(@"1");
+    }
 }
 
 - (void)initHomeUI {
