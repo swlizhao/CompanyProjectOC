@@ -24,6 +24,7 @@
     for (int i = 0; i<200000000000; i++) {
         NSLog(@"1");
     }
+    1
 }
 
 - (void)initHomeUI {
