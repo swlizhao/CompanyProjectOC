@@ -2106,7 +2106,6 @@
 				B0620DA12106DAD6003622CE /* RegisterNext */,
 				188A445A1F8860CC00212E35 /* Forgot */,
 				B0620DA02106DAC1003622CE /* ForgotNext */,
-				F18A654B23162BB0005CD8B7 /* Live */,
 				188A445B1F8860D600212E35 /* Tools */,
 				188A445C1F8860E400212E35 /* Vendor */,
 				188A445F1F88612000212E35 /* Base */,
@@ -3059,21 +3058,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		F18A654B23162BB0005CD8B7 /* Live */ = {
-			isa = PBXGroup;
-			children = (
-				F18A654C23162C06005CD8B7 /* Controllers */,
-			);
-			path = Live;
-			sourceTree = "<group>";
-		};
-		F18A654C23162C06005CD8B7 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		F18A654D231F66B7005CD8B7 /* Advertising */ = {
