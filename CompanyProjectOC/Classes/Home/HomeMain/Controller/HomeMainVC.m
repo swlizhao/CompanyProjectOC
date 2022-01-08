@@ -24,7 +24,7 @@
 //    for (int i = 0; i<200000000000; i++) {
 //        NSLog(@"1");
 //    }
-    NSLog(@"li");
+    NSLog(@"测试git连接状态");
 }
 
 - (void)initHomeUI {
